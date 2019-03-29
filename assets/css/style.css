@@ -1,0 +1,336 @@
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.form-control:focus {
+    border-color: #cccccc;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+.w-shadow {
+    box-shadow: 5px 30px 26px -20px #b6b6b6;
+}
+
+.onlineStatus {
+    display: inline-block;
+    border-radius: 50%;
+    width: 50%;
+    background-color: #EEE;
+    height: 10px;
+    width: 10px;
+}
+
+.form-errors {
+    border-radius: 8px;
+    margin: 10px 25px 45px 25px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.form-errors ul.has-errors {
+    padding: 10px 15px;
+    border: 1px solid #a94442;
+    border-radius: 8px;
+}
+
+.form-errors li {
+    list-style: none;
+    font-size: 16px;
+}
+
+.navbar-dark .dropdown-item.active,
+.navbar-dark .dropdown-item:active {
+    background-color: #343a40;
+}
+
+.searchButton {
+    border-left: 0;
+    border-color: #ccc;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.searchInput {
+    font-size: .8em;
+    padding-left: 30px;
+    border-right: 0;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.authPage {
+    margin-top: 5em;
+}
+
+.authCard {
+    box-shadow: 5px 30px 26px -20px #b6b6b6;
+}
+
+.authLeftSideRegister,
+.authLeftSideLogin {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.authLeftSideRegister {
+    background-image: url(../images/background/auth-bg.jpg);
+}
+
+.authLeftSideLogin {
+    background-image: url(../images/background/auth-bg-2.jpg);
+}
+
+.authForm {
+    padding: 56px 55px 63px 55px;
+}
+
+.newsfeed {
+    /*    padding-top: 4em;*/
+    padding: 0;
+    height: 100%;
+    background-color: #e9ebee;
+}
+
+.newsfeedRightSide {
+    padding: 0;
+}
+
+.newsfeedLeftSide {
+    height: 100vh;
+    padding-right: 0;
+    background-color: #fff;
+}
+
+/*
+.newsfeedSize {
+    width: 80%;
+    margin: 0 auto;
+}
+*/
+
+.newsfeedUserCard {
+    margin-bottom: 40px;
+    border-radius: 0;
+    border-bottom: 0;
+}
+
+.newsfeedLeftSidebar {
+    height: 100%;
+    margin: 0;
+    padding: 50px 0;
+    box-shadow: inset 5px 30px 26px -40px #b6b6b6;
+}
+
+.newsfeedLeftSidebar li {
+    border: 0;
+}
+
+.newsfeedLeftSidebar li.sdActive {
+    border-left: 4px solid #007bff;
+    background-color: #f6f6f6;
+}
+
+.newsfeedRightSideContent {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.newsfeedLoggedUser {
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -o-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+    overflow: hidden;
+    padding: 20px 10px 20px 40px;
+}
+
+.newsfeedLoggedUser .col-md-4,
+.newsfeedUserInfo {
+    -webkit-transform: skewY(2deg);
+    -moz-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    -o-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.newsfeedLeftSidebar {
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -o-transform: skewY(-2deg);
+    transform: skewY(-2deg);
+    overflow: hidden;
+}
+
+.newsfeedLeftSidebar .list-group-item {
+    -webkit-transform: skewY(2deg);
+    -moz-transform: skewY(2deg);
+    -ms-transform: skewY(2deg);
+    -o-transform: skewY(2deg);
+    transform: skewY(2deg);
+}
+
+.newsLink {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.newsfeedLoggedUser .col-md-8 {
+    padding: 0;
+}
+
+.userNewsfeedImage {
+    padding-top: 10px;
+    border-radius: 50%;
+    box-shadow: 5px 30px 26px -20px #b6b6b6;
+}
+
+.newsfeedUsername, .newsfeedCardUsername {
+    font-size: .7em;
+}
+
+.newsfeedUserLocation {
+    padding: 30px 5px 5px;
+}
+
+.newsfeedLTI i {
+    font-size: 1.5em;
+    margin-right: 5px;
+    vertical-align: bottom;
+}
+
+.newsfeedLTI {
+    color: #000;
+    font-size: .95em;
+}
+
+.postFormHeader {
+    background-color: #e9ebee;
+    padding: 8px 20px;
+    border: 1px solid #ccc;
+}
+
+.postFormHeader p {
+    margin: 0;
+}
+
+.postForm {
+    background-color: #d1d3d6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#postForm {
+    resize: none;
+    outline: none;
+    border: 0;
+    height: 150px;
+    padding: 40px 30px;
+    background-color: #d1d3d6;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.postFormImg {
+    width: 8%;
+    border-radius: 50%;
+}
+
+.postInput {
+    margin-bottom: 1.5em;
+}
+
+.postFormGroup {
+    padding: 0px 20px 20px 20px;
+}
+
+.postFormBtn {
+    color: #76747c;
+    font-weight: 700;
+    font-size: .9em;
+}
+
+.postFormBtn:hover {
+    color: #5d5c60;
+    text-decoration: none;
+}
+
+.onlineUsers {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.onlineUserImage {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.onlineUsername {
+    display: block;
+}
+
+.popularTags {
+    font-size: 1em;
+}
+
+/* Post */
+.post {
+    width: 100%;
+}
+
+.postUserImage {
+    width: 8%;
+    border-radius: 50%;
+}
+
+.postUserName {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.postMoreSettings {
+    font-size: 1.5em;
+}
+
+.postContent {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.postCardButtons {
+    margin-top: 15px;
+    padding: 10px 25px;
+    color: #6c757d;
+}
+
+.postCardButtons:hover {
+    color: #6c757d;
+}
+
+.postCardButtons i {
+    font-size: 1.3em;
+    vertical-align: top;
+}
+
+/* PROFILE PAGE */
+.profileCover {
+    background-image: url(../images/covers/1/cover-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}

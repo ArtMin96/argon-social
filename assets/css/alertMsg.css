@@ -1,0 +1,65 @@
+#alertBoxLower {
+    position: fixed;
+    bottom: -250px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 18px;
+    font-size: 18px;
+    border: 1px solid #bce8f1;
+    border-radius: 4px;
+    box-shadow: 2px 4px 10px rgba(0,0,0,0.6);
+    transition: bottom 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+  
+  #alertBoxLower.primary {
+    color: #004085;
+    background-color: #cce5ff;
+    border-color: #b8daff;
+  }
+  
+  #alertBoxLower.secondary {
+    color: #383d41;
+    background-color: #e2e3e5;
+    border-color: #d6d8db;
+  }
+  
+  #alertBoxLower.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+  
+  #alertBoxLower.danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+  
+  #alertBoxLower.warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+  }
+  
+  #alertBoxLower.info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+  }
+  
+  #alertBoxLower.light {
+    color: #818182;
+    background-color: #fefefe;
+    border-color: #fdfdfe;
+  }
+  
+  #alertBoxLower.dark {
+    color: #1b1e21;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+  }
+  
+  #alertBoxLower.show{
+    opacity: 1.0;
+    bottom: 50px;
+  }

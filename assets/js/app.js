@@ -1,0 +1,57 @@
+// Chart.js
+
+var likesChart = document.getElementById('likesChart').getContext('2d');
+var chart = new Chart(likesChart, {
+    // The type of chart we want to create
+    type: 'line',
+
+    // The data for our dataset
+    data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+            label: 'Likes chart',
+            backgroundColor: 'rgb(0, 123, 255)',
+            borderColor: 'rgb(0, 123, 255)',
+            data: [0, 10, 5, 2, 20, 30, 45]
+        }]
+    },
+
+    // Configuration options go here
+    options: {}
+});
+
+var followersChart = document.getElementById('followersChart').getContext('2d');
+var myPieChart = new Chart(followersChart, {
+    type: 'pie',
+    data: {
+        labels: [
+            'Followers',
+            'Following'
+        ],
+        datasets: [{
+            backgroundColor: 'rgb(0, 123, 255)',
+            data: [10, 20]
+        }]
+    },
+    // Configuration options go here
+    options: {}
+});
+
+// Video.js
+$(function () {
+    var $refreshButton = $('#refresh');
+    var $results = $('#css_result');
+
+    function refresh() {
+        var css = $('style.cp-pen-styles').text();
+        $results.html(css);
+    }
+
+    refresh();
+    $refreshButton.click(refresh);
+
+    // Select all the contents when clicked
+    $results.click(function () {
+        $(this).select();
+    });
+});
