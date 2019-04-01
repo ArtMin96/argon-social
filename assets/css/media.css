@@ -1,24 +1,281 @@
-/*
- Extra small devices (portrait phones, less than 576px)
- No media query since this is the default in Bootstrap
-*/
+@media (min-width:320px) {
+    #sidebar-wrapper {
+        margin-left: -15rem
+    }
 
-/* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {
-    ...
+    #page-content-wrapper {
+        min-width: 100%;
+        position: absolute;
+        right: 0
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        padding-left: 200px
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+        min-width: 220px;
+        position: fixed;
+        padding-top: 5rem
+    }
+
+    #wrapper.toggled .newsfeedUserCard {
+        border: 0
+    }
+
+    #wrapper.toggled .sticky-top {
+        position: absolute;
+        width: 100vw;
+        left: 0
+    }
+
+    .userNewsfeedImage {
+        width: 100px
+    }
+
+    .newsfeedRightSideContent {
+        width: 100%
+    }
+
+    .fourSection,
+    .thirdSection {
+        display: none
+    }
+
+    .secondSection {
+        flex: 0 0 100% !important;
+        max-width: 100%
+    }
+
+    .postFormGroup .col-md-9 {
+        position: absolute
+    }
+
+    .postFormBtn span {
+        display: none
+    }
+
+    .postFormGroup {
+        padding: 0 10px 20px 10px
+    }
 }
 
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {
-    ...
+@media (min-width:576px) {
+    #sidebar-wrapper {
+        margin-left: -15rem
+    }
+
+    #page-content-wrapper {
+        min-width: 100%;
+        position: absolute;
+        right: 0
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        padding-left: 200px
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+        min-width: 220px;
+        position: fixed;
+        padding-top: 5rem
+    }
+
+    #wrapper.toggled .newsfeedUserCard {
+        border: 0
+    }
+
+    .userNewsfeedImage {
+        width: 100px
+    }
+
+    .newsfeedRightSideContent {
+        width: 100%
+    }
+
+    .postFormGroup .col-md-9 {
+        position: absolute
+    }
+
+    .fourSection,
+    .thirdSection {
+        display: none
+    }
+
+    .secondSection {
+        flex: 0 0 100% !important;
+        max-width: 100%
+    }
+
+    .postFormGroup {
+        padding: 0 10px 20px 10px
+    }
 }
 
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-    
+@media (min-width:768px) {
+    #sidebar-wrapper {
+        margin-left: -15rem
+    }
+
+    #page-content-wrapper {
+        min-width: 100%;
+        position: absolute;
+        right: 0
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        padding-left: 200px
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: 0;
+        min-width: 220px;
+        position: fixed
+    }
+
+    #wrapper.toggled .sticky-top {
+        position: sticky;
+        width: 100vw;
+        left: 0
+    }
+
+    .postFormGroup .col-md-9 {
+        position: relative
+    }
+
+    .userNewsfeedImage {
+        width: 100px
+    }
+
+    .newsfeedRightSideContent {
+        width: 100%
+    }
+
+    .fourSection,
+    .thirdSection {
+        display: none
+    }
+
+    .secondSection {
+        flex: 0 0 100% !important;
+        max-width: 100%
+    }
+
+    .postFormBtn span {
+        display: inline-block
+    }
+
+    .postFormGroup {
+        padding: 0 10px 20px 10px
+    }
 }
 
-/* Extra large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {
-    
+@media (min-width:992px) {
+    #sidebar-wrapper {
+        width: 100%;
+        margin-left: 0
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+        position: relative;
+        padding-left: 0
+    }
+
+    #menu-toggle {
+        display: none
+    }
+
+    .postFormGroup {
+        padding: 0 10px 20px 10px
+    }
+
+    .postFormGroup .btn-sm {
+        font-size: .7em;
+        padding: 2px 3px
+    }
+
+    .userNewsfeedImage {
+        width: 80px
+    }
+
+    .fourSection {
+        display: none
+    }
+
+    .thirdSection {
+        display: block
+    }
+
+    .fourSection {
+        width: 100%
+    }
+
+    .secondSection {
+        flex: 0 0 100% !important;
+        max-width: 70%
+    }
+
+    .newsfeedRightSideContent {
+        width: 100%
+    }
+
+    .thirdSection strong {
+        font-size: 1em
+    }
+
+    .thirdSection {
+        font-size: .7em
+    }
+
+    .onlineStatus {
+        width: 5px;
+        height: 5px
+    }
+
+    .cardTitle {
+        font-size: .9rem
+    }
+}
+
+@media (min-width:1200px) {
+    #menu-toggle {
+        display: none
+    }
+
+    .postFormGroup {
+        padding: 0 10px 20px 20px
+    }
+
+    .postFormGroup .btn-sm {
+        font-size: .8em
+    }
+
+    .userNewsfeedImage {
+        width: 100px
+    }
+
+    .newsfeedLoggedUser {
+        padding-left: 20px
+    }
+
+    .fourSection {
+        display: block
+    }
+
+    .secondSection {
+        flex: 0 0 50% !important;
+        max-width: 50%
+    }
+
+    .newsfeedRightSideContent {
+        width: 95%
+    }
+
+    .cardTitle {
+        font-size: 1rem
+    }
 }

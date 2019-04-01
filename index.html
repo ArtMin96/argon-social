@@ -4,41 +4,33 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="assets/images/logo-16x16.png" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Social Network</title>
-    <script src="assets/js/pace.min.js"></script>
 
     <!-- Fonts -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@1.9.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="<?=PROOT?>front-resources/css/fontawesome/css/all.min.css">
-
-    <!-- Icons -->
-    <link href="assets/css/all.css" rel="stylesheet">
 
     <!-- Styles -->
     <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="assets/css/style.css?v=<?= VERSION; ?>" rel="stylesheet">
-    <link href="assets/css/alertMsg.css?v=<?= VERSION; ?>" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/media.css" rel="stylesheet">
     <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
-    <link href="assets/css/components.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
 
 <body>
-    <div class="container-fluid newsfeed">
+    <div class="container-fluid newsfeed d-flex" id="wrapper">
         <div class="row newsfeedSize">
-            <div class="col-md-2 newsfeedLeftSide sticky-top">
+            <div class="col-md-2 newsfeedLeftSide sticky-top" id="sidebar-wrapper">
                 <div class="card newsfeedUserCard h-100">
-                    <div class="row newsfeedLoggedUser">
-                        <div class="col-md-4">
+                    <div class="row newsfeedLoggedUser text-center pb-5">
+                        <div class="col-md-12">
                             <img src="assets/images/users/user-4.jpg" class="card-img-top userNewsfeedImage" alt="User image">
                         </div>
-                        <div class="col-md-8 newsfeedUserInfo">
+                        <div class="col-md-12 newsfeedUserInfo">
                             <div class="card-body">
                                 <h5 class="card-title"><a href="#" class="newsfeedUsername">Arthur Minasyan</a></h5>
                                 <p class="card-text mb-4 newsfeedCardUsername">@arthur_minasyan</p>
@@ -74,8 +66,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-10 newsfeedRightSide">
+            <div class="col-md-10 newsfeedRightSide" id="page-content-wrapper">
                 <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                    <button type="button" class="btn btn-primary mr-3" id="menu-toggle"><i class='bx bx-align-left'></i></button>
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -116,7 +109,7 @@
                     </div><!-- /.navbar-collapse -->
                 </nav>
                 <div class="row newsfeedRightSideContent mt-3">
-                    <div class="col-md-6">
+                    <div class="col-md-6 secondSection">
                         <ul class="list-unstyled" style="margin-bottom: 0;">
                             <li class="media postForm w-shadow">
                                 <div class="media-body">
@@ -124,18 +117,18 @@
                                         <textarea class="form-control" id="postForm" rows="2" placeholder="What's on your mind, Arthur?"></textarea>
                                     </div>
                                     <div class="row postFormGroup">
-                                        <div class="col-md-8">
+                                        <div class="col-md-9">
                                             <button type="button" class="btn btn-link postFormBtn btn-sm">
-                                                <i class='bx bx-images'></i> Photo/Video
+                                                <i class='bx bx-images'></i> <span>Photo/Video</span>
                                             </button>
                                             <button type="button" class="btn btn-link postFormBtn btn-sm">
-                                                <i class='bx bxs-group'></i> Tag Friends
+                                                <i class='bx bxs-group'></i> <span>Tag Friends</span>
                                             </button>
                                             <button type="button" class="btn btn-link postFormBtn btn-sm">
-                                                <i class='bx bxs-map'></i> Check In
+                                                <i class='bx bxs-map'></i> <span>Check In</span>
                                             </button>
                                         </div>
-                                        <div class="col-md-4 text-right">
+                                        <div class="col-md-3 text-right">
                                             <button type="button" class="btn btn-primary btn-sm">Publish</button>
                                         </div>
                                     </div>
@@ -242,9 +235,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 thirdSection">
                         <div class="p-3 bg-white rounded w-shadow">
-                            <h6 class="border-bottom border-gray pb-2 mb-0">Online Users</h6>
+                            <h6 class="cardTitle border-bottom border-gray pb-2 mb-0">Online Users</h6>
                             <div class="media text-muted pt-3">
                                 <img src="assets/images/users/user-2.jpg" alt="Online user" class="mr-2 onlineUserImage">
                                 <div class="media-body pb-3 mb-0 small lh-125">
@@ -252,7 +245,7 @@
                                         <strong class="text-gray-dark">Karen Minas</strong>
                                         <span class="onlineStatus bg-success"></span>
                                     </div>
-                                    <span class="d-block">@karen_minas</span>
+                                    <span class="d-block onlineUsername">@karen_minas</span>
                                 </div>
                             </div>
                             <div class="media text-muted pt-3">
@@ -282,7 +275,7 @@
 
                         <!-- Suggestions -->
                         <div class="mt-4 p-3 bg-white rounded w-shadow">
-                            <h6 class="border-bottom border-gray pb-2 mb-0">People You May Know</h6>
+                            <h6 class="cardTitle border-bottom border-gray pb-2 mb-0">People You May Know</h6>
                             <div class="media text-muted pt-3">
                                 <img src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg" alt="Online user" class="mr-2 onlineUserImage">
                                 <div class="media-body pb-3 mb-0 small lh-125">
@@ -310,7 +303,7 @@
 
                         <!-- Suggestions -->
                         <div class="mt-4 p-3 bg-white rounded w-shadow">
-                            <h6 class="border-bottom border-gray pb-2 mb-0">Popular Tags</h6>
+                            <h6 class="cardTitle border-bottom border-gray pb-2 mb-0">Popular Tags</h6>
                             <div class="media text-muted pt-3">
                                 <div class="media-body pb-3 mb-0 small lh-125 popularTags">
                                     <span class="badge badge-primary">love</span>
@@ -325,10 +318,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-md-3 fourSection">
                         <div class="card w-shadow">
                             <div class="card-body">
-                                <h5 class="card-title">Dashboard</h5>
+                                <h5 class="card-title cardTitle">Dashboard</h5>
                                 <hr>
                                 <p>Likes count</p>
                                 <canvas id="likesChart"></canvas>
@@ -338,7 +331,7 @@
                         </div>
                         <div class="card mt-4">
                             <div class="card-body">
-                                <h5 class="card-title">Sponsored</h5>
+                                <h5 class="card-title cardTitle">Sponsored</h5>
                                 <hr>
                                 <img class="card-img-top" src="http://blog.creative-tim.com/wp-content/uploads/2015/08/how-we-started1-730x410.jpg" alt="Card image cap">
                                 <a href="#" class="card-title mt-2 d-block">Creative Tim</a>
@@ -355,11 +348,14 @@
     <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
     <script src="assets/js/popper/popper.min.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.1/bootstrap3-typeahead.min.js"></script>
     <!-- Optional -->
-    <script src="assets/js/alertMsg.js?v=<?= VERSION; ?>"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script type="text/javascript">
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
     <script src="assets/js/app.js"></script>
-</body>
-
-</html>
+</body></html>

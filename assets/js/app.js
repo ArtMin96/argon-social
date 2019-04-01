@@ -29,8 +29,8 @@ var myPieChart = new Chart(followersChart, {
             'Following'
         ],
         datasets: [{
-            backgroundColor: 'rgb(0, 123, 255)',
-            data: [10, 20]
+            backgroundColor: ['rgb(0, 123, 255)', 'rgb(50,205,50)'],
+            data: [32, 17]
         }]
     },
     // Configuration options go here
@@ -55,3 +55,9 @@ $(function () {
         $(this).select();
     });
 });
+
+// Sidebar
+//$('#menu-toggle').click(function(e) {
+//    e.preventDefault();
+//    $('#wrapper').toggleClass('sidebar-displayed');
+//});
