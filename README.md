@@ -19,9 +19,9 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Pages
 
-- [Newsfeed]
-- [Sign Up]
-- [Sign In]
+- Newsfeed
+- Sign Up
+- Sign In
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
