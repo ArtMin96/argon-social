@@ -1,7 +1,7 @@
 <h1 align="center"> Argon Social </h1> <br>
 <p align="center">
   <a href="https://artmin96.github.io/ruah-social/">
-    <img alt="GitPoint" title="GitPoint" src="https://github.com/ArtMin96/ruah-social/blob/master/assets/images/logo-256x256.png" width="450">
+    <img alt="Argon Social" title="Argon Social" src="https://github.com/ArtMin96/ruah-social/blob/master/assets/images/logo-256x256.png" width="450">
   </a>
 </p>
 
@@ -28,5 +28,5 @@
 ## Screenshot
 
 <p align="center">
-  <img src = "https://ibb.co/nBHzYnx" width=350>
+  <img src = "https://mega.nz/#!cj40TChS!flqTTgTNZ0F8HaMUDioUkTiTbgrT2Er7q96RGwcnYWE" width=350>
 </p>
