@@ -305,3 +305,37 @@ a:hover {
     width: 100%;
     height: 300px
 }
+
+/* Posts */
+.postDropdownMenu {
+    padding: 0;
+    min-width: 17rem;
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, .2);
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, .2);
+}
+
+.postDropdownMenu a:focus {
+    background-color: #d1d3d6;
+}
+
+.postDropdownMenu .dropdown-item {
+    padding: 0.3rem 0.8rem;
+}
+
+.postDropdownMenu .form-text {
+    margin-top: 0;
+}
+
+.postOptionIcon {
+    vertical-align: -webkit-baseline-middle;
+    font-size: 1.2rem;
+}
+
+.postOptionTitle {
+    font-size: 0.9rem;
+}
+
+#savePost {
+    font-size: 0.7rem;
+}
