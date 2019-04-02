@@ -28,5 +28,5 @@
 ## Screenshot
 
 <p align="center">
-  <img src = "https://github.com/ArtMin96/ruah-social/blob/master/screenshots/Screenshot.png" width=800>
+  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Screenshot-1.png" width=800>
 </p>
