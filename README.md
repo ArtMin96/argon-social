@@ -31,6 +31,8 @@
   <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Screenshot-1.png" width=800>
 </p>
 
+**Screenshot 2**
+
 <p align="center">
   <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Screenshot-3.png" width=800>
 </p>
