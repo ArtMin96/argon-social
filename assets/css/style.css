@@ -21,6 +21,11 @@ a:hover {
     box-shadow: 5px 30px 26px -20px #b6b6b6
 }
 
+/* Fonts */
+.fs-8 {
+    font-size: 0.8rem;
+}
+
 .onlineStatus {
     display: inline-block;
     border-radius: 50%;
@@ -227,22 +232,26 @@ a:hover {
     border-top-right-radius: 10px
 }
 
-#postForm::-webkit-scrollbar, body::-webkit-scrollbar {
+#postForm::-webkit-scrollbar,
+body::-webkit-scrollbar {
     width: 10px;
 }
 
 /* Track */
-#postForm::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+#postForm::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
 /* Handle */
-#postForm::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+#postForm::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
     background: #888;
 }
 
 /* Handle on hover */
-#postForm::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
+#postForm::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
@@ -404,6 +413,72 @@ a:hover {
 /* Posts */
 .shareDropup {
     display: inline-block;
+}
+
+.comment-wrapper .panel-body {
+    max-height: 650px;
+    overflow: hidden;
+}
+
+.comment-wrapper .media-list .media img {
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.comment-wrapper .media-list .media {
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 25px;
+}
+
+.comment-wrapper .media-list .media:first-child {
+    border-bottom: 0;
+}
+
+.comment-wrapper .media-list .media:last-child {
+    border-bottom: 0;
+    margin: 0;
+}
+
+.commentsList {
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.commentText, .commentUserName {
+    font-size: 0.8rem;
+}
+
+.commentCreatedTime {
+    font-size: 0.7rem;
+    color: #6c757d;
+}
+
+.commentInput {
+    border-radius: 30px !important;
+    font-size: 0.8rem;
+}
+
+.commentFormBtn {
+    background-color: #d1d3d6;
+    color: #6c757d;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.commentFormBtn:hover {
+    background-color: #6c757d;
+    color: #d1d3d6;
+}
+
+.commentLR button {
+    padding: 0 0 1rem;
+}
+
+.commentSeeMore {
+    
 }
 
 /* Online users section */
