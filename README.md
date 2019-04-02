@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  Watch DEMO
+  Watch DEMO - v0.1
 </p>
 
 <p align="center">

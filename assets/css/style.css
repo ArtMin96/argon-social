@@ -360,6 +360,27 @@ a:hover {
     font-size: 0.7rem;
 }
 
+/* Quick links */
+.btnQuickLinks {
+    background-color: #fff;
+    color: #6c757d;
+    flex: 1;
+}
+
+.btnQuickLinks i {
+    font-size: 1.5rem;
+    vertical-align: bottom;
+}
+
+.btnQuickLinks .qlName {
+    font-size: .8rem !important;
+}
+
+.qlActive {
+    background-color: #007bff;
+    color: #fff;
+}
+
 /* Menu */
 #navbar-main {
     padding: 0 1rem;

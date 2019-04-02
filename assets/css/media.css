@@ -231,10 +231,6 @@
         font-size: .7em
     }
 
-    .onlineStatus {
-        width: 5px;
-        height: 5px
-    }
 
     .cardTitle {
         font-size: .9rem
@@ -256,10 +252,6 @@
 
     .userNewsfeedImage {
         width: 100px
-    }
-
-    .newsfeedLoggedUser {
-        padding-left: 20px
     }
 
     .fourSection {
