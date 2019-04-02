@@ -49,11 +49,23 @@
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <a href="#" class="newsfeedLTI"><i class='bx bx-group text-primary'></i> Groups</a>
-                            <span class="badge badge-primary badge-pill">1</span>
+                            <span class="badge badge-primary badge-pill">17</span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <a href="#" class="newsfeedLTI"><i class='bx bx-calendar text-primary'></i> Events</a>
-                            <span class="badge badge-primary badge-pill">1</span>
+                            <span class="badge badge-primary badge-pill">3</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#" class="newsfeedLTI"><i class='bx bx-bookmarks text-primary'></i> Saved</a>
+                            <span class="badge badge-primary badge-pill">8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#" class="newsfeedLTI"><i class='bx bxs-user-detail text-primary'></i> Find Friends</a>
+                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <a href="#" class="newsfeedLTI"><i class='bx bx-carousel text-primary'></i> Matches</a>
+                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
                         </li>
                         <li class="list-group-item d-flex justify-content-between align-items-center">
                             <a href="#" class="newsfeedLTI"><i class='bx bxl-slack-old text-primary'></i> Argon For Teams</a>
@@ -79,9 +91,9 @@
                     <div class="collapse navbar-collapse" id="main_menu">
                         <form class="w-50 mx-2 my-auto d-inline form-inline ml-5">
                             <div class="input-group">
-                                <input type="text" class="typeahead form-control searchInput" placeholder="Search for people, companies, events and more..." aria-label="Search" aria-describedby="basic-addon2">
+                                <input type="text" class="typeahead form-control searchInput form-control form-control-dark w-75" placeholder="Search for people, companies, events and more..." aria-label="Search" aria-describedby="basic-addon2">
                                 <div class="input-group-append">
-                                    <button class="btn btn-primary searchButton" type="button"><i class='bx bx-search'></i></button>
+                                    <button class="btn searchButton" type="button"><i class='bx bx-search'></i></button>
                                 </div>
                             </div>
                         </form>
@@ -90,15 +102,20 @@
                         </ul>
                         <ul class="navbar-nav mr-5">
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="nav-link dropdown-toggle navLinks" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                                <div class="dropdown-menu dropdown-menu-right navDrop">
                                     <a class="dropdown-item" href="sign-in.html">Sign in</a>
                                     <a class="dropdown-item" href="sign-up.html">Sign up</a>
                                 </div>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Arthur</a>
-                                <div class="dropdown-menu dropdown-menu-right">
+                                <a href="#" class="nav-link dropdown-toggle navLinks" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <div class="menuUserImage">
+                                        <img src="assets/images/users/user-4.jpg" class="menuUserImg ml-1" alt="Menu Image">
+                                    </div>
+                                    <span class="ml-2">Arthur</span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right navDrop">
                                     <a class="dropdown-item" href="profile.html"><i class='bx bx-user mr-2'></i> Account</a>
                                     <a class="dropdown-item" href="settings.html"><i class='bx bx-cog mr-2'></i> Settings</a>
                                     <div role="separator" class="dropdown-divider"></div>
@@ -208,7 +225,43 @@
                                 <div class="postCardFooter">
                                     <a href="#" class="postCardButtons"><i class='bx bxs-like mr-2'></i> 67</a>
                                     <a href="#" class="postCardButtons"><i class='bx bx-message-rounded mr-2'></i> 5</a>
-                                    <a href="#" class="postCardButtons"><i class='bx bx-share-alt mr-2'></i> Share</a>
+                                    <div class="dropdown dropup shareDropup">
+                                        <a href="#" class="postCardButtons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class='bx bx-share-alt mr-2'></i> Share
+                                        </a>
+                                        <div class="dropdown-menu postDropdownMenu">
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-share-alt postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Share Now (Public)</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-share-alt postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Share...</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-message postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Send as Message</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="post border-bottom p-3 bg-white w-shadow">
@@ -284,7 +337,43 @@
                                 <div class="postCardFooter">
                                     <a href="#" class="postCardButtons"><i class='bx bx-like mr-2'></i> 13</a>
                                     <a href="#" class="postCardButtons"><i class='bx bx-message-rounded mr-2'></i> 5</a>
-                                    <a href="#" class="postCardButtons"><i class='bx bx-share-alt mr-2'></i> Share</a>
+                                    <div class="dropdown dropup shareDropup">
+                                        <a href="#" class="postCardButtons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class='bx bx-share-alt mr-2'></i> Share
+                                        </a>
+                                        <div class="dropdown-menu postDropdownMenu">
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-share-alt postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Share Now (Public)</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-share-alt postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Share...</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-message postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Send as Message</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="post border-bottom p-3 bg-white w-shadow">
@@ -357,7 +446,43 @@
                                 <div class="postCardFooter">
                                     <a href="#" class="postCardButtons"><i class='bx bx-like mr-2'></i> 139</a>
                                     <a href="#" class="postCardButtons"><i class='bx bx-message-rounded mr-2'></i> 4</a>
-                                    <a href="#" class="postCardButtons"><i class='bx bx-share-alt mr-2'></i> Share</a>
+                                    <div class="dropdown dropup shareDropup">
+                                        <a href="#" class="postCardButtons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class='bx bx-share-alt mr-2'></i> Share
+                                        </a>
+                                        <div class="dropdown-menu postDropdownMenu">
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-share-alt postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Share Now (Public)</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-share-alt postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Share...</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-message postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Send as Message</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="post border-bottom p-3 bg-white w-shadow">
@@ -430,7 +555,43 @@
                                 <div class="postCardFooter">
                                     <a href="#" class="postCardButtons"><i class='bx bx-like mr-2'></i> 74</a>
                                     <a href="#" class="postCardButtons"><i class='bx bx-message-rounded mr-2'></i> 5</a>
-                                    <a href="#" class="postCardButtons"><i class='bx bx-share-alt mr-2'></i> Share</a>
+                                    <div class="dropdown dropup shareDropup">
+                                        <a href="#" class="postCardButtons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class='bx bx-share-alt mr-2'></i> Share
+                                        </a>
+                                        <div class="dropdown-menu postDropdownMenu">
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-share-alt postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Share Now (Public)</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-share-alt postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Share...</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="dropdown-item">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <i class='bx bx-message postOptionIcon'></i>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <span class="postOptionTitle">Send as Message</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +603,7 @@
                                 <img src="assets/images/users/user-2.jpg" alt="Online user" class="mr-2 onlineUserImage">
                                 <div class="media-body pb-3 mb-0 small lh-125">
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <strong class="text-gray-dark">Karen Minas</strong>
+                                        <strong class="text-gray-dark"><a href="#" class="smFLname">Karen Minas</a></strong>
                                         <span class="onlineStatus bg-success"></span>
                                     </div>
                                     <span class="d-block onlineUsername">@karen_minas</span>
@@ -452,7 +613,7 @@
                                 <img src="assets/images/users/user-3.jpg" alt="Online user" class="mr-2 onlineUserImage">
                                 <div class="media-body pb-3 mb-0 small lh-125">
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <strong class="text-gray-dark">Hakob Minasyan</strong>
+                                        <strong class="text-gray-dark"><a href="#" class="smFLname">Hakob Minasyan</a></strong>
                                         <span class="onlineStatus bg-success"></span>
                                     </div>
                                     <span class="d-block">@hakob_minasyan</span>
@@ -462,7 +623,7 @@
                                 <img src="assets/images/users/user-1.jpg" alt="Online user" class="mr-2 onlineUserImage">
                                 <div class="media-body pb-3 mb-0 small lh-125">
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <strong class="text-gray-dark">Ծովինար Գրիգորյան</strong>
+                                        <strong class="text-gray-dark"><a href="#" class="smFLname">Ծովինար Գրիգորյան</a></strong>
                                         <span class="onlineStatus bg-success"></span>
                                     </div>
                                     <span class="d-block">@ծովինար_գրիգորյան</span>
@@ -480,7 +641,7 @@
                                 <img src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg" alt="Online user" class="mr-2 onlineUserImage">
                                 <div class="media-body pb-3 mb-0 small lh-125">
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <strong class="text-gray-dark" style="line-height: 0;">John Michael</strong>
+                                        <strong class="text-gray-dark" style="line-height: 0;"><a href="#" class="smFLname">John Michael</a></strong>
                                         <a href="#" data-toggle="tooltip" data-placement="top" title="Follow"><i class='bx bxs-plus-circle' style="font-size: 2.5em; color: #969696;"></i></a>
                                     </div>
                                     <span class="d-block" style="line-height: 8px;">4 mutual friends</span>
@@ -490,7 +651,7 @@
                                 <img src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-3.jpg" alt="Online user" class="mr-2 onlineUserImage">
                                 <div class="media-body pb-3 mb-0 small lh-125">
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <strong class="text-gray-dark" style="line-height: 0;">Samantha Ivy</strong>
+                                        <strong class="text-gray-dark" style="line-height: 0;"><a href="#" class="smFLname">Samantha Ivy</a></strong>
                                         <a href="#" data-toggle="tooltip" data-placement="top" title="Follow"><i class='bx bxs-plus-circle' style="font-size: 2.5em; color: #969696;"></i></a>
                                     </div>
                                     <span class="d-block" style="line-height: 8px;">1 mutual friends</span>
@@ -556,9 +717,6 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
-
     </script>
     <script src="assets/js/app.js"></script>
-</body>
-
-</html>
+</body></html>

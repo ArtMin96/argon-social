@@ -5,7 +5,8 @@ body {
     overflow-x: hidden
 }
 
-.form-control:focus {
+.form-control:focus,
+.btn:focus {
     border-color: #ccc;
     -webkit-box-shadow: none;
     box-shadow: none
@@ -36,17 +37,16 @@ a:hover {
 
 .searchButton {
     border-left: 0;
-    border-color: #ccc;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px
+    border-color: #fff;
+    border-radius: 0;
+    background-color: #fff;
 }
 
 .searchInput {
+    padding: .75rem 1rem;
+    border-width: 0;
+    border-radius: 0;
     font-size: .8em;
-    padding-left: 30px;
-    border-right: 0;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px
 }
 
 .authPage {
@@ -227,6 +227,25 @@ a:hover {
     border-top-right-radius: 10px
 }
 
+#postForm::-webkit-scrollbar, body::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+#postForm::-webkit-scrollbar-track, body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+#postForm::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+/* Handle on hover */
+#postForm::-webkit-scrollbar-thumb:hover, body::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .postInput {
     margin-bottom: 1.5em
 }
@@ -285,7 +304,7 @@ a:hover {
 .postCardButtons {
     margin-top: 15px;
     padding: 10px 25px;
-    color: #6c757d
+    color: #6c757d;
 }
 
 .postCardButtons:hover {
@@ -336,6 +355,43 @@ a:hover {
     font-size: 0.9rem;
 }
 
-#savePost {
+#savePost,
+.navDrop {
     font-size: 0.7rem;
+}
+
+/* Menu */
+#navbar-main {
+    padding: 0 1rem;
+}
+
+.navLinks {
+    font-size: 0.8rem;
+    line-height: 2;
+}
+
+.menuUserImage {
+    width: 30px;
+    display: inline-block;
+}
+
+.menuUserImg {
+    width: 100%;
+    border-radius: 50%;
+}
+
+/* Posts */
+.shareDropup {
+    display: inline-block;
+}
+
+/* Online users section */
+.smFLname {
+    color: #6c757d;
+}
+
+/* Popular tags */
+.popularTags span {
+    margin: 0.1rem 0.1rem;
+    font-size: .7rem;
 }

@@ -55,9 +55,3 @@ $(function () {
         $(this).select();
     });
 });
-
-// Sidebar
-//$('#menu-toggle').click(function(e) {
-//    e.preventDefault();
-//    $('#wrapper').toggleClass('sidebar-displayed');
-//});
