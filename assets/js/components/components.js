@@ -40,7 +40,7 @@ $(".expand-button").click(function () {
     $("#contacts").toggleClass("expanded");
 });
 
-$("#status-options ul#set-online-status li").click(function () {
+$("#status-options ul li").click(function () {
     $(".conv-img").removeClass();
     $("#status-online").removeClass("messenger-user-active");
     $("#status-away").removeClass("messenger-user-active");
