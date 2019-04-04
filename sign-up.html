@@ -16,31 +16,135 @@
     <!-- Styles -->
     <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/auth.css" rel="stylesheet">
     <link href="assets/css/media.css" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container-fluid authWrapper">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="authLeftSide">
-                    <div class="alsTop d-flex justify-content-between">
-                        <div class="weatherSm text-white">
-                            <p><i class='bx bx-sun'></i> <span>14&deg;</span></p>
-                            <p class="weatherSmCity">Gyumri</p>
+    <div class="row ht-100v flex-row-reverse no-gutters">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="signup-form">
+                <div class="auth-logo text-center mb-5">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="assets/images/logo-64x64.png" class="logo-img" alt="Logo">
                         </div>
-                        <div class="authLogo">
-                            <a href="sign-up.html"><img src="assets/images/logo-64x64.png" alt="Logo"></a>
+                        <div class="col-md-10">
+                            <p>Argon Social Network</p>
+                            <span>Design System</span>
                         </div>
-                    </div>
-                    <div class="alsMiddle d-flex align-items-center h-100">
-                        <h4>Welcome Back</h4>
                     </div>
                 </div>
+                <form action="" method="" class="pt-5">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="" placeholder="Phone Number">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control">
+                                    <option value="">- Select Day -</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control">
+                                    <option value="">- Select Month -</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <select name="" id="" class="form-control">
+                                    <option value="">- Select Year -</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="" placeholder="Confirm Password">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <p class="agree-privacy">By clicking the Sign Up button below you agreed to our privacy policy and terms of use of our website.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <span class="go-login">Already a member? <a href="sign-in.html">Sign In</a></span>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary sign-up">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
             </div>
-            <div class="col-md-5">
-                <div class="authRightSide">
-                    
+        </div>
+        <div class="col-md-6 auth-bg-image d-flex justify-content-center align-items-center">
+            <div class="auth-left-content mt-5 mb-5 text-center">
+                <div class="weather-small text-white">
+                    <p class="current-weather"><i class='bx bx-sun'></i> <span>14&deg;</span></p>
+                    <p class="weather-city">Gyumri</p>
+                </div>
+                <div class="text-white mt-5 mb-5">
+                    <h2 class="create-account mb-3">Create Account</h2>
+                    <p>Enter your personal details and start journey with us.</p>
+                </div>
+                <div class="auth-quick-links">
+                    <a href="#" class="btn btn-outline-primary">Purchase template</a>
                 </div>
             </div>
         </div>
@@ -52,6 +156,4 @@
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
     <!-- Optional -->
     <script src="assets/js/app.js"></script>
-</body>
-
-</html>
+</body></html>

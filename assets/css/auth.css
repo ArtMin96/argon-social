@@ -1,0 +1,107 @@
+/*******************************************
+************ Authentication Page************
+*******************************************/
+
+.ht-100v {
+    height: 100vh;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse !important;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.auth-bg-image {
+    background: url(https://cdn.pixabay.com/photo/2016/10/29/09/21/abstract-1780139_1280.png) no-repeat;
+    background-size: cover;
+}
+
+.auth-left-content,
+.signup-form {
+    width: 500px;
+}
+
+.weather-small .current-weather {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+}
+
+.weather-city {
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+}
+
+.create-account {
+    font-size: 3rem;
+}
+
+.auth-quick-links a {
+    border-radius: 30px;
+    padding: 0.5rem 5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.sign-up {
+    border-radius: 30px;
+    padding: 0.5rem 2rem;
+}
+
+.auth-logo {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.auth-logo p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.auth-logo span {
+    text-align: left;
+}
+
+.auth-logo span.break-line {
+    font-size: 1rem;
+    color: #868ba1;
+}
+
+.agree-privacy {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #868ba1;
+}
+
+.go-login {
+    vertical-align: -webkit-baseline-middle;
+}
+
+.remember-checkbox {
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+}
+
+@media (max-width: 998px) {
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+    
+    .auth-logo {
+        margin-top: 3rem;
+    }
+}

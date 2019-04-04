@@ -62,60 +62,6 @@ button:focus {
 }
 
 /*******************************************
-************ Authentication Page************
-*******************************************/
-
-.authWrapper {
-    margin: 0;
-    padding: 0;
-}
-
-.authLeftSide {
-    width: 100%;
-    height: 100vh;
-    background: url(../images/background/auth-bg-1.jpg) no-repeat;
-    background-size: cover;
-    position: relative;
-    padding: 1rem 2rem;
-}
-
-.authLeftSide:before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    display: block;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 0;
-}
-
-.authLeftSide .alsTop {
-    position: relative;
-}
-
-.authLeftSide .alsTop .weatherSm {
-    font-size: 2rem;
-    line-height: 0;
-}
-
-.authLeftSide .alsTop .weatherSm .weatherSmCity {
-    font-size: 1rem;
-    text-align: center;
-}
-
-.authLeftSide .alsMiddle {
-    position: relative;
-}
-
-.authLeftSide .alsMiddle h1 {
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 4rem;
-}
-
-/*******************************************
 ********** End Authentication Page**********
 *******************************************/
 

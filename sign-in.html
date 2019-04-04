@@ -4,89 +4,86 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="assets/images/logo-16x16.png" />
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Social Network</title>
-    <script src="assets/js/pace.min.js"></script>
+    <title>Argon - Social Network</title>
 
     <!-- Fonts -->
-    <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
     <link href='https://cdn.jsdelivr.net/npm/boxicons@1.9.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="<?=PROOT?>front-resources/css/fontawesome/css/all.min.css">
-
-    <!-- Icons -->
-    <link href="assets/css/all.css" rel="stylesheet">
 
     <!-- Styles -->
     <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/style.css?v=<?= VERSION; ?>" rel="stylesheet">
-    <link href="assets/css/alertMsg.css?v=<?= VERSION; ?>" rel="stylesheet">
-    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
-    <link href="assets/css/components.css" rel="stylesheet">
-    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/auth.css" rel="stylesheet">
+    <link href="assets/css/media.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_menu" aria-controls="main_menu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <a class="navbar-brand mr-lg-5" href="index.html">Ruah Social</a>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="main_menu">
-            <ul class="navbar-nav mr-auto">
-
-            </ul>
-            <ul class="navbar-nav mr-5">
-                <li class="nav-item"><a class="nav-link" href="sign-in.html">Sign In</a></li>
-                <li class="nav-item"><a class="nav-link" href="sign-up.html">Sign Up</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </nav>
-    <div class="container authPage">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row authCard">
-                    <div class="col-md-6">
-                        <div class="authLeftSideLogin">
-
+    <div class="row ht-100v flex-row-reverse no-gutters">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="signup-form">
+                <div class="auth-logo text-center mb-5">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="assets/images/logo-64x64.png" class="logo-img" alt="Logo">
+                        </div>
+                        <div class="col-md-10">
+                            <p>Argon Social Network</p>
+                            <span>Design System</span>
                         </div>
                     </div>
-                    <div class="col-md-6 authForm">
-                        <h3 class="text-center">Log In</h3>
-                        <form class="form" action="" method="post">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="username">Username</label>
-                                        <input type="text" class="form-control" id="username" name="">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="password">Password</label>
-                                        <input type="password" class="form-control" id="password" name="">
-                                    </div>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="remember_me">Remember me</label>
-                                        <input type="checkbox" id="remember_me" name="">
-                                    </div>
-                                </div>
-                                <div class="col-md-8 mt-3">
-                                    <div class="flex-grow-1 text-body">Don't have an account? <a href="sign-up.html">Sign Up</a></div>
-                                </div>
-                                <div class="col-md-4 mt-2">
-                                    <button type="submit" class="btn btn-primary">Login</button>
+                </div>
+                <form action="" method="" class="pt-5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="" placeholder="Email Address">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="" placeholder="Password">
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <a href="forgot-password.html">Forgot password?</a>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group remember-checkbox">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                    <label class="form-check-label" for="gridCheck">
+                                        Remember Me
+                                    </label>
                                 </div>
                             </div>
-                        </form>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-primary sign-up">Sign In</button>
+                            </div>
+                        </div>
+                        <div class="col-md-12 text-center mt-5">
+                            <span class="go-login">Not yet a member? <a href="sign-up.html">Sign Up</a></span>
+                        </div>
                     </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 auth-bg-image d-flex justify-content-center align-items-center">
+            <div class="auth-left-content mt-5 mb-5 text-center">
+                <div class="weather-small text-white">
+                    <p class="current-weather"><i class='bx bx-sun'></i> <span>14&deg;</span></p>
+                    <p class="weather-city">Gyumri</p>
+                </div>
+                <div class="text-white mt-5 mb-5">
+                    <h2 class="create-account mb-3">Welcome Back</h2>
+                    <p>Thank you for joining. Updates and new features are released daily.</p>
+                </div>
+                <div class="auth-quick-links">
+                    <a href="#" class="btn btn-outline-primary">Purchase template</a>
                 </div>
             </div>
         </div>
@@ -97,9 +94,5 @@
     <script src="assets/js/popper/popper.min.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
     <!-- Optional -->
-    <script src="assets/js/alertMsg.js?v=<?= VERSION; ?>"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script src="assets/js/app.js"></script>
-</body>
-
-</html>
+</body></html>
