@@ -37,30 +37,8 @@ var myPieChart = new Chart(followersChart, {
     options: {}
 });
 
-// Video.js
+// Tooltip
 $(function () {
-    var $refreshButton = $('#refresh');
-    var $results = $('#css_result');
-
-    function refresh() {
-        var css = $('style.cp-pen-styles').text();
-        $results.html(css);
-    }
-
-    refresh();
-    $refreshButton.click(refresh);
-
-    // Select all the contents when clicked
-    $results.click(function () {
-        $(this).select();
-    });
+    $('[rel="tooltip"]').tooltip();
 });
 
-// Show comment section
-$(document).ready(function () {
-    $('#show-comments').click(function () {
-        $('.hide-comments').slideToggle("slow");
-        // Alternative animation for example
-        // slideToggle("fast");
-    });
-});

@@ -1,15 +1,30 @@
+/*!
+ * Argon Social v0.1 (https://artmin96.github.io/argon-social)
+ * Copyright 2019 Arthur Minasyan
+ * Licensed under MIT (https://github.com/ArtMin96/argon-social/blob/master/LICENSE.md)
+ */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
 body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow-x: hidden
+    overflow-x: hidden;
 }
 
-.form-control:focus,
-.btn:focus {
-    border-color: #ccc;
-    -webkit-box-shadow: none;
-    box-shadow: none
+@-ms-viewport {
+    width: device-width
 }
 
 a,
@@ -17,16 +32,94 @@ a:hover {
     text-decoration: none
 }
 
+.form-control:focus,
+.btn:focus,
+button:focus {
+    border-color: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none
+}
+
 .w-shadow {
     box-shadow: 5px 30px 26px -20px #b6b6b6
 }
 
 /* Fonts */
+.fs-7 {
+    font-size: 0.7rem;
+}
+
 .fs-8 {
     font-size: 0.8rem;
 }
 
-.onlineStatus {
+.fs-9 {
+    font-size: 0.9rem;
+}
+
+.fs-1 {
+    font-size: 1rem;
+}
+
+/*******************************************
+************ Authentication Page************
+*******************************************/
+
+.authWrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.authLeftSide {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/background/auth-bg-1.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 1rem 2rem;
+}
+
+.authLeftSide:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 0;
+}
+
+.authLeftSide .alsTop {
+    position: relative;
+}
+
+.authLeftSide .alsTop .weatherSm {
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.authLeftSide .alsTop .weatherSm .weatherSmCity {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.authLeftSide .alsMiddle {
+    position: relative;
+}
+
+.authLeftSide .alsMiddle h1 {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 4rem;
+}
+
+/*******************************************
+********** End Authentication Page**********
+*******************************************/
+
+.online-status {
     display: inline-block;
     border-radius: 50%;
     width: 50%;
@@ -40,14 +133,14 @@ a:hover {
     background-color: #343a40
 }
 
-.searchButton {
+.search-button {
     border-left: 0;
     border-color: #fff;
     border-radius: 0;
     background-color: #fff;
 }
 
-.searchInput {
+.search-input {
     padding: .75rem 1rem;
     border-width: 0;
     border-radius: 0;
@@ -89,44 +182,50 @@ a:hover {
     background-color: #e9ebee
 }
 
-.newsfeedRightSide {
+/*
+.newsfeed-size {
+    width: 100%;
+}
+*/
+
+.newsfeed-right-side {
     padding: 0
 }
 
-.newsfeedLeftSide {
+.newsfeed-left-side {
     height: 100vh;
     padding-right: 0;
     background-color: #fff
 }
 
-.newsfeedUserCard {
+.newsfeed-user-card {
     margin-bottom: 40px;
     border-radius: 0;
     border-bottom: 0
 }
 
-.newsfeedLeftSidebar {
+.newsfeed-left-sidebar {
     height: 100%;
     margin: 0;
     padding: 50px 0;
     box-shadow: inset 5px 30px 26px -40px #b6b6b6
 }
 
-.newsfeedLeftSidebar li {
+.newsfeed-left-sidebar li {
     border: 0
 }
 
-.newsfeedLeftSidebar li.sdActive {
+.newsfeed-left-sidebar li.sd-active {
     border-left: 4px solid #007bff;
     background-color: #f6f6f6
 }
 
-.newsfeedRightSideContent {
+.newsfeed-right-side-content {
     width: 95%;
     margin: 0 auto
 }
 
-.newsfeedLoggedUser {
+.newsfeed-logged-user {
     -webkit-transform: skewY(-2deg);
     -moz-transform: skewY(-2deg);
     -ms-transform: skewY(-2deg);
@@ -135,9 +234,9 @@ a:hover {
     overflow: hidden
 }
 
-.newsfeedLoggedUser .col-md-4,
-.newsfeedUserInfo,
-.userNewsfeedImage {
+.newsfeed-logged-user .col-md-4,
+.newsfeed-user-info,
+.user-newsfeed-image {
     -webkit-transform: skewY(2deg);
     -moz-transform: skewY(2deg);
     -ms-transform: skewY(2deg);
@@ -145,7 +244,7 @@ a:hover {
     transform: skewY(2deg)
 }
 
-.newsfeedLeftSidebar {
+.newsfeed-left-sidebar {
     -webkit-transform: skewY(-2deg);
     -moz-transform: skewY(-2deg);
     -ms-transform: skewY(-2deg);
@@ -154,7 +253,7 @@ a:hover {
     overflow: hidden
 }
 
-.newsfeedLeftSidebar .list-group-item {
+.newsfeed-left-sidebar .list-group-item {
     -webkit-transform: skewY(2deg);
     -moz-transform: skewY(2deg);
     -ms-transform: skewY(2deg);
@@ -168,41 +267,35 @@ a:hover {
     width: 100%
 }
 
-.newsfeedLoggedUser .col-md-8 {
+.newsfeed-logged-user .col-md-8 {
     padding: 0
 }
 
-.userNewsfeedImage {
+.user-newsfeed-image {
     padding-top: 10px;
     border-radius: 50%;
-    box-shadow: 5px 30px 26px -20px #b6b6b6
-}
-
-.newsfeedCardUsername,
-.newsfeedUsername {
-    font-size: .7em
 }
 
 .newsfeedUserLocation {
     padding: 30px 5px 5px
 }
 
-.newsfeedLTI i {
+.sidebar-item i {
     font-size: 1.5em;
     margin-right: 5px;
     vertical-align: bottom
 }
 
-.newsfeedLTI {
+.sidebar-item {
     color: #000;
-    font-size: .8em
+    font-size: 0.8rem
 }
 
 #sidebar-wrapper {
-    -webkit-transition: margin .25s ease-out;
-    -moz-transition: margin .25s ease-out;
-    -o-transition: margin .25s ease-out;
-    transition: margin .25s ease-out
+    -webkit-transition: margin 0.25s ease-out;
+    -moz-transition: margin 0.25s ease-out;
+    -o-transition: margin 0.25s ease-out;
+    transition: margin 0.25s ease-out
 }
 
 .postFormHeader {
@@ -215,7 +308,7 @@ a:hover {
     margin: 0
 }
 
-.postForm {
+.post-form {
     background-color: #d1d3d6;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px
@@ -233,38 +326,42 @@ a:hover {
 }
 
 #postForm::-webkit-scrollbar,
+.message-contacts::-webkit-scrollbar,
 body::-webkit-scrollbar {
     width: 10px;
 }
 
 /* Track */
 #postForm::-webkit-scrollbar-track,
+.message-contacts::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
 /* Handle */
 #postForm::-webkit-scrollbar-thumb,
+.message-contacts::-webkit-scrollbar-thumb,
 body::-webkit-scrollbar-thumb {
     background: #888;
 }
 
 /* Handle on hover */
 #postForm::-webkit-scrollbar-thumb:hover,
+.message-contacts::-webkit-scrollbar-thumb:hover,
 body::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
-.postInput {
+.post-input {
     margin-bottom: 1.5em
 }
 
-.postFormBtn {
+.post-form-btn {
     color: #76747c;
     font-weight: 700
 }
 
-.postFormBtn:hover {
+.post-form-btn:hover {
     color: #5d5c60;
     text-decoration: none
 }
@@ -274,16 +371,16 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 20px
 }
 
-.onlineUserImage {
+.online-user-image {
     width: 15%;
     border-radius: 50%
 }
 
-.onlineUsername {
+.online-username {
     display: block
 }
 
-.popularTags {
+.popular-tags {
     font-size: 1em
 }
 
@@ -291,36 +388,36 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%
 }
 
-.postUserImage {
+.post-user-image {
     width: 8%;
     border-radius: 50%
 }
 
-.postUserName {
+.post-user-name {
     font-size: 1.2em;
     font-weight: 700
 }
 
-.postMoreSettings {
+.post-more-settings {
     font-size: 1.5em
 }
 
-.postContent {
+.post-content {
     width: 100%;
     margin-bottom: 20px
 }
 
-.postCardButtons {
+.post-card-buttons {
     margin-top: 15px;
     padding: 10px 25px;
     color: #6c757d;
 }
 
-.postCardButtons:hover {
+.post-card-buttons:hover {
     color: #6c757d
 }
 
-.postCardButtons i {
+.post-card-buttons i {
     font-size: 1.3em;
     vertical-align: top
 }
@@ -334,8 +431,10 @@ body::-webkit-scrollbar-thumb:hover {
     height: 300px
 }
 
-/* Posts */
-.postDropdownMenu {
+/*******************************************
+****************** Posts *******************
+*******************************************/
+.post-dropdown-menu {
     padding: 0;
     min-width: 17rem;
     -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, .2);
@@ -343,49 +442,41 @@ body::-webkit-scrollbar-thumb:hover {
     box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, .2);
 }
 
-.postDropdownMenu a:focus {
+.post-dropdown-menu a:focus {
     background-color: #d1d3d6;
 }
 
-.postDropdownMenu .dropdown-item {
+.post-dropdown-menu .dropdown-item {
     padding: 0.3rem 0.8rem;
 }
 
-.postDropdownMenu .form-text {
+.post-dropdown-menu .form-text {
     margin-top: 0;
 }
 
-.postOptionIcon {
+.post-option-icon {
     vertical-align: -webkit-baseline-middle;
     font-size: 1.2rem;
 }
 
-.postOptionTitle {
-    font-size: 0.9rem;
-}
-
 #savePost,
-.navDrop {
+.nav-drop {
     font-size: 0.7rem;
 }
 
 /* Quick links */
-.btnQuickLinks {
+.btn-quick-links {
     background-color: #fff;
     color: #6c757d;
     flex: 1;
 }
 
-.btnQuickLinks i {
+.btn-quick-links i {
     font-size: 1.5rem;
     vertical-align: bottom;
 }
 
-.btnQuickLinks .qlName {
-    font-size: .8rem !important;
-}
-
-.qlActive {
+.ql-active {
     background-color: #007bff;
     color: #fff;
 }
@@ -395,23 +486,47 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 0 1rem;
 }
 
-.navLinks {
+.nav-links {
     font-size: 0.8rem;
     line-height: 2;
 }
 
-.menuUserImage {
+.menu-user-image {
     width: 30px;
     display: inline-block;
 }
 
-.menuUserImg {
+.menu-user-img {
     width: 100%;
     border-radius: 50%;
 }
 
+/* Post modal */
+.post-content img {
+    width: 100%;
+}
+
+.post-body,
+.post-body .container-fluid {
+    padding: 0;
+    border: 0;
+}
+
+.post-modal-user-img {
+    width: 10%;
+    border-radius: 50%;
+}
+
+.post-modal-top-user {
+    line-height: 0;
+}
+
+.fs-9 {
+    font-size: 0.9rem;
+}
+
 /* Posts */
-.shareDropup {
+.share-dropup {
     display: inline-block;
 }
 
@@ -441,26 +556,22 @@ body::-webkit-scrollbar-thumb:hover {
     margin: 0;
 }
 
-.commentsList {
+.comments-list {
     padding: 0;
     margin-bottom: 0;
 }
 
-.commentText, .commentUserName {
-    font-size: 0.8rem;
-}
-
-.commentCreatedTime {
+.comment-created-time {
     font-size: 0.7rem;
     color: #6c757d;
 }
 
-.commentInput {
+.comment-input {
     border-radius: 30px !important;
     font-size: 0.8rem;
 }
 
-.commentFormBtn {
+.comment-form-btn {
     background-color: #d1d3d6;
     color: #6c757d;
     border-radius: 50%;
@@ -468,7 +579,7 @@ body::-webkit-scrollbar-thumb:hover {
     margin-left: 0.5rem;
 }
 
-.commentFormBtn:hover {
+.comment-form-btn:hover {
     background-color: #6c757d;
     color: #d1d3d6;
 }
@@ -477,17 +588,13 @@ body::-webkit-scrollbar-thumb:hover {
     padding: 0 0 1rem;
 }
 
-.commentSeeMore {
-    
-}
-
 /* Online users section */
 .smFLname {
     color: #6c757d;
 }
 
 /* Popular tags */
-.popularTags span {
+.popular-tags span {
     margin: 0.1rem 0.1rem;
     font-size: .7rem;
 }

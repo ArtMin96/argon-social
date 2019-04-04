@@ -1,3 +1,9 @@
+/*!
+ * Argon Social v0.1 (https://artmin96.github.io/argon-social)
+ * Copyright 2019 Arthur Minasyan
+ * Licensed under MIT (https://github.com/ArtMin96/argon-social/blob/master/LICENSE.md)
+ */
+
 @media (min-width:320px) {
     #sidebar-wrapper {
         margin-left: -15rem
@@ -20,7 +26,7 @@
         padding-top: 5rem
     }
 
-    #wrapper.toggled .newsfeedUserCard {
+    #wrapper.toggled .newsfeed-user-card {
         border: 0
     }
 
@@ -30,33 +36,33 @@
         left: 0
     }
 
-    .userNewsfeedImage {
+    .user-newsfeed-image {
         width: 100px
     }
 
-    .newsfeedRightSideContent {
+    .newsfeed-right-side-content {
         width: 100%
     }
 
-    .fourSection,
-    .thirdSection {
+    .four-section,
+    .third-section {
         display: none
     }
 
-    .secondSection {
+    .second-section {
         flex: 0 0 100% !important;
         max-width: 100%
     }
 
-    .postFormGroup .col-md-9 {
+    .post-form-group .col-md-9 {
         position: absolute
     }
 
-    .postFormBtn span {
+    .post-form-btn span {
         display: none
     }
 
-    .postFormGroup {
+    .post-form-group {
         padding: 0 10px 20px 10px
     }
 }
@@ -83,33 +89,33 @@
         padding-top: 5rem
     }
 
-    #wrapper.toggled .newsfeedUserCard {
+    #wrapper.toggled .newsfeed-user-card {
         border: 0
     }
 
-    .userNewsfeedImage {
+    .user-newsfeed-image {
         width: 100px
     }
 
-    .newsfeedRightSideContent {
+    .newsfeed-right-side-content {
         width: 100%
     }
 
-    .postFormGroup .col-md-9 {
+    .post-form-group .col-md-9 {
         position: absolute
     }
 
-    .fourSection,
-    .thirdSection {
+    .four-section,
+    .third-section {
         display: none
     }
 
-    .secondSection {
+    .second-section {
         flex: 0 0 100% !important;
         max-width: 100%
     }
 
-    .postFormGroup {
+    .post-form-group {
         padding: 0 10px 20px 10px
     }
 }
@@ -141,33 +147,33 @@
         left: 0
     }
 
-    .postFormGroup .col-md-9 {
+    .post-form-group .col-md-9 {
         position: relative
     }
 
-    .userNewsfeedImage {
+    .user-newsfeed-image {
         width: 100px
     }
 
-    .newsfeedRightSideContent {
+    .newsfeed-right-side-content {
         width: 100%
     }
 
-    .fourSection,
-    .thirdSection {
+    .four-section,
+    .third-section {
         display: none
     }
 
-    .secondSection {
+    .second-section {
         flex: 0 0 100% !important;
         max-width: 100%
     }
 
-    .postFormBtn span {
+    .post-form-btn span {
         display: inline-block
     }
 
-    .postFormGroup {
+    .post-form-group {
         padding: 0 10px 20px 10px
     }
 }
@@ -180,7 +186,7 @@
 
     #page-content-wrapper {
         min-width: 0;
-        width: 100%;
+        width: 100vw;
         position: relative;
         padding-left: 0
     }
@@ -189,50 +195,50 @@
         display: none
     }
 
-    .postFormGroup {
+    .post-form-group {
         padding: 0 10px 20px 10px
     }
 
-    .postFormGroup .btn-sm {
+    .post-form-group .btn-sm {
         font-size: .7em;
         padding: 2px 3px
     }
 
-    .userNewsfeedImage {
+    .user-newsfeed-image {
         width: 80px
     }
 
-    .fourSection {
+    .four-section {
         display: none
     }
 
-    .thirdSection {
+    .third-section {
         display: block
     }
 
-    .fourSection {
+    .four-section {
         width: 100%
     }
 
-    .secondSection {
+    .second-section {
         flex: 0 0 100% !important;
         max-width: 70%
     }
 
-    .newsfeedRightSideContent {
+    .newsfeed-right-side-content {
         width: 100%
     }
 
-    .thirdSection strong {
+    .third-section strong {
         font-size: 1em
     }
 
-    .thirdSection {
+    .third-section {
         font-size: .7em
     }
 
 
-    .cardTitle {
+    .card-title {
         font-size: .9rem
     }
 }
@@ -242,32 +248,32 @@
         display: none
     }
 
-    .postFormGroup {
+    .post-form-group {
         padding: 0 10px 20px 20px
     }
 
-    .postFormGroup .btn-sm {
+    .post-form-group .btn-sm {
         font-size: .8em
     }
 
-    .userNewsfeedImage {
+    .user-newsfeed-image {
         width: 100px
     }
 
-    .fourSection {
+    .four-section {
         display: block
     }
 
-    .secondSection {
+    .second-section {
         flex: 0 0 50% !important;
         max-width: 50%
     }
 
-    .newsfeedRightSideContent {
+    .newsfeed-right-side-content {
         width: 95%
     }
 
-    .cardTitle {
+    .card-title {
         font-size: 1rem
     }
 }
