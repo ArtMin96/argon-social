@@ -306,3 +306,15 @@
         flex: 0 0 100% !important;
     }
 }
+
+.upload input {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+}
+
+.upload {
+    width: 100px;
+    color: #fff;
+    cursor: pointer;
+}

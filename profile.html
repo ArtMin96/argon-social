@@ -16,6 +16,7 @@
     <!-- Styles -->
     <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/components.css" rel="stylesheet">
     <link href="assets/css/profile.css" rel="stylesheet">
     <link href="assets/css/media.css" rel="stylesheet">
 </head>
@@ -102,7 +103,7 @@
                                 <a href="#" class="nav-link nav-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <i class='bx bxs-message-rounded message-dropdown'></i> <span class="badge badge-pill badge-primary">1</span>
                                 </a>
-                                <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop">
+                                <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop dropdown-shadow">
                                     <div class="notify-drop-title">
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6 col-xs-6 fs-8">Messages | <a href="#">Requests</a></div>
@@ -222,7 +223,7 @@
                                 <a href="#" class="nav-link nav-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                     <i class='bx bxs-bell notification-bell'></i> <span class="badge badge-pill badge-primary">3</span>
                                 </a>
-                                <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop">
+                                <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop dropdown-shadow">
                                     <div class="notify-drop-title">
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6 col-xs-6 fs-8">Notifications <span class="badge badge-pill badge-primary ml-2">3</span></div>
@@ -340,7 +341,7 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link nav-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
-                                <div class="dropdown-menu dropdown-menu-right nav-drop">
+                                <div class="dropdown-menu dropdown-menu-right nav-drop dropdown-shadow">
                                     <a class="dropdown-item" href="sign-in.html">Sign in</a>
                                     <a class="dropdown-item" href="sign-up.html">Sign up</a>
                                 </div>
@@ -352,7 +353,7 @@
                                     </div>
                                     <span class="ml-2">Arthur</span>
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right nav-drop">
+                                <div class="dropdown-menu dropdown-menu-right nav-drop dropdown-shadow">
                                     <a class="dropdown-item" href="profile.html"><i class='bx bx-user mr-2'></i> Account</a>
                                     <a class="dropdown-item" href="settings.html"><i class='bx bx-cog mr-2'></i> Settings</a>
                                     <div role="separator" class="dropdown-divider"></div>
@@ -380,7 +381,10 @@
                                             <div class="profile-img-overlay"></div>
                                             <img src="assets/images/users/user-4.jpg" alt="Avatar" class="avatar img-circle">
                                             <div class="profile-img-caption">
-                                                <a href="#" class="text-center"><i class='bx bxs-camera'></i> Update</a>
+                                                <label for="updateProfilePic" class="upload">
+                                                    <i class='bx bxs-camera'></i> Update
+                                                    <input type="file" id="updateProfilePicInput" class="text-center upload">
+                                                </label>
                                             </div>
                                         </div>
                                         <p class="profile-fullname mt-3">Arthur Minasyan</p>
@@ -389,7 +393,7 @@
                                     <div class="intro mt-4">
                                         <div class="d-flex">
                                             <button type="button" class="btn btn-follow mr-3"><i class='bx bx-plus'></i> Follow</button>
-                                            <button type="button" class="btn btn-start-chat"><i class='bx bxs-message-rounded'></i> <span class="fs-8">Message</span></button>
+                                            <button type="button" class="btn btn-start-chat" data-toggle="modal" data-target="#newMessageModal"><i class='bx bxs-message-rounded'></i> <span class="fs-8">Message</span></button>
                                             <button type="button" class="btn btn-follow" id="moreMobile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-dots-horizontal-rounded'></i> <span class="fs-8">More</span></button>
                                             <div class="dropdown-menu dropdown-menu-right profile-ql-dropdown" aria-labelledby="moreMobile">
                                                 <a href="newsfeed.html" class="dropdown-item">Timeline</a>
@@ -750,10 +754,36 @@
         </div>
     </div>
 
+    <!-- New message modal -->
+    <div class="modal fade" id="newMessageModal" tabindex="-1" role="dialog" aria-labelledby="newMessageModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header new-msg-header">
+                    <h5 class="modal-title" id="newMessageModalLabel">Start new conversation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body new-msg-body">
+                    <form action="" method="" class="new-msg-form">
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message:</label>
+                            <textarea class="form-control search-input" rows="5" id="message-text" placeholder="Type a message..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer new-msg-footer">
+                    <button type="button" class="btn btn-primary btn-sm">Send message</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Core -->
     <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
     <script src="assets/js/popper/popper.min.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.js"></script>
     <!-- Optional -->
     <script type="text/javascript">
         $("#menu-toggle").click(function(e) {

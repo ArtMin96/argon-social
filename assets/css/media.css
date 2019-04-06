@@ -5,6 +5,10 @@
  */
 
 @media (min-width:320px) {
+    .newsfeed-left-side {
+        padding-left: 0;
+    }
+    
     #sidebar-wrapper {
         margin-left: -15rem
     }
@@ -68,6 +72,10 @@
 }
 
 @media (min-width:576px) {
+    .newsfeed-left-side {
+        padding-left: 0;
+    }
+    
     #sidebar-wrapper {
         margin-left: -15rem
     }
@@ -178,7 +186,7 @@
     }
 }
 
-@media (min-width:992px) {
+@media (min-width:992px) {    
     #sidebar-wrapper {
         width: 100%;
         margin-left: 0
