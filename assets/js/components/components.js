@@ -86,3 +86,8 @@ $(window).on('keydown', function (e) {
         return false;
     }
 });
+
+// Enable tooltip
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip();
+});

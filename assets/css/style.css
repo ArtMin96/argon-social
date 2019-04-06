@@ -41,7 +41,7 @@ button:focus {
 }
 
 .w-shadow {
-    box-shadow: 5px 30px 26px -20px #b6b6b6
+    box-shadow: 5px 30px 26px -20px #b6b6b6;
 }
 
 /* Fonts */
@@ -197,6 +197,14 @@ button:focus {
 
 .dropdown-menu.notify-drop .notify-drop-footer a:hover {
     color: #333;
+}
+
+#main_menu .dropdown .nav-links span.badge {
+    position: relative;
+    width: 20px;
+    top: -10px;
+    right: 12px;
+    border: 1px solid#fff;
 }
 
 .search-button {

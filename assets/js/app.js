@@ -37,8 +37,3 @@ var myPieChart = new Chart(followersChart, {
     options: {}
 });
 
-// Tooltip
-$(function () {
-    $('[rel="tooltip"]').tooltip();
-});
-
