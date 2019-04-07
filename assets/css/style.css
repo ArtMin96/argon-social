@@ -80,7 +80,7 @@ button:focus {
     width: 20px;
     top: -10px;
     right: 12px;
-    border: 1px solid#fff;
+    border: 1px solid #fff;
 }
 
 .search-button {
@@ -132,11 +132,26 @@ button:focus {
     background-color: #e9ebee
 }
 
-/*
 .newsfeed-size {
-    width: 100%;
+    margin: 0;
 }
-*/
+
+.nav-quick-links .dropdown-menu {
+    width: 210px;
+}
+
+.nav-quick-links .dropdown-menu .list-group .list-group-item {
+    padding: 0.5rem 1rem;
+    border: 0;
+}
+
+.nav-quick-links .nav-links {
+    color: rgba(0,0,0,.5);
+}
+
+.nav-quick-links .nav-links i {
+    font-size: 1.5rem;
+}
 
 .newsfeed-right-side {
     padding: 0

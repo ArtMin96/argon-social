@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.profile-rows {
+    margin: 0;
+}
+
 .profile-right-side-content {
     margin: 0;
 }
@@ -212,8 +216,16 @@
 }
 
 .profile-links .list-inline-item {
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
     margin: 0;
+}
+
+.profile-links .profile-active {
+    background-color: #007bff;
+}
+
+.profile-links .profile-active a {
+    color: #fff !important;
 }
 
 .profile-links .list-inline-item a {
@@ -309,8 +321,10 @@
 
 .upload input {
     opacity: 0;
-    visibility: hidden;
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
 }
 
 .upload {

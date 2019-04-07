@@ -24,61 +24,7 @@
 <body class="profile">
     <div class="container-fluid newsfeed d-flex" id="wrapper">
         <div class="row newsfeed-size">
-            <div class="col-md-2 newsfeed-left-side sticky-top" id="sidebar-wrapper">
-                <div class="card newsfeed-user-card h-100">
-                    <div class="row newsfeed-logged-user text-center pb-5">
-                        <div class="col-md-12">
-                            <img src="assets/images/users/user-4.jpg" class="card-img-top w-shadow user-newsfeed-image" alt="User image">
-                        </div>
-                        <div class="col-md-12 newsfeed-user-info">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="#" class="fs-1">Arthur Minasyan</a></h5>
-                                <p class="card-text mb-4 fs-7">@arthur_minasyan</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ul class="list-group list-group-flush newsfeed-left-sidebar">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="index.html" class="sidebar-item"><i class='bx bx-news text-primary'></i> News Feed</a>
-                            <a href="#" class="newsfeedListicon"><i class='bx bx-dots-horizontal-rounded'></i></a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="messages.html" class="sidebar-item"><i class='bx bx-envelope text-primary'></i> Messages</a>
-                            <span class="badge badge-primary badge-pill">2</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="groups.html" class="sidebar-item"><i class='bx bx-group text-primary'></i> Groups</a>
-                            <span class="badge badge-primary badge-pill">17</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="events.html" class="sidebar-item"><i class='bx bx-calendar text-primary'></i> Events</a>
-                            <span class="badge badge-primary badge-pill">3</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="saved.html" class="sidebar-item"><i class='bx bx-bookmarks text-primary'></i> Saved</a>
-                            <span class="badge badge-primary badge-pill">8</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="find-friends.html" class="sidebar-item"><i class='bx bxs-user-detail text-primary'></i> Find Friends</a>
-                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="matches.html" class="sidebar-item"><i class='bx bx-carousel text-primary'></i> Matches</a>
-                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="teams.html" class="sidebar-item"><i class='bx bxl-slack-old text-primary'></i> Argon For Teams</a>
-                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center newsLink">
-                            <a href="news.html" class="sidebar-item"><i class='bx bx-file text-primary'></i> News</a>
-                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-10" id="page-content-wrapper">
+            <div class="col-md-12" id="page-content-wrapper">
                 <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
                     <button type="button" class="btn btn-primary mr-3" id="menu-toggle"><i class='bx bx-align-left'></i></button>
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -87,6 +33,50 @@
                     </button>
 
                     <a class="navbar-brand mr-lg-5" href="index.html"><img src="assets/images/logo-32x32.png" class="mr-3" alt="Logo"> Argon</a>
+                    
+                    <div class="dropdown nav-item nav-quick-links" data-toggle="tooltip" data-placement="bottom" title="Quick Links">
+                        <a href="#" class="nav-link nav-links" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class='bx bx-align-middle'></i></a>
+                        <div class="dropdown-menu nav-drop">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="index.html" class="sidebar-item"><i class='bx bx-news text-primary'></i> News Feed</a>
+                                    <a href="#" class="newsfeedListicon"><i class='bx bx-dots-horizontal-rounded'></i></a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="messages.html" class="sidebar-item"><i class='bx bx-envelope text-primary'></i> Messages</a>
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="groups.html" class="sidebar-item"><i class='bx bx-group text-primary'></i> Groups</a>
+                                    <span class="badge badge-primary badge-pill">17</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="events.html" class="sidebar-item"><i class='bx bx-calendar text-primary'></i> Events</a>
+                                    <span class="badge badge-primary badge-pill">3</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="saved.html" class="sidebar-item"><i class='bx bx-bookmarks text-primary'></i> Saved</a>
+                                    <span class="badge badge-primary badge-pill">8</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="find-friends.html" class="sidebar-item"><i class='bx bxs-user-detail text-primary'></i> Find Friends</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="matches.html" class="sidebar-item"><i class='bx bx-carousel text-primary'></i> Matches</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="teams.html" class="sidebar-item"><i class='bx bxl-slack-old text-primary'></i> Argon For Teams</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="news.html" class="sidebar-item"><i class='bx bx-file text-primary'></i> News</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="main_menu">
                         <form class="w-50 mx-2 my-auto d-inline form-inline ml-5">
@@ -457,7 +447,7 @@
                                     <div class="row">
                                         <div class="col-md-8 profile-center">
                                             <ul class="list-inline profile-links d-flex justify-content-between w-shadow rounded">
-                                                <li class="list-inline-item">
+                                                <li class="list-inline-item profile-active">
                                                     <a href="#">Timeline</a>
                                                 </li>
                                                 <li class="list-inline-item">
@@ -585,7 +575,7 @@
                                                     <img src="assets/images/users/post/post-1.jpg" class="w-100 mb-3" alt="post image">
                                                 </div>
                                                 <div class="mb-2">
-                                                   
+
                                                     <!-- Reactions -->
                                                     <div class="argon-reaction">
                                                         <span class="like-btn">
@@ -600,7 +590,7 @@
                                                             </ul>
                                                         </span>
                                                     </div>
-                                                    
+
                                                     <a href="javascript:void(0)" class="post-card-buttons" id="show-comments"><i class='bx bx-message-rounded mr-2'></i> 5</a>
                                                     <div class="dropdown dropup share-dropup">
                                                         <a href="#" class="post-card-buttons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -805,9 +795,6 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
-
     </script>
     <script src="assets/js/components/components.js"></script>
-</body>
-
-</html>
+</body></html>
