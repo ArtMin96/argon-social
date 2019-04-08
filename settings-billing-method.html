@@ -361,7 +361,7 @@
                                 <div class="message-contacts">
                                     <ul class="conversations">
                                         <h6 class="p-3">General Settings</h6>
-                                        <li class="contact setting-active">
+                                        <li class="contact">
                                             <a href="settings.html" class="wrap d-flex align-items-center">
                                                 <i class='bx bxs-user'></i>
                                                 <div class="meta">
@@ -415,7 +415,7 @@
                                             </a>
                                         </li>
                                         <h6 class="p-3">Billing &#38; Payment</h6>
-                                        <li class="contact">
+                                        <li class="contact setting-active">
                                             <a href="settings-billing-method.html" class="wrap d-flex align-items-center">
                                                 <div class="meta"></div>
                                                 <p><i class='bx bxs-wallet'></i> Billing Method</p>
@@ -430,38 +430,60 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div class="content">
+                            <div class="content" style="overflow: auto;">
                                 <div class="settings-form p-4">
-                                    <h2>Your Account</h2>
-                                    <form action="" method="" class="mt-4 settings-form">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="settingsFirstName">First Name</label>
-                                                <input type="text" class="form-control" id="settingsFirstName" placeholder="First Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="settingsLastName">Last Name</label>
-                                                <input type="text" class="form-control" id="settingsLastName" placeholder="Last Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="form-row mb-3 align-items-center">
-                                                <div class="col">
-                                                    <label for="settingsUsername">Username</label>
-                                                    <input type="email" class="form-control" id="settingsUsername" aria-describedby="usernameHelp" value="arthur_minasyan_96" placeholder="Username">
-                                                    <small id="usernameHelp" class="form-text text-muted">Your public username is the same as your timeline address.</small>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h2 class="mb-4">Billing Method</h2>
+                                        <a href="#" class="btn btn-primary">Add New Billing Method</a>
+                                    </div>
+                                    <div class="login-sessions">
+                                        <h5 class="mb-3 mt-4 text-muted">Primary Account Billing Method</h5>
+                                        <p class="text-muted">This is the primary billing method for your account. Iy'll be the default we use to charge you for future transactions.</p>
+                                        <div class="location-card">
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <img class="mr-4 float-left" src="assets/images/icons/visa.png" alt="Paymant image">
+                                                    <div>
+                                                        <h5 class="mt-0 fs-1">411111******1111</h5>
+                                                        <span class="text-muted">Expire 12/2013</span>
+                                                    </div>
                                                 </div>
-                                                <div class="col check-username">
-                                                    <span><i class='bx bx-check success'></i> Username is available</span>
+                                                <div class="col-md-4">
+                                                    <div class="billing-address">
+                                                        <span class="d-block">Billing address</span>
+                                                        <span>Address line 1, Address line 2, 2700...</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 text-right">
+                                                    <a href="#" class="btn"><i class='bx bxs-trash-alt'></i></a>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 text-right">
-                                            <button type="submit" class="btn btn-primary btn-sm">Save Changes</button>
+
+                                        <h5 class="mb-3 mt-4 text-muted">All Other Billing Methods</h5>
+                                        <p class="text-muted">These are all of the other billing methods you have added.</p>
+                                        <div class="location-card">
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <img class="mr-4 float-left" src="assets/images/icons/paypal.png" alt="Paymant image">
+                                                    <div>
+                                                        <h5 class="fs-1">Pay Pal</h5>
+                                                        <span class="text-muted">bt_buyer_us@paypal.com</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="billing-address">
+                                                        <span class="d-block">Billing address</span>
+                                                        <span>Address line 1, Address line 2, 2700...</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 text-right">
+                                                    <a href="#" class="btn btn-light">Set as Primary</a>
+                                                    <a href="#" class="btn"><i class='bx bxs-trash-alt'></i></a>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </form>
+                                    </div>
                                 </div>
                             </div>
                         </div>
