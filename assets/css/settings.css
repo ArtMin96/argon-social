@@ -1,0 +1,824 @@
+/*!
+ * Argon Social v0.1 (https://artmin96.github.io/argon-social)
+ * Copyright 2019 Arthur Minasyan
+ * Licensed under MIT (https://github.com/ArtMin96/argon-social/blob/master/LICENSE.md)
+ */
+
+.message-right-side {
+    width: 100%;
+    padding: 0
+}
+
+.messenger {
+    overflow: hidden
+}
+
+.conversations {
+    padding: 2rem 0;
+}
+
+.messages-content {
+    padding: 0 1rem
+}
+
+.message-search .search-input {
+    padding: 1.3rem 2.5rem !important;
+    background-color: #f5f5f5
+}
+
+.message-input .search-input {
+    padding: 1.5rem 2rem
+}
+
+.btn-create-conversation {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 50%;
+    color: #5d5c60;
+    background-color: #fff;
+    font-size: 1.5rem;
+    z-index: 1;
+    box-shadow: 0 0 30px 5px rgba(0, 0, 0, .04)
+}
+
+#send-message {
+    font-size: 1.5rem;
+    color: #007bff
+}
+
+.new-msg-header {
+    background-color: #fdfdfd;
+    border-color: #fdfdfd
+}
+
+.new-msg-footer {
+    border: 0
+}
+
+.new-msg-form input,
+.new-msg-form textarea {
+    background-color: #f5f5f5
+}
+
+.new-msg-form input:focus,
+.new-msg-form textarea:focus {
+    background-color: #f5f5f5
+}
+
+.new-msg-form textarea {
+    resize: none
+}
+
+.unread-messages {
+    position: absolute;
+    left: 2rem !important;
+    top: 1.6rem;
+    margin: -2px 0 0 -2px;
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    background-color: #007bff !important;
+    font-size: .6rem
+}
+
+#set-online-status {
+    padding: 0;
+    color: #fff
+}
+
+#message-frame {
+    width: 100%;
+    min-width: 360px;
+    max-width: 100%;
+    height: 93.5vh;
+    min-height: 300px;
+    max-height: 100%
+}
+
+@media screen and (max-width:360px) {
+    #message-frame {
+        width: 100%;
+        height: 100vh
+    }
+}
+
+#message-frame .message-sidepanel {
+    float: left;
+    min-width: 280px;
+    max-width: 340px;
+    width: 40%;
+    height: 100%;
+    background: #fff;
+    color: #5d5c60;
+    overflow: hidden;
+    position: relative
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel {
+        width: 58px;
+        min-width: 58px
+    }
+
+    .btn-create-conversation,
+    .message-search {
+        display: none !important
+    }
+}
+
+#message-frame .message-sidepanel .message-profile {
+    width: 80%;
+    margin: 25px auto
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile {
+        width: 100%;
+        margin: 0 auto;
+        padding: 5px 0 0 0;
+        background: #32465a
+    }
+}
+
+#message-frame .message-sidepanel .message-profile.expanded .wrap {
+    height: 210px;
+    line-height: initial
+}
+
+#message-frame .message-sidepanel .message-profile.expanded .wrap p {
+    margin-top: 20px
+}
+
+#message-frame .message-sidepanel .message-profile.expanded .wrap i.expand-button {
+    -moz-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipH;
+    -ms-filter: FlipH
+}
+
+#message-frame .message-sidepanel .message-profile .wrap {
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    -moz-transition: .3s height ease;
+    -o-transition: .3s height ease;
+    -webkit-transition: .3s height ease;
+    transition: .3s height ease
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap {
+        height: 55px
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap img {
+    width: 50px;
+    border-radius: 50%;
+    padding: 3px;
+    border: 2px solid #e74c3c;
+    height: auto;
+    float: left;
+    cursor: pointer;
+    -moz-transition: .3s border ease;
+    -o-transition: .3s border ease;
+    -webkit-transition: .3s border ease;
+    transition: .3s border ease
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap img {
+        width: 40px;
+        margin-left: 4px
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap img.online {
+    border: 2px solid #2ecc71
+}
+
+#message-frame .message-sidepanel .message-profile .wrap img.away {
+    border: 2px solid #f1c40f
+}
+
+#message-frame .message-sidepanel .message-profile .wrap img.busy {
+    border: 2px solid #e74c3c
+}
+
+#message-frame .message-sidepanel .message-profile .wrap img.offline {
+    border: 2px solid #95a5a6
+}
+
+#message-frame .message-sidepanel .message-profile .wrap p {
+    float: left;
+    margin-left: 15px
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap p {
+        display: none
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap i.expand-button {
+    float: right;
+    margin-top: 15px;
+    font-size: 2em;
+    cursor: pointer;
+    color: #435f7a
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap i.expand-button {
+        display: none
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 150px;
+    margin: 70px 0 0 0;
+    border-radius: 6px;
+    z-index: 99;
+    line-height: initial;
+    background-color: #007bff;
+    -moz-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap #status-options {
+        width: 58px;
+        margin-top: 57px
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options.messenger-user-active {
+    opacity: 1;
+    visibility: visible;
+    margin: 75px 0 0 0
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap #status-options.messenger-user-active {
+        margin-top: 62px
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 8px solid #007bff;
+    margin: -8px 0 0 24px
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap #status-options:before {
+        margin-left: 23px
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul {
+    overflow: hidden;
+    border-radius: 6px
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li {
+    padding: 15px 0 30px 18px;
+    display: block;
+    cursor: pointer
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap #status-options ul li {
+        padding: 15px 0 35px 22px
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li:hover {
+    background: #f1f1f1;
+    color: #343a40
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li span.status-circle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 5px 0 0 0
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap #status-options ul li span.status-circle {
+        width: 14px;
+        height: 14px
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li span.status-circle:before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    margin: -3px 0 0 -3px;
+    background: 0 0;
+    border-radius: 50%;
+    z-index: 0
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap #status-options ul li span.status-circle:before {
+        height: 18px;
+        width: 18px
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li p {
+    padding-left: 12px
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-profile .wrap #status-options ul li p {
+        display: none
+    }
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li#status-online span.status-circle {
+    background: #2ecc71
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li#status-online.messenger-user-active span.status-circle:before {
+    border: 1px solid #2ecc71
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li#status-away span.status-circle {
+    background: #f1c40f
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li#status-away.messenger-user-active span.status-circle:before {
+    border: 1px solid #f1c40f
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li#status-busy span.status-circle {
+    background: #e74c3c
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li#status-busy.messenger-user-active span.status-circle:before {
+    border: 1px solid #e74c3c
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li#status-offline span.status-circle {
+    background: #95a5a6
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #status-options ul li#status-offline.messenger-user-active span.status-circle:before {
+    border: 1px solid #95a5a6
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #expanded {
+    padding: 70px 0 0 0;
+    display: block;
+    line-height: initial !important
+}
+
+#message-frame .message-sidepanel .message-profile .wrap #expanded .list-group-item {
+    padding: .4rem .5rem;
+    border: 0
+}
+
+#expanded .list-group-item i {
+    font-size: 1.3rem
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-search {
+        display: none
+    }
+}
+
+#message-frame .message-sidepanel .message-search label {
+    position: absolute;
+    margin: 8px 0 0 10px;
+    font-size: 1.2rem
+}
+
+#message-frame .message-sidepanel .message-search input {
+    padding: 10px 0 10px 46px;
+    width: 100%;
+    border: none
+}
+
+#message-frame .message-sidepanel .message-contacts {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-contacts {
+        height: calc(100% - 149px);
+        overflow-y: scroll;
+        overflow-x: hidden
+    }
+
+    #message-frame .message-sidepanel .message-contacts::-webkit-scrollbar {
+        display: none
+    }
+}
+
+#message-frame .message-sidepanel .message-contacts.expanded {
+    height: calc(100% - 334px)
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact {
+    position: relative;
+    padding: 0.5rem 1rem;
+    font-size: .9em;
+    cursor: pointer;
+/*    border-left: 4px solid #5d5c60;*/
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.setting-active {
+    border-left: 4px solid #007bff;
+    color: #007bff;
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact p {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-contacts ul li.contact {
+        padding: 6px 0 46px 8px
+    }
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact:hover {
+    background: #f1f1f1
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact.messenger-user-active {
+    color: #5d5c60;
+    background: #f1f1f1;
+    border-left: 4px solid #007bff
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact.messenger-user-active span.contact-status {
+    border: 1.5px solid #fff !important
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap {
+    width: 88%;
+    margin: 0 auto;
+    position: relative
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-contacts ul li.contact .wrap {
+        width: 100%
+    }
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap span {
+    position: absolute;
+    left: 0;
+    margin: -2px 0 0 -2px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1.5px solid #fff;
+    background: #95a5a6
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap span.online {
+    background: #2ecc71
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap span.away {
+    background: #f1c40f
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap span.busy {
+    background: #e74c3c
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap img {
+    width: 40px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 10px
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap i {
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-contacts ul li.contact .wrap img {
+        margin-right: 0
+    }
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap .meta {
+    padding: 5px 0 0 0
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .message-contacts ul li.contact .wrap .meta {
+        display: none
+    }
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap .meta .name {
+    font-weight: 600
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap .meta .preview {
+    margin: 5px 0 0 0;
+    padding: 0 0 1px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -moz-transition: 1s all ease;
+    -o-transition: 1s all ease;
+    -webkit-transition: 1s all ease;
+    transition: 1s all ease
+}
+
+#message-frame .message-sidepanel .message-contacts ul li.contact .wrap .meta .preview span {
+    position: initial;
+    border-radius: initial;
+    background: 0 0;
+    border: none;
+    padding: 0 2px 0 0;
+    margin: 0 0 0 1px;
+    opacity: .5
+}
+
+#message-frame .message-sidepanel .contacts-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 0
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .contacts-bottom button {
+        float: none;
+        width: 100%;
+        padding: 15px 0
+    }
+}
+
+#message-frame .message-sidepanel .contacts-bottom button:focus {
+    outline: 0
+}
+
+#message-frame .message-sidepanel .contacts-bottom button:nth-child(1) {
+    border-right: 1px solid #2c3e50
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .contacts-bottom button:nth-child(1) {
+        border-right: none;
+        border-bottom: 1px solid #2c3e50
+    }
+}
+
+#message-frame .message-sidepanel .contacts-bottom button:hover {
+    background: #435f7a
+}
+
+#message-frame .message-sidepanel .contacts-bottom button i {
+    margin-right: 3px;
+    font-size: 1em
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .contacts-bottom button i {
+        font-size: 1.3em
+    }
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .message-sidepanel .contacts-bottom button span {
+        display: none
+    }
+}
+
+#message-frame .content {
+    float: right;
+    width: 60%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .content {
+        width: calc(100% - 58px);
+        min-width: 300px !important
+    }
+}
+
+@media screen and (min-width:900px) {
+    #message-frame .content {
+        width: calc(100% - 340px)
+    }
+}
+
+#message-frame .content .contact-profile .message-profile-name {
+    line-height: 60px
+}
+
+#message-frame .content .contact-profile {
+    width: 100%;
+    height: 60px;
+    background: #f5f5f5
+}
+
+#message-frame .content .contact-profile img {
+    width: 40px;
+    border-radius: 50%;
+    float: left;
+    margin: 9px 12px 0 9px
+}
+
+#message-frame .content .contact-profile p {
+    float: left
+}
+
+#message-frame .content .contact-profile .social-media {
+    float: right
+}
+
+#message-frame .content .contact-profile .social-media i {
+    font-size: 1.7rem;
+    line-height: 2;
+    color: #5d5c60;
+    margin-left: 1rem;
+    cursor: pointer
+}
+
+#message-frame .content .contact-profile .social-media i:nth-last-child(1) {
+    margin-right: 2rem
+}
+
+#message-frame .content .contact-profile .social-media i:hover {
+    color: #007bff
+}
+
+#message-frame .content .messages {
+    width: 100%;
+    height: auto;
+    min-height: calc(100% - 93px);
+    max-height: calc(100% - 93px);
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .content .messages {
+        max-height: calc(100% - 105px)
+    }
+}
+
+#message-frame .content .messages::-webkit-scrollbar {
+    width: 8px;
+    background: 0 0
+}
+
+#message-frame .content .messages::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .3)
+}
+
+#message-frame .content .messages ul li {
+    display: inline-block;
+    clear: both;
+    float: left;
+    width: calc(100% - 25px);
+    font-size: .9rem
+}
+
+#message-frame .content .messages ul li:nth-last-child(1) {
+    margin-bottom: 20px
+}
+
+#message-frame .content .messages ul li.sent img {
+    margin: 6px 8px 0 0
+}
+
+#message-frame .content .messages ul li.sent p {
+    background: #007bff;
+    color: #f5f5f5
+}
+
+#message-frame .content .messages ul li.replies img {
+    float: right;
+    margin: 6px 0 0 8px
+}
+
+#message-frame .content .messages ul li.replies p {
+    background: #f5f5f5;
+    float: right
+}
+
+#message-frame .content .messages ul li img {
+    width: 30px;
+    border-radius: 50%;
+    float: left
+}
+
+#message-frame .content .messages ul li p {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 20px;
+    max-width: 205px;
+    line-height: 130%
+}
+
+@media screen and (min-width:735px) {
+    #message-frame .content .messages ul li p {
+        max-width: 300px
+    }
+}
+
+#message-frame .content .message-input {
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 99
+}
+
+#message-frame .content .message-input .wrap {
+    position: relative
+}
+
+#message-frame .content .message-input .wrap input {
+    float: left;
+    width: calc(100% - 90px)
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .content .message-input .wrap input {
+        padding: 15px 32px 16px 8px
+    }
+}
+
+@media screen and (max-width:735px) {
+    #message-frame .content .message-input .wrap button {
+        padding: 16px 0
+    }
+}
+
+.settings-form .check-username {
+    padding-top: 0.4rem;
+}
+
+.settings-form .check-password {
+    padding-top: 2.3rem;
+}
+
+.settings-form i.success, i.error {
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+.settings-form i.success {
+    color: #28a745;
+}
+
+.settings-form i.error {
+    color: #dc3545;
+}
+
+.location-card {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.location-card img {
+    width: 64px;
+    height: 64px;
+}
