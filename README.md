@@ -24,11 +24,19 @@
 - User Profile
 - Newsfeed
 - Messenger
+- Settings - Basic info, contact info, password, location
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Screenshot
 
 <p align="center">
-  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Screenshot-1.png" width=800>
+  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Sign-in.png" width=200>
+  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Sign-up.png" width=200>
+  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Newsfeed.png" width=200>
+  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Profile.png" width=200>
+  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Messenger.png" width=200>
+  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Settings-basic-info.png" width=200>
+  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Settings-password.png" width=200>
+  <img src = "https://github.com/ArtMin96/argon-social/blob/master/screenshots/Settings-location.png" width=200>
 </p>
