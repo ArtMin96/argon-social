@@ -18,6 +18,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/components.css" rel="stylesheet">
     <link href="assets/css/auth.css" rel="stylesheet">
+    <link href="assets/css/forms.css" rel="stylesheet">
     <link href="assets/css/media.css" rel="stylesheet">
 </head>
 
@@ -36,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                <form action="" method="" class="pt-5">
+                <form action="" method="">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group">
@@ -52,19 +53,20 @@
                             <a href="forgot-password.html">Forgot password?</a>
                         </div>
                         <div class="col-md-6">
-                            <div class="form-group remember-checkbox">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="gridCheck">
-                                    <label class="form-check-label" for="gridCheck">
-                                        Remember Me
-                                    </label>
-                                </div>
-                            </div>
+                            <label class="custom-control material-checkbox">
+                                <input type="checkbox" class="material-control-input">
+                                <span class="material-control-indicator"></span>
+                                <span class="material-control-description">Remember Me</span>
+                            </label>
                         </div>
                         <div class="col-md-6 text-right">
                             <div class="form-group">
                                 <button type="button" class="btn btn-primary sign-up">Sign In</button>
                             </div>
+                        </div>
+                        <div class="col-md-12 text-center mt-4">
+                            <p class="text-muted">Start using your fingerprint</p>
+                            <a href="#" class="btn btn-outline-primary btn-sm sign-up" data-toggle="modal" data-target="#fingerprintModal">Use Fingerprint</a>
                         </div>
                         <div class="col-md-12 text-center mt-5">
                             <span class="go-login">Not yet a member? <a href="sign-up.html">Sign Up</a></span>
@@ -90,10 +92,24 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade fingerprint-modal" id="fingerprintModal" tabindex="-1" role="dialog" aria-labelledby="fingerprintModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h3 class="text-muted display-5">Place your Finger on the Device Now</h3>
+                    <img src="assets/images/icons/auth-fingerprint.png" alt="Fingerprint">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Core -->
     <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
     <script src="assets/js/popper/popper.min.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
     <!-- Optional -->
     <script src="assets/js/app.js"></script>
-</body></html>
+</body>
+
+</html>

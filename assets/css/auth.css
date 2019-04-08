@@ -85,14 +85,26 @@
 }
 
 .remember-checkbox {
-    margin-bottom: 0;
+    margin-bottom: 0px;
     padding-top: 0.5rem;
+}
+
+.fingerprint-modal .modal-body {
+    padding: 5rem 4rem;
+}
+
+.fingerprint-modal .modal-body img {
+    width: 30%;
+    margin-top: 4rem;
+    border-radius: 50%;
+    padding: 1rem;
+    border: 3px solid #00B2E8;
 }
 
 @media (max-width: 998px) {
     form {
         width: 90%;
-        margin: 0 auto;
+        margin: 0px auto;
     }
 }
 
