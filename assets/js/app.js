@@ -36,4 +36,3 @@ var myPieChart = new Chart(followersChart, {
     // Configuration options go here
     options: {}
 });
-

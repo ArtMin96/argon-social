@@ -122,6 +122,89 @@
     vertical-align: text-bottom;
 }
 
+.quick-media {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.quick-media .media-overlay {
+    background: rgba(0, 0, 0, 0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 2px;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    margin: 0 auto;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.quick-media:hover .media-overlay {
+    opacity: 1;
+}
+
+.quick-media:hover .media-overlay-content {
+    opacity: 1;
+}
+
+.media-overlay-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    opacity: 0;
+    color: #fff;
+    padding: 0.5rem;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.media-overlay-content .media-overlay-owner img {
+    width: 15%;
+    padding: 0.2rem;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+}
+
+.media-overlay-content .overlay-more {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.media-overlay-content .overlay-bottom {
+    position: absolute;
+    width: 100%;
+    bottom: 5%;
+    left: 0;
+}
+
+.media-overlay-content .overlay-bottom a {
+    color: #fff;
+}
+
+.media-overlay-content .overlay-bottom .argon-reaction {
+    width: 40%;
+}
+
+.liked-users {
+    width: 100%;
+}
+
+.liked-users img {
+    width: 8% !important;
+    margin-left: -10px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
 .profile-info-left .profile-fullname {
     font-weight: 700;
     font-size: 1.3rem;
@@ -275,7 +358,7 @@
 
 .profile-quick-media img {
     width: 100%;
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.5rem;
 }
 
 #page-content-wrapper {
