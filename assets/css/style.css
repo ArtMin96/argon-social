@@ -40,6 +40,10 @@ a:hover {
     width: 30%;
 }
 
+.f-width {
+    width: 100%;
+}
+
 .form-control:focus,
 .btn:focus,
 button:focus {
