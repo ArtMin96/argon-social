@@ -73,6 +73,10 @@ button:focus {
     font-size: 1rem;
 }
 
+.d-mobile {
+    display: none !important;
+}
+
 .online-status {
     display: inline-block;
     border-radius: 50%;
@@ -462,6 +466,7 @@ body::-webkit-scrollbar-thumb:hover {
     background-color: #fff;
     color: #6c757d;
     flex: 1;
+    text-align: center;
 }
 
 .btn-quick-links i {
