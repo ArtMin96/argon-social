@@ -32,6 +32,14 @@ a:hover {
     text-decoration: none
 }
 
+.w-40 {
+    width: 40%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
 .form-control:focus,
 .btn:focus,
 button:focus {
@@ -433,6 +441,18 @@ body::-webkit-scrollbar-thumb:hover {
     font-size: 0.7rem;
 }
 
+.nav-dropdown-menu small {
+    font-size: 0.7rem;
+}
+
+.nav-dropdown-menu {
+    padding: 0;
+    min-width: 23rem;
+    -webkit-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, .2);
+    -moz-box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, .2);
+    box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, .2);
+}
+
 /* Quick links */
 .btn-quick-links {
     background-color: #fff;
@@ -471,6 +491,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Post modal */
+.media-body .bx-globe {
+    vertical-align: middle;
+}
+
 .post-content img {
     width: 100%;
 }

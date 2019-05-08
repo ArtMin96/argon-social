@@ -8,7 +8,7 @@
     .newsfeed-left-side {
         padding-left: 0;
     }
-    
+
     #sidebar-wrapper {
         margin-left: -15rem
     }
@@ -75,7 +75,7 @@
     .newsfeed-left-side {
         padding-left: 0;
     }
-    
+
     #sidebar-wrapper {
         margin-left: -15rem
     }
@@ -186,7 +186,7 @@
     }
 }
 
-@media (min-width:992px) {    
+@media (min-width:992px) {
     #sidebar-wrapper {
         width: 100%;
         margin-left: 0
@@ -251,6 +251,20 @@
     }
 }
 
+@media (min-width:992px) and (max-width:1200px) {
+    #page-content-wrapper {
+        -ms-flex: 0 0 79.333333%;
+        flex: 0 0 79.333333%;
+        max-width: 79.333333%;
+    }
+
+    #sidebar-wrapper {
+        -ms-flex: 0 0 20.333333%;
+        flex: 0 0 20.333333%;
+        max-width: 20.333333%;
+    }
+}
+
 @media (min-width:1200px) {
     #menu-toggle {
         display: none
@@ -283,5 +297,11 @@
 
     .card-title {
         font-size: 1rem
+    }
+}
+
+@media (max-width:1049px) {
+    #main_menu form {
+        margin-left: 0px !important;
     }
 }
