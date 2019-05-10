@@ -29,7 +29,8 @@ body {
 
 a,
 a:hover {
-    text-decoration: none
+    text-decoration: none;
+    color: #65666E;
 }
 
 .w-40 {
@@ -75,6 +76,10 @@ button:focus {
 
 .d-mobile {
     display: none !important;
+}
+
+#wrapper {
+    padding: 0;
 }
 
 .online-status {
@@ -174,7 +179,7 @@ button:focus {
 }
 
 .newsfeed-left-side {
-    height: 100vh;
+    height: 100%;
     padding-right: 0;
     background-color: #fff;
 }
@@ -188,8 +193,6 @@ button:focus {
 .newsfeed-left-sidebar {
     height: 100%;
     margin: 0;
-    padding: 50px 0;
-    box-shadow: inset 5px 30px 26px -40px #b6b6b6
 }
 
 .newsfeed-left-sidebar li {
@@ -201,60 +204,20 @@ button:focus {
     background-color: #f6f6f6
 }
 
+.newsfeed-left-sidebar li a img {
+    width: 20px;
+    margin-right: 1rem;
+}
+
 .newsfeed-right-side-content {
     width: 95%;
     margin: 0 auto
-}
-
-.newsfeed-logged-user {
-    -webkit-transform: skewY(-2deg);
-    -moz-transform: skewY(-2deg);
-    -ms-transform: skewY(-2deg);
-    -o-transform: skewY(-2deg);
-    transform: skewY(-2deg);
-    overflow: hidden
-}
-
-.newsfeed-logged-user .col-md-4,
-.newsfeed-user-info,
-.user-newsfeed-image {
-    -webkit-transform: skewY(2deg);
-    -moz-transform: skewY(2deg);
-    -ms-transform: skewY(2deg);
-    -o-transform: skewY(2deg);
-    transform: skewY(2deg)
-}
-
-.newsfeed-left-sidebar {
-    -webkit-transform: skewY(-2deg);
-    -moz-transform: skewY(-2deg);
-    -ms-transform: skewY(-2deg);
-    -o-transform: skewY(-2deg);
-    transform: skewY(-2deg);
-    overflow: hidden
-}
-
-.newsfeed-left-sidebar .list-group-item {
-    -webkit-transform: skewY(2deg);
-    -moz-transform: skewY(2deg);
-    -ms-transform: skewY(2deg);
-    -o-transform: skewY(2deg);
-    transform: skewY(2deg)
 }
 
 .newsLink {
     position: absolute;
     bottom: 20px;
     width: 100%
-}
-
-.newsfeed-logged-user .col-md-8 {
-    padding: 0
-}
-
-.user-newsfeed-image {
-    padding-top: 10px;
-    border-radius: 50%;
 }
 
 .newsfeedUserLocation {
@@ -480,8 +443,34 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 /* Menu */
+.navbar {
+    background-color: #fff !important;
+}
+
 #navbar-main {
-    padding: 0 1rem;
+    padding: 0px 1rem;
+}
+
+#navbar-main .navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+#navbar-main .nav-icon {
+    font-size: 1.6rem;
+}
+
+#navbar-main form .search-input {
+    border: 1px solid #ccc;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+#navbar-main form .search-button {
+    border: 1px solid #ccc;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-left: 0;
 }
 
 .nav-links {

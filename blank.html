@@ -22,81 +22,25 @@
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
 
-<body>
-    <div class="container-fluid newsfeed d-flex" id="wrapper">
+<body class="newsfeed">
+    <div class="container-fluid" id="wrapper">
         <div class="row newsfeed-size">
-            <div class="col-md-2 newsfeed-left-side sticky-top" id="sidebar-wrapper">
-                <div class="card newsfeed-user-card h-100">
-                    <div class="row newsfeed-logged-user text-center pb-5">
-                        <div class="col-md-12">
-                            <img src="assets/images/users/user-4.jpg" class="card-img-top w-shadow user-newsfeed-image" alt="User image">
-                        </div>
-                        <div class="col-md-12 newsfeed-user-info">
-                            <div class="card-body">
-                                <h5 class="card-title"><a href="#" class="fs-1">Arthur Minasyan</a></h5>
-                                <p class="card-text mb-4 fs-7">@arthur_minasyan</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <ul class="list-group list-group-flush newsfeed-left-sidebar">
-                        <li class="list-group-item d-flex justify-content-between align-items-center sd-active">
-                            <a href="index.html" class="sidebar-item"><i class='bx bx-news text-primary'></i> News Feed</a>
-                            <a href="#" class="newsfeedListicon"><i class='bx bx-dots-horizontal-rounded'></i></a>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="messages.html" class="sidebar-item"><i class='bx bx-envelope text-primary'></i> Messages</a>
-                            <span class="badge badge-primary badge-pill">2</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="groups.html" class="sidebar-item"><i class='bx bx-group text-primary'></i> Groups</a>
-                            <span class="badge badge-primary badge-pill">17</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="events.html" class="sidebar-item"><i class='bx bx-calendar text-primary'></i> Events</a>
-                            <span class="badge badge-primary badge-pill">3</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="saved.html" class="sidebar-item"><i class='bx bx-bookmarks text-primary'></i> Saved</a>
-                            <span class="badge badge-primary badge-pill">8</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="find-friends.html" class="sidebar-item"><i class='bx bxs-user-detail text-primary'></i> Find Friends</a>
-                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="matches.html" class="sidebar-item"><i class='bx bx-carousel text-primary'></i> Matches</a>
-                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="teams.html" class="sidebar-item"><i class='bx bxl-slack-old text-primary'></i> Argon For Teams</a>
-                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center newsLink">
-                            <a href="https://github.com/ArtMin96/argon-social" target="_blank" class="sidebar-item"><i class='bx bx-file text-primary'></i> News</a>
-                            <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-10 newsfeed-right-side" id="page-content-wrapper">
-                <nav id="navbar-main" class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-
-                    <a class="navbar-brand mr-lg-5" href="index.html"><img src="assets/images/logo-32x32.png" class="mr-3" alt="Logo"></a>
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <form class="w-40 mx-2 my-auto d-inline form-inline ml-5">
-                        <div class="input-group">
-                            <input type="text" class="form-control search-input w-75" placeholder="Search for people, companies, events and more..." aria-label="Search" aria-describedby="search-addon">
-                            <div class="input-group-append">
-                                <button class="btn search-button" type="button"><i class='bx bx-search'></i></button>
-                            </div>
-                        </div>
-                    </form>
-                    <ul class="navbar-nav mr-auto d-mobile"></ul>
+            <div class="col-md-12 newsfeed-right-side">
+                <nav id="navbar-main" class="navbar navbar-expand-lg shadow-sm sticky-top">
                     <ul class="navbar-nav mr-5" id="main_menu">
+                        <a class="navbar-brand nav-item mr-lg-5" href="index.html"><img src="assets/images/logo-64x64.png" width="40" height="40" class="mr-3" alt="Logo"></a>
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <form class="w-30 mx-2 my-auto d-inline form-inline mr-5">
+                            <div class="input-group">
+                                <input type="text" class="form-control search-input w-75" placeholder="Search for people, companies, events and more..." aria-label="Search" aria-describedby="search-addon">
+                                <div class="input-group-append">
+                                    <button class="btn search-button" type="button"><i class='bx bx-search'></i></button>
+                                </div>
+                            </div>
+                        </form>
                         <li class="nav-item btn-group d-mobile">
-                            <a href="#" class="nav-link nav-links" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Create
+                            <a href="#" class="nav-link nav-icon nav-links" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bx bx-plus"></i>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right nav-dropdown-menu">
                                 <a href="#" class="dropdown-item" aria-describedby="createGroup">
@@ -123,8 +67,8 @@
                                 </a>
                             </div>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link nav-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <li class="nav-item dropdown message-drop-li">
+                            <a href="#" class="nav-link nav-links message-drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class='bx bxs-message-rounded message-dropdown'></i> <span class="badge badge-pill badge-primary">1</span>
                             </a>
                             <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop">
@@ -235,6 +179,38 @@
                                             </p>
                                         </div>
                                     </li>
+                                    <li>
+                                        <div class="col-md-3 col-sm-3 col-xs-3">
+                                            <div class="notify-img">
+                                                <img src="assets/images/users/user-10.png" alt="notification user image">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 pd-l0">
+                                            <a href="#" class="notification-user">Sean S. Smith</a>
+                                            <a href="#" class="notify-right-icon">
+                                                <i class='bx bx-radio-circle-marked'></i>
+                                            </a>
+                                            <p class="time">
+                                                Which of those two is best?
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col-md-3 col-sm-3 col-xs-3">
+                                            <div class="notify-img">
+                                                <img src="assets/images/users/user-10.png" alt="notification user image">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-9 col-sm-9 col-xs-9 pd-l0">
+                                            <a href="#" class="notification-user">Test S. Smith</a>
+                                            <a href="#" class="notify-right-icon">
+                                                <i class='bx bx-radio-circle-marked'></i>
+                                            </a>
+                                            <p class="time">
+                                                Which of those two is best?
+                                            </p>
+                                        </div>
+                                    </li>
                                 </div>
                                 <div class="notify-drop-footer text-center">
                                     <a href="#">See More</a>
@@ -245,7 +221,7 @@
                             <a href="#" class="nav-link nav-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                                 <i class='bx bxs-bell notification-bell'></i> <span class="badge badge-pill badge-primary">3</span>
                             </a>
-                            <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop">
+                            <ul class="dropdown-menu notify-drop notify-mobile dropdown-menu-right nav-drop">
                                 <div class="notify-drop-title">
                                     <div class="fs-8">Notifications <span class="badge badge-pill badge-primary ml-2">3</span></div>
                                     <div>
@@ -360,7 +336,7 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown d-mobile">
-                            <a href="#" class="nav-link nav-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <a href="#" class="nav-link nav-links nav-icon" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="bx bx-flag"></i></a>
                             <div class="dropdown-menu dropdown-menu-right nav-drop">
                                 <a class="dropdown-item" href="sign-in.html">Sign in</a>
                                 <a class="dropdown-item" href="sign-up.html">Sign up</a>
@@ -371,29 +347,75 @@
                                 <div class="menu-user-image">
                                     <img src="assets/images/users/user-4.jpg" class="menu-user-img ml-1" alt="Menu Image">
                                 </div>
-                                <span class="ml-2 d-mobile">Arthur</span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right nav-drop">
                                 <a class="dropdown-item" href="profile.html"><i class='bx bx-user mr-2'></i> Account</a>
-                                <a class="dropdown-item" href="settings.html"><i class='bx bx-cog mr-2'></i> Settings</a>
                                 <div role="separator" class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#"><i class='bx bx-undo mr-2'></i> Logout</a>
                             </div>
+                        </li>
+                        <li class="nav-item nav-icon">
+                            <a href="settings.html" class="nav-link"><i class="bx bx-cog"></i></a>
                         </li>
                     </ul>
                     <button type="button" class="btn btn-primary mr-3" id="menu-toggle"><i class='bx bx-align-left'></i></button>
                 </nav>
                 <div class="row newsfeed-right-side-content mt-3">
-                    <div class="col-md-6 second-section">
+                    <div class="col-md-2 newsfeed-left-side sticky-top shadow-sm" id="sidebar-wrapper">
+                        <div class="card newsfeed-user-card h-100">
+                            <ul class="list-group list-group-flush newsfeed-left-sidebar">
+                                <li class="list-group-item">
+                                    <h6>Home</h6>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center sd-active">
+                                    <a href="index.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/newsfeed.png" alt="newsfeed"> News Feed</a>
+                                    <a href="#" class="newsfeedListicon"><i class='bx bx-dots-horizontal-rounded'></i></a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="messages.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/message.png" alt="message"> Messages</a>
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="groups.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/group.png" alt="group"> Groups</a>
+                                    <span class="badge badge-primary badge-pill">17</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="events.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/event.png" alt="event"> Events</a>
+                                    <span class="badge badge-primary badge-pill">3</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="saved.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/saved.png" alt="saved"> Saved</a>
+                                    <span class="badge badge-primary badge-pill">8</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="find-friends.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/find-friends.png" alt="find-friends"> Find Friends</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="matches.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/matches.png" alt="matches"> Matches</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="teams.html" class="sidebar-item"><i class='bx bxl-slack-old text-primary'></i> Argon For Teams</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center newsLink">
+                                    <a href="https://github.com/ArtMin96/argon-social" target="_blank" class="sidebar-item"><i class='bx bx-file text-primary'></i> News</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 second-section" id="page-content-wrapper">
                         <div class="mb-3">
                             <div class="btn-group d-flex">
                                 <a href="index.html" class="btn btn-quick-links mr-3 ql-active">
-                                    <i class='bx bx-list-ul mr-2'></i>
-                                    <span class="fs-8">Newsfeed</span>
+                                    <i class='bx bx-microphone mr-2'></i>
+                                    <span class="fs-8">Speech</span>
                                 </a>
                                 <a href="messages.html" class="btn btn-quick-links mr-3">
-                                    <i class='bx bx-message-rounded mr-2'></i>
-                                    <span class="fs-8">Message</span>
+                                    <i class='bx bx-pulse mr-2'></i>
+                                    <span class="fs-8">Listen</span>
                                 </a>
                                 <a href="watch.html" class="btn btn-quick-links">
                                     <i class='bx bx-play-circle mr-2'></i>
@@ -434,7 +456,7 @@
                                     <img src="assets/images/users/user-1.jpg" alt="Online user" class="mr-3 post-user-image">
                                     <div class="media-body pb-3 mb-0 small lh-125">
                                         <div class="d-flex justify-content-between align-items-center w-100">
-                                            <a href="#" class="text-gray-dark post-user-name">Lina Adamyan</a>
+                                            <a href="#" class="text-gray-dark post-user-name">John Michael</a>
                                             <div class="dropdown">
                                                 <a href="#" class="post-more-settings" role="button" data-toggle="dropdown" id="postOptions" aria-haspopup="true" aria-expanded="false">
                                                     <i class='bx bx-dots-horizontal-rounded'></i>
@@ -1115,7 +1137,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 third-section">
+                    <div class="col-md-2 third-section">
                         <div class="p-3 bg-white rounded w-shadow">
                             <h6 class="card-title border-bottom border-gray pb-2 mb-0">Online Users</h6>
                             <div class="media text-muted pt-3">
@@ -1142,10 +1164,10 @@
                                 <img src="assets/images/users/user-1.jpg" alt="Online user" class="mr-2 online-user-image">
                                 <div class="media-body pb-3 mb-0 small lh-125">
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <strong class="text-gray-dark"><a href="#" class="smFLname">Lina Adamyan</a></strong>
+                                        <strong class="text-gray-dark"><a href="#" class="smFLname">John Michael</a></strong>
                                         <span class="online-status bg-success"></span>
                                     </div>
-                                    <span class="d-block online-username">@lina_adamyan</span>
+                                    <span class="d-block online-username">@john_michael</span>
                                 </div>
                             </div>
                             <small class="d-block text-right mt-3">
@@ -1198,7 +1220,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-3 four-section">
+                    <div class="col-md-2 four-section">
                         <div class="card w-shadow">
                             <div class="card-body">
                                 <h5 class="card-title card-title">Dashboard</h5>
@@ -1239,7 +1261,7 @@
                                     <img src="assets/images/users/user-1.jpg" alt="user image" class="mr-3 post-modal-user-img">
                                     <div class="media-body">
                                         <div class="d-flex justify-content-between align-items-center w-100 post-modal-top-user fs-9">
-                                            <a href="#" class="text-gray-dark">Lina Adamyan</a>
+                                            <a href="#" class="text-gray-dark">John Michael</a>
                                             <div class="dropdown">
                                                 <a href="#" class="postMoreSettings" role="button" data-toggle="dropdown" id="postOptions" aria-haspopup="true" aria-expanded="false">
                                                     <i class='bx bx-dots-horizontal-rounded'></i>
@@ -1288,6 +1310,47 @@
     </script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/components/components.js"></script>
+    <script type="text/javascript">
+        // Chart.js
+
+        var likesChart = document.getElementById('likesChart').getContext('2d');
+        var chart = new Chart(likesChart, {
+            // The type of chart we want to create
+            type: 'line',
+
+            // The data for our dataset
+            data: {
+                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                datasets: [{
+                    label: 'Likes chart',
+                    backgroundColor: 'rgb(0, 123, 255)',
+                    borderColor: 'rgb(0, 123, 255)',
+                    data: [0, 10, 5, 2, 20, 30, 45]
+                }]
+            },
+
+            // Configuration options go here
+            options: {}
+        });
+
+        var followersChart = document.getElementById('followersChart').getContext('2d');
+        var myPieChart = new Chart(followersChart, {
+            type: 'pie',
+            data: {
+                labels: [
+                    'Followers',
+                    'Following'
+                ],
+                datasets: [{
+                    backgroundColor: ['rgb(0, 123, 255)', 'rgb(50,205,50)'],
+                    data: [32, 17]
+                }]
+            },
+            // Configuration options go here
+            options: {}
+        });
+
+    </script>
 </body>
 
 </html>

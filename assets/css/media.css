@@ -10,7 +10,7 @@
     }
 
     #sidebar-wrapper {
-        margin-left: -15rem
+        margin-left: -36rem;
     }
 
     #page-content-wrapper {
@@ -20,14 +20,18 @@
     }
 
     #wrapper.toggled #page-content-wrapper {
-        padding-left: 200px
+        overflow: hidden;
     }
 
     #wrapper.toggled #sidebar-wrapper {
         margin-left: 0;
         min-width: 220px;
         position: fixed;
-        padding-top: 5rem
+        min-height: 100vh;
+        max-height: 100vh;
+        overflow: hidden;
+        top: 55px;
+        padding-top: 1rem;
     }
 
     #wrapper.toggled .newsfeed-user-card {
@@ -40,10 +44,6 @@
         left: 0
     }
 
-    .user-newsfeed-image {
-        width: 100px
-    }
-
     .newsfeed-right-side-content {
         width: 100%
     }
@@ -51,11 +51,6 @@
     .four-section,
     .third-section {
         display: none
-    }
-
-    .second-section {
-        flex: 0 0 100% !important;
-        max-width: 100%
     }
 
     .post-form-group .col-md-9 {
@@ -77,7 +72,7 @@
     }
 
     #sidebar-wrapper {
-        margin-left: -15rem
+        margin-left: -48rem
     }
 
     #page-content-wrapper {
@@ -86,23 +81,14 @@
         right: 0
     }
 
-    #wrapper.toggled #page-content-wrapper {
-        padding-left: 200px
-    }
-
     #wrapper.toggled #sidebar-wrapper {
         margin-left: 0;
         min-width: 220px;
         position: fixed;
-        padding-top: 5rem
     }
 
     #wrapper.toggled .newsfeed-user-card {
         border: 0
-    }
-
-    .user-newsfeed-image {
-        width: 100px
     }
 
     .newsfeed-right-side-content {
@@ -116,11 +102,6 @@
     .four-section,
     .third-section {
         display: none
-    }
-
-    .second-section {
-        flex: 0 0 100% !important;
-        max-width: 100%
     }
 
     .post-form-group {
@@ -140,7 +121,8 @@
     }
 
     #wrapper.toggled #page-content-wrapper {
-        padding-left: 200px
+        margin-top: 55px;
+        padding-left: 230px
     }
 
     #wrapper.toggled #sidebar-wrapper {
@@ -150,17 +132,13 @@
     }
 
     #wrapper.toggled .sticky-top {
-        position: sticky;
+        position: fixed;
         width: 100vw;
         left: 0
     }
 
     .post-form-group .col-md-9 {
         position: relative
-    }
-
-    .user-newsfeed-image {
-        width: 100px
     }
 
     .newsfeed-right-side-content {
@@ -172,11 +150,6 @@
         display: none
     }
 
-    .second-section {
-        flex: 0 0 100% !important;
-        max-width: 100%
-    }
-
     .post-form-btn span {
         display: inline-block
     }
@@ -184,23 +157,34 @@
     .post-form-group {
         padding: 0 10px 20px 10px
     }
+    
+    #navbar-main .notify-drop {
+        min-width: 320px !important;
+    }
 }
 
 @media (min-width:992px) {
     #sidebar-wrapper {
         width: 100%;
-        margin-left: 0
+        margin-left: 0;
+        position: sticky;
+        top: 82px;
+        height: 640px;
     }
 
     #page-content-wrapper {
         min-width: 0;
         width: 100vw;
         position: relative;
-        padding-left: 0
+        padding-left: 1%
     }
 
     #menu-toggle {
         display: none
+    }
+    
+    .navbar {
+        padding-right: 3rem !important;
     }
 
     .post-form-group {
@@ -212,25 +196,12 @@
         padding: 2px 3px
     }
 
-    .user-newsfeed-image {
-        width: 80px
-    }
-
     .four-section {
         display: none
     }
 
     .third-section {
         display: block
-    }
-
-    .four-section {
-        width: 100%
-    }
-
-    .second-section {
-        flex: 0 0 100% !important;
-        max-width: 70%
     }
 
     .newsfeed-right-side-content {
@@ -252,11 +223,6 @@
 }
 
 @media (min-width:992px) and (max-width:1200px) {
-    #page-content-wrapper {
-        -ms-flex: 0 0 79.333333%;
-        flex: 0 0 79.333333%;
-        max-width: 79.333333%;
-    }
 
     #sidebar-wrapper {
         -ms-flex: 0 0 20.333333%;
@@ -278,21 +244,19 @@
         font-size: .8em
     }
 
-    .user-newsfeed-image {
-        width: 100px
-    }
-
     .four-section {
         display: block
     }
 
+/*
     .second-section {
         flex: 0 0 50% !important;
         max-width: 50%
     }
+*/
 
     .newsfeed-right-side-content {
-        width: 95%
+        width: 100%
     }
 
     .card-title {
@@ -314,7 +278,6 @@
     }
 
     #navbar-main .navbar-nav li {
-        width: 30%;
         display: inline-block;
         display: flex;
         align-items: center;
@@ -332,22 +295,29 @@
         margin-right: 0 !important;
     }
 
-    #navbar-main .notify-drop {
+    #navbar-main .dropdown-menu {
         position: absolute;
+        margin-left: -90px !important;
+    }
+    
+    #navbar-main .notify-drop {
         left: 0 !important;
-        min-width: 320px;
-        max-height: 100vh;
-        min-height: 100vh;
-        margin-left: -80px !important;
+        width: 100vw; /* for desktop version set min-width: 320px; */
+        max-height: 540px;
+        min-height: 540px;
+    }
+    
+    #navbar-main .notify-mobile {
+        margin-left: -147px !important;
     }
 
     #navbar-main .notify-drop .drop-content li {
-        width: 100%;
+        width: 75%;
     }
 
     #navbar-main .notify-drop .drop-content {
         width: 100%;
-        max-height: 100vh;
+        max-height: 460px;
     }
 
     #navbar-main .notify-drop .notify-drop-title {
@@ -355,6 +325,42 @@
         justify-content: space-between;
         align-items: center;
         padding: 0.5 1rem;
+    }
+    
+    #navbar-main .navbar-brand {
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    #navbar-main form {
+        display: block!important;
+    }
+    
+    .d-mobile {
+        display: inline-block !important;
+    }
+    
+}
+
+@media (min-width: 512px) {
+    #navbar-main .notify-drop .drop-content {
+        max-height: 360px;
+    }
+    
+    #navbar-main .notify-drop {
+        min-height: 440px;
+        max-height: 440px;
+    }
+}
+
+@media (max-width: 992px) {
+    #navbar-main .navbar-brand {
+        width: 30%;
+    }
+    
+    #navbar-main .navbar-nav li {
+        width: 30%;
     }
 }
 

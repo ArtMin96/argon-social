@@ -26,7 +26,7 @@
 \*-------------------------------------------*/
 
 /* Notification & Message dropdown */
-.dropdown-menu.notify-drop {
+.dropdown-menu.notify-drop.show {
     min-width: 330px;
     background-color: #fff;
     min-height: 360px;
@@ -41,7 +41,7 @@
 .dropdown-menu.notify-drop .drop-content {
     min-height: 280px;
     max-height: 280px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .dropdown-menu.notify-drop .drop-content > li {
