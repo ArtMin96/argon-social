@@ -217,8 +217,8 @@
     }
 
 
-    .card-title {
-        font-size: .9rem
+    .third-section .card-title {
+        font-size: 1rem
     }
 }
 
@@ -257,10 +257,6 @@
 
     .newsfeed-right-side-content {
         width: 100%
-    }
-
-    .card-title {
-        font-size: 1rem
     }
 }
 
