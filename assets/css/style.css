@@ -105,6 +105,12 @@ button:focus {
     border: 1px solid #fff;
 }
 
+.nav-settings {
+    background-color: #D7DCE0;
+    padding: 0.3rem;
+    border-radius: 50%;
+}
+
 .search-button {
     border-left: 0;
     border-color: #fff;
@@ -315,6 +321,10 @@ body::-webkit-scrollbar-thumb:hover {
     text-decoration: none
 }
 
+.post-form-btn img {
+    width: 20px;
+}
+
 .onlineUsers {
     background-color: #fff;
     padding: 20px
@@ -338,7 +348,6 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .post-user-image {
-    width: 8%;
     border-radius: 50%
 }
 
@@ -459,6 +468,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 #navbar-main .nav-icon {
     font-size: 1.6rem;
+}
+
+#navbar-main .f-nav-icon {
+    width: 30px;
 }
 
 #navbar-main form .search-input {
@@ -626,13 +639,13 @@ body::-webkit-scrollbar-thumb:hover {
     width: 100%;
 }
 
-.list-unstyled {
+.liked-users {
     display: inline-block;
     width: 100%;
     vertical-align: middle;
 }
 
-.list-unstyled img {
+.liked-users img {
     width: 25px;
     float: left;
     margin-left: -8px;
@@ -665,4 +678,13 @@ body::-webkit-scrollbar-thumb:hover {
 .contacts .media .media-body strong {
     font-size: 0.9rem;
     color: #000 !important;
+}
+
+.message-right-side {
+    padding-left: 0px !important;
+}
+
+img.settings-icon {
+    width: 25px !important;
+    border-radius: 0 !important;
 }

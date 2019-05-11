@@ -29,9 +29,9 @@
         position: fixed;
         min-height: 100vh;
         max-height: 100vh;
-        overflow: hidden;
-        top: 55px;
+        top: 122px;
         padding-top: 1rem;
+        overflow: auto;
     }
 
     #wrapper.toggled .newsfeed-user-card {
@@ -63,6 +63,10 @@
 
     .post-form-group {
         padding: 0 10px 20px 10px
+    }
+    
+    .post-user-image {
+        width: 50px;
     }
 }
 
@@ -128,7 +132,8 @@
     #wrapper.toggled #sidebar-wrapper {
         margin-left: 0;
         min-width: 220px;
-        position: fixed
+        position: fixed;
+        overflow: hidden;
     }
 
     #wrapper.toggled .sticky-top {
@@ -158,9 +163,15 @@
         padding: 0 10px 20px 10px
     }
     
+    .post-user-image {
+        width: 8%;
+    }
+    
+/*
     #navbar-main .notify-drop {
         min-width: 320px !important;
     }
+*/
 }
 
 @media (min-width:992px) {
@@ -279,7 +290,7 @@
         align-items: center;
     }
 
-    #navbar-main form {
+    #main_menu form {
         display: none !important;
     }
 
@@ -288,7 +299,8 @@
     }
 
     #menu-toggle {
-        margin-right: 0 !important;
+        margin-right: 0px !important;
+        padding: 0px;
     }
 
     #navbar-main .dropdown-menu {
@@ -296,9 +308,10 @@
         margin-left: -90px !important;
     }
     
+/*
     #navbar-main .notify-drop {
         left: 0 !important;
-        width: 100vw; /* for desktop version set min-width: 320px; */
+        width: 100vw;  for desktop version set min-width: 320px; 
         max-height: 540px;
         min-height: 540px;
     }
@@ -322,6 +335,7 @@
         align-items: center;
         padding: 0.5 1rem;
     }
+*/
     
     #navbar-main .navbar-brand {
         margin-right: 0;
@@ -329,7 +343,7 @@
 }
 
 @media (min-width: 992px) {
-    #navbar-main form {
+    #main_menu form {
         display: block!important;
     }
     
@@ -337,17 +351,9 @@
         display: inline-block !important;
     }
     
-}
-
-@media (min-width: 512px) {
-    #navbar-main .notify-drop .drop-content {
-        max-height: 360px;
-    }
-    
-    #navbar-main .notify-drop {
-        min-height: 440px;
-        max-height: 440px;
-    }
+    .enable-mobile {
+        display: none !important;
+    }   
 }
 
 @media (max-width: 992px) {
@@ -355,7 +361,7 @@
         width: 30%;
     }
     
-    #navbar-main .navbar-nav li {
+    #navbar-main .navbar-nav li.s-nav {
         width: 30%;
     }
 }

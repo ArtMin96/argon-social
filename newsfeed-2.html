@@ -38,9 +38,9 @@
                                 </div>
                             </div>
                         </form>
-                        <li class="nav-item btn-group d-mobile">
-                            <a href="#" class="nav-link nav-icon nav-links" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="bx bx-plus"></i>
+                        <li class="nav-item dropdown d-mobile">
+                            <a href="#" class="nav-link nav-icon nav-links drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Create" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/icons/navbar/create.png" alt="navbar icon">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right nav-dropdown-menu">
                                 <a href="#" class="dropdown-item" aria-describedby="createGroup">
@@ -68,8 +68,8 @@
                             </div>
                         </li>
                         <li class="nav-item dropdown message-drop-li">
-                            <a href="#" class="nav-link nav-links message-drop" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <i class='bx bxs-message-rounded message-dropdown'></i> <span class="badge badge-pill badge-primary">1</span>
+                            <a href="#" class="nav-link nav-links message-drop drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Messages" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/icons/navbar/message.png" class="message-dropdown" alt="navbar icon"> <span class="badge badge-pill badge-primary">1</span>
                             </a>
                             <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop">
                                 <div class="notify-drop-title">
@@ -218,8 +218,8 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a href="#" class="nav-link nav-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                                <i class='bx bxs-bell notification-bell'></i> <span class="badge badge-pill badge-primary">3</span>
+                            <a href="#" class="nav-link nav-links drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Notifications" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/icons/navbar/notification.png" class="notification-bell" alt="navbar icon"> <span class="badge badge-pill badge-primary">3</span>
                             </a>
                             <ul class="dropdown-menu notify-drop notify-mobile dropdown-menu-right nav-drop">
                                 <div class="notify-drop-title">
@@ -336,8 +336,11 @@
                             </ul>
                         </li>
                         <li class="nav-item dropdown d-mobile">
-                            <a href="#" class="nav-link nav-links nav-icon" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="bx bx-flag"></i></a>
+                            <a href="#" class="nav-link nav-links nav-icon drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Pages" role="button" aria-haspopup="true" aria-expanded="false">
+                                <img src="assets/images/icons/navbar/flag.png" alt="navbar icon">
+                            </a>
                             <div class="dropdown-menu dropdown-menu-right nav-drop">
+                                <a class="dropdown-item" href="newsfeed-2.html">Newsfeed 2</a>
                                 <a class="dropdown-item" href="sign-in.html">Sign in</a>
                                 <a class="dropdown-item" href="sign-up.html">Sign up</a>
                             </div>
@@ -355,7 +358,7 @@
                             </div>
                         </li>
                         <li class="nav-item nav-icon">
-                            <a href="settings.html" class="nav-link"><i class="bx bx-cog"></i></a>
+                            <a href="settings.html" data-toggle="tooltip" data-placement="bottom" data-title="Settings" class="nav-link"><img src="assets/images/icons/navbar/settings.png" alt="navbar icon"></a>
                         </li>
                     </ul>
                     <button type="button" class="btn btn-primary mr-3" id="menu-toggle"><i class='bx bx-align-left'></i></button>
@@ -396,11 +399,11 @@
                                     <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="teams.html" class="sidebar-item"><i class='bx bxl-slack-old text-primary'></i> Argon For Teams</a>
+                                    <a href="teams.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/team.png" alt="find-friends"> Argon For Teams</a>
                                     <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center newsLink">
-                                    <a href="https://github.com/ArtMin96/argon-social" target="_blank" class="sidebar-item"><i class='bx bx-file text-primary'></i> News</a>
+                                    <a href="https://github.com/ArtMin96/argon-social" target="_blank" class="sidebar-item"><img src="assets/images/icons/left-sidebar/news.png" alt="find-friends"> News</a>
                                     <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
                                 </li>
                             </ul>
@@ -410,15 +413,15 @@
                         <div class="mb-3">
                             <div class="btn-group d-flex">
                                 <a href="index.html" class="btn btn-quick-links mr-3 ql-active">
-                                    <i class='bx bx-microphone mr-2'></i>
+                                    <img src="assets/images/icons/theme/speech.png" class="mr-2" alt="quick links icon">
                                     <span class="fs-8">Speech</span>
                                 </a>
                                 <a href="messages.html" class="btn btn-quick-links mr-3">
-                                    <i class='bx bx-pulse mr-2'></i>
+                                    <img src="assets/images/icons/theme/listen.png" class="mr-2" alt="quick links icon">
                                     <span class="fs-8">Listen</span>
                                 </a>
                                 <a href="watch.html" class="btn btn-quick-links">
-                                    <i class='bx bx-play-circle mr-2'></i>
+                                    <img src="assets/images/icons/theme/watch.png" class="mr-2" alt="quick links icon">
                                     <span class="fs-8">Watch</span>
                                 </a>
                             </div>
@@ -1151,7 +1154,7 @@
                                 </div>
                                 <div class="card-footer">
                                     <div class="like-user-img">
-                                        <ul class="list-unstyled">
+                                        <ul class="list-unstyled liked-users">
                                             <li>
                                                 <a href="#"><img src="assets/images/users/user-7.png" alt="Like user image"></a>
                                             </li>
