@@ -58,6 +58,14 @@ button:focus {
 }
 
 /* Fonts */
+.fs-5 {
+    font-size: 0.5rem;
+}
+
+.fs-6 {
+    font-size: 0.6rem;
+}
+
 .fs-7 {
     font-size: 0.7rem;
 }
@@ -239,7 +247,8 @@ button:focus {
 
 .sidebar-item {
     color: #000;
-    font-size: 0.8rem
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 #sidebar-wrapper {
@@ -331,12 +340,8 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .online-user-image {
-    width: 15%;
+    width: 18%;
     border-radius: 50%
-}
-
-.online-username {
-    display: block
 }
 
 .popular-tags {
@@ -524,10 +529,6 @@ body::-webkit-scrollbar-thumb:hover {
 
 .post-modal-top-user {
     line-height: 0;
-}
-
-.fs-9 {
-    font-size: 0.9rem;
 }
 
 /* Posts */

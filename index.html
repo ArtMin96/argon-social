@@ -11,13 +11,14 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@1.9.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.1/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Styles -->
     <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/components.css" rel="stylesheet">
     <link href="assets/css/media.css" rel="stylesheet">
+    <link href="assets/css/chat.css" rel="stylesheet">
     <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
@@ -1138,35 +1139,35 @@
                     </div>
                     <div class="col-md-2 third-section">
                         <div class="p-3 bg-white rounded w-shadow">
-                            <h6 class="card-title border-bottom border-gray pb-2 mb-0">Online Users</h6>
+                            <h6 class="pb-2 mb-0">Online Users</h6>
                             <div class="media text-muted pt-3">
                                 <img src="assets/images/users/user-2.jpg" alt="Online user" class="mr-2 online-user-image">
                                 <div class="media-body pb-3 mb-0 small lh-125">
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <strong class="text-gray-dark"><a href="#" class="smFLname">Karen Minas</a></strong>
+                                        <strong class="text-gray-dark"><a href="#" class="fs-7">Karen Minas</a></strong>
                                         <span class="online-status bg-success"></span>
                                     </div>
-                                    <span class="d-block online-username">@karen_minas</span>
+                                    <span class="d-block fs-6">@karen_minas</span>
                                 </div>
                             </div>
                             <div class="media text-muted pt-3">
                                 <img src="assets/images/users/user-3.jpg" alt="Online user" class="mr-2 online-user-image">
                                 <div class="media-body pb-3 mb-0 small lh-125">
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <strong class="text-gray-dark"><a href="#" class="smFLname">Hakob Minasyan</a></strong>
+                                        <strong class="text-gray-dark"><a href="#" class="fs-7">Hakob Minasyan</a></strong>
                                         <span class="online-status bg-success"></span>
                                     </div>
-                                    <span class="d-block online-username">@hakob_minasyan</span>
+                                    <span class="d-block fs-6">@hakob_minasyan</span>
                                 </div>
                             </div>
                             <div class="media text-muted pt-3">
                                 <img src="assets/images/users/user-1.jpg" alt="Online user" class="mr-2 online-user-image">
                                 <div class="media-body pb-3 mb-0 small lh-125">
                                     <div class="d-flex justify-content-between align-items-center w-100">
-                                        <strong class="text-gray-dark"><a href="#" class="smFLname">John Michael</a></strong>
+                                        <strong class="text-gray-dark"><a href="#" class="fs-7">John Michael</a></strong>
                                         <span class="online-status bg-success"></span>
                                     </div>
-                                    <span class="d-block online-username">@john_michael</span>
+                                    <span class="d-block fs-6">@john_michael</span>
                                 </div>
                             </div>
                             <small class="d-block text-right mt-3">
@@ -1176,7 +1177,7 @@
 
                         <!-- Suggestions -->
                         <div class="mt-4 p-3 bg-white rounded w-shadow">
-                            <h6 class="card-title border-bottom border-gray pb-2 mb-0">People You May Know</h6>
+                            <h6 class="pb-2 mb-0">People You May Know</h6>
                             <div class="media text-muted pt-3">
                                 <img src="https://demos.creative-tim.com/argon-dashboard-pro/assets/img/theme/team-4.jpg" alt="Online user" class="mr-2 online-user-image">
                                 <div class="media-body pb-3 mb-0 small lh-125">
@@ -1204,17 +1205,17 @@
 
                         <!-- Suggestions -->
                         <div class="mt-4 p-3 bg-white rounded w-shadow">
-                            <h6 class="card-title border-bottom border-gray pb-2 mb-0">Popular Tags</h6>
+                            <h6 class="pb-2 mb-0">Popular Tags</h6>
                             <div class="media text-muted pt-3">
                                 <div class="media-body pb-3 mb-0 small lh-125 popular-tags">
-                                    <span class="badge badge-primary">love</span>
-                                    <span class="badge badge-primary">instagood</span>
-                                    <span class="badge badge-primary">photooftheday</span>
-                                    <span class="badge badge-primary">fashion</span>
-                                    <span class="badge badge-primary">beautiful</span>
-                                    <span class="badge badge-primary">happy</span>
-                                    <span class="badge badge-primary">summer</span>
-                                    <span class="badge badge-primary">nature</span>
+                                    <span class="badge badge-primary">#love</span>
+                                    <span class="badge badge-primary">#instagood</span>
+                                    <span class="badge badge-primary">#photooftheday</span>
+                                    <span class="badge badge-primary">#fashion</span>
+                                    <span class="badge badge-primary">#beautiful</span>
+                                    <span class="badge badge-primary">#happy</span>
+                                    <span class="badge badge-primary">#summer</span>
+                                    <span class="badge badge-primary">#nature</span>
                                 </div>
                             </div>
                         </div>
@@ -1293,6 +1294,87 @@
             </div>
         </div>
     </div>
+
+    <!-- Chat Popup -->
+    <div class="chat-popup" id="hide-in-mobile">
+        <div class="row chat-window col-xs-5 col-md-3">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="top-bar shadow-sm d-flex align-items-center">
+                        <div class="col-md-8 col-xs-8">
+                            <a href="profile.html">
+                                <img src="assets/images/users/user-2.jpg" class="mr-2 chatbox-user-img" alt="Chat user image">
+                                <span class="panel-title">Karen Minas</span>
+                            </a>
+                        </div>
+                        <div class="col-md-4 col-xs-4" style="text-align: right;">
+                            <a href="#"><i id="minimize-chat-window" class="bx bx-minus icon_minim"></i></a>
+                            <a href="#" id="close-chatbox"><i class="bx bx-x"></i></a>
+                        </div>
+                    </div>
+                    <div id="messagebody" class="msg_container_base">
+                        <div class="row msg_container base_sent">
+                            <div class="col-md-10 col-xs-10">
+                                <div class="messages message-reply bg-primary shadow-sm">
+                                    <p>Hi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row msg_container base_receive">
+                            <div class="col-md-10 col-xs-10">
+                                <div class="messages message-receive shadow-sm">
+                                    <p>Hi sir,</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row msg_container base_receive">
+                            <div class="col-xs-10 col-md-10">
+                                <div class="messages message-receive shadow-sm">
+                                    <p>How are you?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row msg_container base_sent">
+                            <div class="col-xs-10 col-md-10">
+                                <div class="messages message-reply bg-primary shadow-sm">
+                                    <p>I am Fine. Hw about u?</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row msg_container base_receive">
+                            <div class="col-xs-10 col-md-10">
+                                <div class="messages message-receive shadow-sm">
+                                    <p>I am also doing fine. See you later sir.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row msg_container base_sent">
+                            <div class="col-md-10 col-xs-10">
+                                <div class="messages message-reply bg-primary shadow-sm">
+                                    <p>Good, Have a nice day.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer chat-inputs">
+                        <div class="col-md-12 message-box">
+                            <input type="text" class="w-100 search-input type-message" placeholder="Type a message..." />
+                            <div class="chat-tools">
+                                <i class="bx bx-image"></i>
+                                <i class='bx bxs-file-gif'></i>
+                                <i class="bx bxs-smiley-happy"></i>
+                                <i class="bx bxs-smiley-happy"></i>
+                                <i class="bx bxs-smiley-happy"></i>
+                                <i class="bx bxs-smiley-happy"></i>
+                                <i class="fa fa-thumbs-o-up m-0"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END Chat Popup -->
 
     <!-- Core -->
     <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>
