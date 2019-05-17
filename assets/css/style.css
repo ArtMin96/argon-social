@@ -29,8 +29,13 @@ body {
 
 a,
 a:hover {
-    text-decoration: none;
+    text-decoration: none !important;
     color: #65666E;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+    text-decoration: none !important;
 }
 
 /* Loader */
@@ -1259,6 +1264,23 @@ img.settings-icon {
     border-radius: 10px;
     font-weight: 500;
     background-color: #dee2e6;
+}
+
+.group-cat-overlay {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    border-radius: 20px;
+}
+
+.group-category {
+    color: #fff;
+}
+
+.group-category:hover {
+    color: #f9f9f9;
+}
+
+.group-category-img {
+    border-radius: 20px;
 }
 
 .verify {
