@@ -110,8 +110,16 @@
     justify-content: space-between;
 }
 
-.chat-tools i {
+.chat-tools .chatbox-tools-img {
     color: #444;
-    font-size: 1.2rem;
+    width: 20px;
     padding: 0px 0px 10px 0px;
+}
+.chatbox-call {
+    width: 18px;
+    margin: 0 15px;
+}
+
+.chatbox-call:last-child {
+    margin-right: 0px;
 }

@@ -64,7 +64,7 @@
     .post-form-group {
         padding: 0 10px 20px 10px
     }
-    
+
     .post-user-image {
         width: 50px;
     }
@@ -162,16 +162,35 @@
     .post-form-group {
         padding: 0 10px 20px 10px
     }
-    
+
     .post-user-image {
         width: 8%;
     }
-    
-/*
+
+    /*
     #navbar-main .notify-drop {
         min-width: 320px !important;
     }
 */
+}
+
+@media (max-width:768px) {
+    .group-card {
+        margin-bottom: 2rem;
+    }
+
+    .group-card-inline .btn {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        margin: 0px auto;
+    }
+
+    .group-card-inline .group-card-inline-img {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0px;
+    }
 }
 
 @media (min-width:992px) {
@@ -193,7 +212,7 @@
     #menu-toggle {
         display: none
     }
-    
+
     .navbar {
         padding-right: 3rem !important;
     }
@@ -240,6 +259,12 @@
         flex: 0 0 20.333333%;
         max-width: 20.333333%;
     }
+    
+    #page-content-wrapper {
+        -ms-flex: 0 0 79.333333%;
+        flex: 0 0 79.333333%;
+        max-width: 79.333333%;
+    }
 }
 
 @media (min-width:1200px) {
@@ -259,7 +284,7 @@
         display: block
     }
 
-/*
+    /*
     .second-section {
         flex: 0 0 50% !important;
         max-width: 50%
@@ -307,8 +332,8 @@
         position: absolute;
         margin-left: -90px !important;
     }
-    
-/*
+
+    /*
     #navbar-main .notify-drop {
         left: 0 !important;
         width: 100vw;  for desktop version set min-width: 320px; 
@@ -336,7 +361,7 @@
         padding: 0.5 1rem;
     }
 */
-    
+
     #navbar-main .navbar-brand {
         margin-right: 0;
     }
@@ -344,23 +369,23 @@
 
 @media (min-width: 992px) {
     #main_menu form {
-        display: block!important;
+        display: block !important;
     }
-    
+
     .d-mobile {
         display: inline-block !important;
     }
-    
+
     .enable-mobile {
         display: none !important;
-    }   
+    }
 }
 
 @media (max-width: 992px) {
     #navbar-main .navbar-brand {
         width: 30%;
     }
-    
+
     #navbar-main .navbar-nav li.s-nav {
         width: 30%;
     }

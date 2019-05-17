@@ -1,3 +1,8 @@
+// Loader
+$(window).on('load', function () {
+    $('#loader').fadeOut('slow');
+});
+
 // Real time detect browser screen size
 (function (window) {
     window.watchResize = function (callback) {
@@ -42,6 +47,7 @@ window.watchResize(function () {
         $('.notification').removeClass('show');
         $(".rm-drop-mobile").removeAttr("data-toggle");
         $(".notification a.nav-link").attr("href", "notification.html");
+        $("a.settings-link").attr("href", "settings.html");
     } else {
         $('.message-drop-li').show();
         $('#hide-in-mobile').show();
@@ -52,6 +58,17 @@ window.watchResize(function () {
 
 // Create dropdown and tooltip together
 $('.drop-w-tooltip').tooltip();
+
+// Disable dropdown auto close when click the toggle
+//$('.dark-mode').on('click', function (event) {
+//    event.stopPropagation();
+//});
+
+//$('.dark-mode').on('click', function () {
+//    if(this) {
+//        this.stopPropagation();
+//    }
+//});
 
 // Chatbox
 

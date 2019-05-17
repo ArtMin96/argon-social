@@ -24,6 +24,20 @@
 </head>
 
 <body class="newsfeed">
+<!--
+    <div class="spinner d-flex align-items-center justify-content-center" id="loader">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="assets/images/logo-128x128.png" class="mb-5" alt="Loader image">
+            </div>
+            <div class="col-md-12 loader">
+                <div class="bounce bounce1"></div>
+                <div class="bounce bounce2"></div>
+                <div class="bounce bounce3"></div>
+            </div>
+        </div>
+    </div>
+-->
     <div class="container-fluid" id="wrapper">
         <div class="row newsfeed-size">
             <div class="col-md-12 newsfeed-right-side">
@@ -93,7 +107,7 @@
                                 <a href="#" class="nav-link nav-links message-drop drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Messages" role="button" aria-haspopup="true" aria-expanded="false">
                                     <img src="assets/images/icons/navbar/message.png" class="message-dropdown" alt="navbar icon"> <span class="badge badge-pill badge-primary">1</span>
                                 </a>
-                                <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop">
+                                <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop shadow-sm">
                                     <div class="notify-drop-title">
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6 col-xs-6 fs-8">Messages | <a href="#">Requests</a></div>
@@ -213,7 +227,7 @@
                                 <a href="#" class="nav-link nav-links rm-drop-mobile drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Notifications" role="button" aria-haspopup="true" aria-expanded="false">
                                     <img src="assets/images/icons/navbar/notification.png" class="notification-bell" alt="navbar icon"> <span class="badge badge-pill badge-primary">3</span>
                                 </a>
-                                <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop">
+                                <ul class="dropdown-menu notify-drop dropdown-menu-right nav-drop shadow-sm">
                                     <div class="notify-drop-title">
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6 col-xs-6 fs-8">Notifications <span class="badge badge-pill badge-primary ml-2">3</span></div>
@@ -339,20 +353,29 @@
                                     <a class="dropdown-item" href="sign-up.html">Sign up</a>
                                 </div>
                             </li>
-                            <li class="nav-item s-nav dropdown">
-                                <a href="#" class="nav-link nav-links" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <li class="nav-item s-nav">
+                                <a href="profile.html" class="nav-link nav-links">
                                     <div class="menu-user-image">
                                         <img src="assets/images/users/user-4.jpg" class="menu-user-img ml-1" alt="Menu Image">
                                     </div>
                                 </a>
-                                <div class="dropdown-menu dropdown-menu-right nav-drop">
-                                    <a class="dropdown-item" href="profile.html"><img src="assets/images/icons/navbar/account.png" class="mr-2" alt="Navbar account"> Account</a>
-                                    <div role="separator" class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#"><img src="assets/images/icons/navbar/logout.png" class="mr-2" alt="Navbar account"> Logout</a>
-                                </div>
                             </li>
-                            <li class="nav-item s-nav nav-icon">
-                                <a href="settings.html" data-toggle="tooltip" data-placement="bottom" data-title="Settings" class="nav-link"><img src="assets/images/icons/navbar/settings.png" class="nav-settings" alt="navbar icon"></a>
+                            <li class="nav-item s-nav nav-icon dropdown">
+                                <a href="settings.html" data-toggle="dropdown" data-placement="bottom" data-title="Settings" class="nav-link settings-link rm-drop-mobile drop-w-tooltip" id="settings-dropdown"><img src="assets/images/icons/navbar/settings.png" class="nav-settings" alt="navbar icon"></a>
+                                <div class="dropdown-menu dropdown-menu-right settings-dropdown shadow-sm" aria-labelledby="settings-dropdown">
+                                    <a class="dropdown-item" href="#">
+                                        <img src="assets/images/icons/navbar/help.png" alt="Navbar icon"> Help Center</a>
+                                    <a class="dropdown-item d-flex align-items-center dark-mode" onClick="event.stopPropagation();" href="#">
+                                        <img src="assets/images/icons/navbar/moon.png" alt="Navbar icon"> Dark Mode
+                                        <button type="button" class="btn btn-lg btn-toggle ml-auto" data-toggle="button" aria-pressed="false" autocomplete="off">
+                                            <div class="handle"></div>
+                                        </button>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <img src="assets/images/icons/navbar/gear-1.png" alt="Navbar icon"> Settings</a>
+                                    <a class="dropdown-item logout-btn" href="#">
+                                        <img src="assets/images/icons/navbar/logout.png" alt="Navbar icon"> Log Out</a>
+                                </div>
                             </li>
                             <button type="button" class="btn nav-link" id="menu-toggle"><img src="assets/images/icons/theme/navs.png" alt="Navbar navs"></button>
                         </ul>
@@ -1221,25 +1244,7 @@
                         </div>
                     </div>
                     <div class="col-md-2 four-section">
-                        <div class="card w-shadow">
-                            <div class="card-body">
-                                <h5 class="card-title card-title">Dashboard</h5>
-                                <hr>
-                                <p>Likes count</p>
-                                <canvas id="likesChart"></canvas>
-                                <p class="mt-3">Follow count</p>
-                                <canvas id="followersChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="card mt-4">
-                            <div class="card-body">
-                                <h5 class="card-title card-title">Sponsored</h5>
-                                <hr>
-                                <img class="card-img-top" src="http://blog.creative-tim.com/wp-content/uploads/2015/08/how-we-started1-730x410.jpg" alt="Card image cap">
-                                <a href="#" class="card-title mt-2 d-block">Creative Tim</a>
-                                <small class="card-text">Speed up your projects! Get the Premium version of our products. They come with a huge num...</small>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -1301,57 +1306,63 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="top-bar shadow-sm d-flex align-items-center">
-                        <div class="col-md-8 col-xs-8">
+                        <div class="col-md-6 col-xs-6">
                             <a href="profile.html">
                                 <img src="assets/images/users/user-2.jpg" class="mr-2 chatbox-user-img" alt="Chat user image">
                                 <span class="panel-title">Karen Minas</span>
                             </a>
                         </div>
-                        <div class="col-md-4 col-xs-4" style="text-align: right;">
-                            <a href="#"><i id="minimize-chat-window" class="bx bx-minus icon_minim"></i></a>
-                            <a href="#" id="close-chatbox"><i class="bx bx-x"></i></a>
+                        <div class="col-md-6 col-xs-6 d-flex align-items-center justify-content-between">
+                            <a href="#">
+                                <img src="assets/images/icons/messenger/video-call.png" class="chatbox-call" alt="Chatbox contact types">
+                            </a>
+                            <a href="#">
+                                <img src="assets/images/icons/messenger/call.png" class="chatbox-call" alt="Chatbox contact types">
+                            </a>
+                            <a href="javascript:void(0)"><i id="minimize-chat-window" class="bx bx-minus icon_minim"></i></a>
+                            <a href="javascript:void(0)" id="close-chatbox"><i class="bx bx-x"></i></a>
                         </div>
                     </div>
                     <div id="messagebody" class="msg_container_base">
                         <div class="row msg_container base_sent">
                             <div class="col-md-10 col-xs-10">
                                 <div class="messages message-reply bg-primary shadow-sm">
-                                    <p>Hi</p>
+                                    <p>Are you going to the party on Saturday?</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row msg_container base_receive">
                             <div class="col-md-10 col-xs-10">
                                 <div class="messages message-receive shadow-sm">
-                                    <p>Hi sir,</p>
+                                    <p>I was thinking about it. Are you?</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row msg_container base_receive">
                             <div class="col-xs-10 col-md-10">
                                 <div class="messages message-receive shadow-sm">
-                                    <p>How are you?</p>
+                                    <p>Really? Well, what time does it start?</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row msg_container base_sent">
                             <div class="col-xs-10 col-md-10">
                                 <div class="messages message-reply bg-primary shadow-sm">
-                                    <p>I am Fine. Hw about u?</p>
+                                    <p>It starts at 8:00 pm, and I really think you should go.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row msg_container base_receive">
                             <div class="col-xs-10 col-md-10">
                                 <div class="messages message-receive shadow-sm">
-                                    <p>I am also doing fine. See you later sir.</p>
+                                    <p>Well, who else is going to be there?</p>
                                 </div>
                             </div>
                         </div>
                         <div class="row msg_container base_sent">
                             <div class="col-md-10 col-xs-10">
                                 <div class="messages message-reply bg-primary shadow-sm">
-                                    <p>Good, Have a nice day.</p>
+                                    <p>Everybody from school.</p>
                                 </div>
                             </div>
                         </div>
@@ -1360,13 +1371,24 @@
                         <div class="col-md-12 message-box">
                             <input type="text" class="w-100 search-input type-message" placeholder="Type a message..." />
                             <div class="chat-tools">
-                                <i class="bx bx-image"></i>
-                                <i class='bx bxs-file-gif'></i>
-                                <i class="bx bxs-smiley-happy"></i>
-                                <i class="bx bxs-smiley-happy"></i>
-                                <i class="bx bxs-smiley-happy"></i>
-                                <i class="bx bxs-smiley-happy"></i>
-                                <i class="fa fa-thumbs-o-up m-0"></i>
+                                <a href="#" class="chatbox-tools">
+                                    <img src="assets/images/icons/theme/post-image.png" class="chatbox-tools-img" alt="Chatbox tool">
+                                </a>
+                                <a href="#" class="chatbox-tools">
+                                    <img src="assets/images/icons/messenger/gif.png" class="chatbox-tools-img" alt="Chatbox tool">
+                                </a>
+                                <a href="#" class="chatbox-tools">
+                                    <img src="assets/images/icons/messenger/smile.png" class="chatbox-tools-img" alt="Chatbox tool">
+                                </a>
+                                <a href="#" class="chatbox-tools">
+                                    <img src="assets/images/icons/messenger/console.png" class="chatbox-tools-img" alt="Chatbox tool">
+                                </a>
+                                <a href="#" class="chatbox-tools">
+                                    <img src="assets/images/icons/messenger/attach-file.png" class="chatbox-tools-img" alt="Chatbox tool">
+                                </a>
+                                <a href="#" class="chatbox-tools">
+                                    <img src="assets/images/icons/messenger/photo-camera.png" class="chatbox-tools-img" alt="Chatbox tool">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1391,47 +1413,6 @@
     </script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/components/components.js"></script>
-    <script type="text/javascript">
-        // Chart.js
-
-        var likesChart = document.getElementById('likesChart').getContext('2d');
-        var chart = new Chart(likesChart, {
-            // The type of chart we want to create
-            type: 'line',
-
-            // The data for our dataset
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-                datasets: [{
-                    label: 'Likes chart',
-                    backgroundColor: 'rgb(0, 123, 255)',
-                    borderColor: 'rgb(0, 123, 255)',
-                    data: [0, 10, 5, 2, 20, 30, 45]
-                }]
-            },
-
-            // Configuration options go here
-            options: {}
-        });
-
-        var followersChart = document.getElementById('followersChart').getContext('2d');
-        var myPieChart = new Chart(followersChart, {
-            type: 'pie',
-            data: {
-                labels: [
-                    'Followers',
-                    'Following'
-                ],
-                datasets: [{
-                    backgroundColor: ['rgb(0, 123, 255)', 'rgb(50,205,50)'],
-                    data: [32, 17]
-                }]
-            },
-            // Configuration options go here
-            options: {}
-        });
-
-    </script>
 </body>
 
 </html>
