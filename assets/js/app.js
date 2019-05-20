@@ -59,6 +59,12 @@ window.watchResize(function () {
 // Create dropdown and tooltip together
 $('.drop-w-tooltip').tooltip();
 
+$('#btn-to-scroll-bottom').on('click', function () {
+    $('html, body').animate({
+        scrollTop: $("#scroll-div-bootom").offset().top
+    }, 1000)
+});
+
 // Disable dropdown auto close when click the toggle
 //$('.dark-mode').on('click', function (event) {
 //    event.stopPropagation();

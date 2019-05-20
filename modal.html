@@ -11,20 +11,36 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-    <link href='https://cdn.jsdelivr.net/npm/boxicons@1.9.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.1/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Styles -->
     <link href="assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/components.css" rel="stylesheet">
-    <link href="assets/css/messenger.css" rel="stylesheet">
     <link href="assets/css/media.css" rel="stylesheet">
+    <link href="assets/css/chat.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
 
-<body class="messenger">
-    <div class="container-fluid newsfeed d-flex" id="wrapper">
+<body class="newsfeed">
+    <!--
+    <div class="spinner d-flex align-items-center justify-content-center" id="loader">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="assets/images/logo-128x128.png" class="mb-5" alt="Loader image">
+            </div>
+            <div class="col-md-12 loader">
+                <div class="bounce bounce1"></div>
+                <div class="bounce bounce2"></div>
+                <div class="bounce bounce3"></div>
+            </div>
+        </div>
+    </div>
+-->
+    <div class="container-fluid" id="wrapper">
         <div class="row newsfeed-size">
-            <div class="col-md-12 message-right-side">
+            <div class="col-md-12 newsfeed-right-side">
                 <nav id="navbar-main" class="navbar navbar-expand-lg shadow-sm sticky-top">
                     <div class="w-100 justify-content-md-center">
                         <ul class="nav navbar-nav enable-mobile px-2">
@@ -361,302 +377,313 @@
                                         <img src="assets/images/icons/navbar/logout.png" alt="Navbar icon"> Log Out</a>
                                 </div>
                             </li>
+                            <button type="button" class="btn nav-link" id="menu-toggle"><img src="assets/images/icons/theme/navs.png" alt="Navbar navs"></button>
                         </ul>
+
                     </div>
+
                 </nav>
-                <div class="row message-right-side-content">
-                    <div class="col-md-12">
-                        <div id="message-frame">
-                            <div class="message-sidepanel">
-                                <div class="message-profile">
-                                    <div class="wrap">
-                                        <img src="assets/images/users/user-4.jpg" class="online conv-img" alt="Conversation user" />
-                                        <p>Arthur Minasyan</p>
-                                        <i class='bx bx-chevron-down expand-button'></i>
-                                        <div id="status-options">
-                                            <ul id="set-online-status">
-                                                <li id="status-online" class="messenger-user-active"><span class="status-circle"></span>
-                                                    <p>Online</p>
-                                                </li>
-                                                <li id="status-away"><span class="status-circle"></span>
-                                                    <p>Away</p>
-                                                </li>
-                                                <li id="status-busy"><span class="status-circle"></span>
-                                                    <p>Busy</p>
-                                                </li>
-                                                <li id="status-offline"><span class="status-circle"></span>
-                                                    <p>Offline</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div id="expanded">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="text-dark fs-9"><i class='bx bx-search text-primary mr-3'></i> Search in Conversation</a>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="text-dark fs-9"><i class='bx bx-pencil text-primary mr-3'></i> Edit Nicknames</a>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="text-dark fs-9"><i class='bx bxs-color-fill text-primary mr-3'></i> Change Color</a>
-                                                </li>
-                                                <li class="list-group-item">
-                                                    <a href="javascript:void(0)" class="text-dark fs-9"><i class='bx bx-bell text-primary mr-3'></i> Notifications</a>
-                                                </li>
-                                            </ul>
+                <div class="row newsfeed-right-side-content mt-3">
+                    <div class="col-md-2 newsfeed-left-side sticky-top shadow-sm" id="sidebar-wrapper">
+                        <div class="card newsfeed-user-card h-100">
+                            <ul class="list-group list-group-flush newsfeed-left-sidebar">
+                                <li class="list-group-item">
+                                    <h6>Home</h6>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="index.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/newsfeed.png" alt="newsfeed"> News Feed</a>
+                                    <a href="#" class="newsfeedListicon"><i class='bx bx-dots-horizontal-rounded'></i></a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="messages.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/message.png" alt="message"> Messages</a>
+                                    <span class="badge badge-primary badge-pill">2</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center sd-active">
+                                    <a href="groups.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/group.png" alt="group"> Groups</a>
+                                    <span class="badge badge-primary badge-pill">17</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="events.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/event.png" alt="event"> Events</a>
+                                    <span class="badge badge-primary badge-pill">3</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="saved.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/saved.png" alt="saved"> Saved</a>
+                                    <span class="badge badge-primary badge-pill">8</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="find-friends.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/find-friends.png" alt="find-friends"> Find Friends</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="matches.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/matches.png" alt="matches"> Matches</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="teams.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/team.png" alt="find-friends"> Argon For Teams</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center newsLink">
+                                    <a href="https://github.com/ArtMin96/argon-social" target="_blank" class="sidebar-item"><img src="assets/images/icons/left-sidebar/news.png" alt="find-friends"> News</a>
+                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-10 second-section" id="page-content-wrapper">
+                        <div class="mb-3">
+                            <div class="btn-group d-flex top-links-fg">
+                                <a href="index.html" class="btn btn-quick-links mr-3 ql-active">
+                                    <img src="assets/images/icons/theme/group-white.png" class="mr-2" alt="quick links icon">
+                                    <span class="fs-8">Your Groups</span>
+                                </a>
+                                <a href="messages.html" class="btn btn-quick-links mr-3">
+                                    <img src="assets/images/icons/theme/rocket.png" class="mr-2" alt="quick links icon">
+                                    <span class="fs-8">Discover</span>
+                                </a>
+                                <a href="watch.html" class="btn btn-quick-links">
+                                    <img src="assets/images/icons/theme/create.png" class="mr-2" alt="quick links icon">
+                                    <span class="fs-8">Create</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="jumbotron groups-banner">
+                            <div class="container group-banner-content">
+                                <h1 class="jumbotron-heading mt-auto"><img src="assets/images/icons/theme/group-white.png" alt="Welcome to groups"> Groups</h1>
+                                <p>Get latest active from your groups.</p>
+                            </div>
+                        </div>
+
+                        <!-- Groups -->
+                        <div class="groups bg-white py-3 px-4 shadow-sm">
+                            <div class="card-head d-flex justify-content-between">
+                                <h5 class="mb-4">Suggested Groups</h5>
+                                <a href="#" class="btn btn-link">See All</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card group-card shadow-sm">
+                                        <img src="assets/images/groups/group-1.png" class="card-img-top group-card-image" alt="Group image">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Argon Social Network <img src="assets/images/theme/verify.png" width="15px" class="verify" alt="Group verified"></h5>
+                                            <p class="card-text">10k Members 20+ post a week</p>
+                                            <a href="#" class="btn btn-quick-link join-group-btn border w-100" data-toggle="modal" data-target="#exampleModal">Join</a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="message-search position-relative d-flex">
-                                    <label for=""><i class='bx bx-search'></i></label>
-                                    <input type="text" class="form-control search-input" placeholder="Search for conversations..." />
-                                    <button type="button" class="btn btn-create-conversation" data-toggle="modal" data-target="#newConversation"><i class='bx bx-pencil'></i></button>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card group-card shadow-sm">
+                                        <img src="assets/images/groups/group-2.jpg" class="card-img-top group-card-image" alt="Group image">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tourism</h5>
+                                            <p class="card-text">2.5k Members 35+ post a week</p>
+                                            <a href="#" class="btn btn-quick-link join-group-btn border w-100">Join</a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="message-contacts">
-                                    <ul class="conversations">
-                                        <li class="contact">
-                                            <div class="wrap">
-                                                <span class="contact-status online"></span>
-                                                <img src="assets/images/users/user-5.png" alt="Conversation user" />
-                                                <span class="unread-messages">3</span>
-                                                <div class="meta">
-                                                    <p class="name">Ruth D. Greene</p>
-                                                    <p class="preview">Great, I’ll see you tomorrow!.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="contact messenger-user-active">
-                                            <div class="wrap">
-                                                <span class="contact-status busy"></span>
-                                                <img src="assets/images/users/user-6.png" alt="Conversation user" />
-                                                <div class="meta">
-                                                    <p class="name">Susan P. Jarvis</p>
-                                                    <p class="preview">This party is going to have a DJ, food, and drinks.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="contact">
-                                            <div class="wrap">
-                                                <span class="contact-status away"></span>
-                                                <img src="assets/images/users/user-7.png" alt="Conversation user" />
-                                                <div class="meta">
-                                                    <p class="name">Kimberly R. Hatfield</p>
-                                                    <p class="preview"><span>You:</span> Yeah, I will be there.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="contact">
-                                            <div class="wrap">
-                                                <span class="contact-status online"></span>
-                                                <img src="assets/images/users/user-8.png" alt="Conversation user" />
-                                                <span class="unread-messages">1</span>
-                                                <div class="meta">
-                                                    <p class="name">Joe S. Feeney</p>
-                                                    <p class="preview">I would really like to bring my friend Jake, if that would be OK.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="contact">
-                                            <div class="wrap">
-                                                <span class="contact-status busy"></span>
-                                                <img src="assets/images/users/user-9.png" alt="Conversation user" />
-                                                <div class="meta">
-                                                    <p class="name">William S. Willmon</p>
-                                                    <p class="preview"><span>You:</span> Sure, what can I help you with?</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="contact">
-                                            <div class="wrap">
-                                                <span class="contact-status"></span>
-                                                <img src="assets/images/users/user-10.png" alt="Conversation user" />
-                                                <span class="unread-messages">4</span>
-                                                <div class="meta">
-                                                    <p class="name">Sean S. Smith</p>
-                                                    <p class="preview">Which of those two is best?</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="contact">
-                                            <div class="wrap">
-                                                <span class="contact-status"></span>
-                                                <img src="assets/images/users/user-11.png" alt="Conversation user" />
-                                                <span class="unread-messages">1</span>
-                                                <div class="meta">
-                                                    <p class="name">Michelle R. Alvarado</p>
-                                                    <p class="preview">You'll need to make an appointment.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="contact">
-                                            <div class="wrap">
-                                                <span class="contact-status busy"></span>
-                                                <img src="assets/images/users/user-12.png" alt="Conversation user" />
-                                                <span class="unread-messages">2</span>
-                                                <div class="meta">
-                                                    <p class="name">Irwin M. Speller</p>
-                                                    <p class="preview">Sure. Here you go.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="contact">
-                                            <div class="wrap">
-                                                <span class="contact-status"></span>
-                                                <img src="assets/images/users/user-5.png" alt="Conversation user" />
-                                                <span class="unread-messages">1</span>
-                                                <div class="meta">
-                                                    <p class="name">Karen E. Nagata</p>
-                                                    <p class="preview">Would you like to exchange it?</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="contact">
-                                            <div class="wrap">
-                                                <span class="contact-status"></span>
-                                                <img src="assets/images/users/user-8.png" alt="Conversation user" />
-                                                <div class="meta">
-                                                    <p class="name">Jonathan Sidwell</p>
-                                                    <p class="preview"><span>You:</span> Certainly. This will take only a few seconds.</p>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card group-card shadow-sm">
+                                        <img src="assets/images/groups/group-3.jpg" class="card-img-top group-card-image" alt="Group image">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Reading Books</h5>
+                                            <p class="card-text">1.3k Members 10+ post a day</p>
+                                            <a href="#" class="btn btn-quick-link join-group-btn border w-100">Join</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="card group-card shadow-sm">
+                                        <img src="assets/images/groups/group-4.jpg" class="card-img-top group-card-image" alt="Group image">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Capture The Best</h5>
+                                            <p class="card-text">2.8k Members 8+ post a day</p>
+                                            <a href="#" class="btn btn-quick-link join-group-btn border w-100">Join</a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="content">
-                                <div class="row">
-                                    <div class="col-md-12 messenger-top-section">
-                                        <div class="contact-profile d-flex align-items-center justify-content-between">
-                                            <div class="messenger-top-luser df-aic">
-                                                <img src="assets/images/users/user-6.png" class="messenger-user" alt="Convarsation user image" />
-                                                <a href="#" class="message-profile-name">Susan P. Jarvis</a>
+                        </div>
+                        <hr class="my-5">
+                        <div class="groups py-3 px-4 mt-3">
+                            <div class="card-head d-flex justify-content-between">
+                                <h5 class="mb-4">Friends Groups</h5>
+                                <a href="#" class="btn btn-link">See All</a>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="card group-card bg-transparent group-card-inline mb-3">
+                                        <div class="row no-gutters  d-flex align-items-center">
+                                            <div class="col-md-4">
+                                                <img src="assets/images/groups/group-5.jpg" class="card-img group-card-inline-img" alt="Group image">
                                             </div>
-                                            <div class="social-media messenger-top-ricon df-aic">
-                                                <img src="assets/images/icons/messenger/phone.png" class="msg-top-more-info" alt="Messenger icons">
-                                                <img src="assets/images/icons/messenger/videocam.png" class="msg-top-more-info" alt="Messenger icons">
-                                                <img src="assets/images/icons/messenger/info.png" class="msg-top-more-info" alt="Messenger icons">
-                                                <span class="dropdown">
-                                                    <a href="#" role="button" id="message-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                        <i class='bx bx-dots-vertical-rounded'></i>
-                                                    </a>
-                                                    <div class="dropdown-menu dropdown-menu-right fs-9" aria-labelledby="message-options">
-                                                        <a href="#" class="dropdown-item">Mute</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="#" class="dropdown-item">Delete</a>
-                                                        <div class="dropdown-divider"></div>
-                                                        <a href="#" class="dropdown-item">Mark as Unread</a>
-                                                        <a href="#" class="dropdown-item">Something's wrong</a>
-                                                        <a href="#" class="dropdown-item">Ignore Messages</a>
-                                                        <a href="#" class="dropdown-item">Block Messages</a>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">Source Code Viewer</h5>
+                                                    <p class="card-text">8.6k Members 29+ post a day</p>
+                                                    <div class="like-user-img">
+                                                        <ul class="list-unstyled liked-users">
+                                                            <li>
+                                                                <a href="#"><img src="assets/images/users/user-7.png" alt="Like user image"></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><img src="assets/images/users/user-6.png" alt="Like user image"></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><img src="assets/images/users/user-5.png" alt="Like user image"></a>
+                                                            </li>
+                                                            <li>
+                                                                <span class="liked-info fs-8">9 friends are members</span>
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                </span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <a href="#" class="btn btn-quick-link bg-white">Join</a>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12" style="max-height: 532px;">
-                                        <div class="messages">
-                                            <ul class="messages-content">
-                                                <li class="message-receive">
-                                                    <img src="assets/images/users/user-6.png" alt="Conversation user image" />
-                                                    <p>Are you going to the party on Saturday?</p>
-                                                </li>
-                                                <li class="message-reply">
-                                                    <p>I was thinking about it. Are you?</p>
-                                                </li>
-                                                <li class="message-receive">
-                                                    <img src="assets/images/users/user-6.png" alt="Conversation user image" />
-                                                    <p>Yeah, I heard it's going to be a lot of fun.</p>
-                                                </li>
-                                                <li class="message-reply">
-                                                    <p>Really? Well, what time does it start?</p>
-                                                </li>
-                                                <li class="message-receive">
-                                                    <img src="assets/images/users/user-6.png" alt="Conversation user image" />
-                                                    <p>It starts at 8:00 pm, and I really think you should go.</p>
-                                                </li>
-                                                <li class="message-reply">
-                                                    <p>Well, who else is going to be there?</p>
-                                                </li>
-                                                <li class="message-receive">
-                                                    <img src="assets/images/users/user-6.png" alt="Conversation user image" />
-                                                    <p>Everybody from school.</p>
-                                                </li>
-                                                <li class="message-reply">
-                                                    <p>How do you know it's going to be so fun?</p>
-                                                </li>
-                                                <li class="message-receive">
-                                                    <img src="assets/images/users/user-6.png" alt="Conversation user image" />
-                                                    <p>This party is going to have a DJ, food, and drinks.</p>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="message-input">
-                                            <div class="wrap">
-                                                <form class="d-inline form-inline">
-                                                    <div class="d-flex align-items-center justify-content-between messenger-icons">
-                                                        <button type="button" class="btn search-button">
-                                                            <img src="assets/images/icons/messenger/m-camera.png" alt="Messenger icons">
-                                                        </button>
-                                                        <button type="button" class="btn search-button">
-                                                            <img src="assets/images/icons/messenger/m-photo.png" alt="Messenger icons">
-                                                        </button>
-                                                        <button type="button" class="btn search-button">
-                                                            <img src="assets/images/icons/messenger/m-gamepad.png" alt="Messenger icons">
-                                                        </button>
-                                                        <button type="button" class="btn search-button">
-                                                            <img src="assets/images/icons/messenger/m-microphone.png" alt="Messenger icons">
-                                                        </button>
-                                                        <div class="input-group messenger-input">
-                                                            <input type="text" class="form-control search-input" placeholder="Type a message..." aria-label="Type a message..." aria-describedby="button-addon2">
-                                                            <div class="input-group-append">
-                                                                <button class="btn search-button" type="button" id="button-addon2 send-message">
-                                                                    <img src="assets/images/icons/messenger/m-smile.png" alt="Messenger icons">
-                                                                </button>
-                                                            </div>
-                                                        </div>
-                                                        <button type="button" class="btn search-button" id="send-message">
-                                                            <img src="assets/images/icons/messenger/m-send.png" alt="Messenger icons">
-                                                        </button>
+                                </div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="card group-card bg-transparent group-card-inline mb-3">
+                                        <div class="row no-gutters  d-flex align-items-center">
+                                            <div class="col-md-4">
+                                                <img src="assets/images/groups/group-6.jpg" class="card-img group-card-inline-img" alt="Group image">
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">T-Shirt</h5>
+                                                    <p class="card-text">2.4k Members 5+ post a day</p>
+                                                    <div class="like-user-img">
+                                                        <ul class="list-unstyled liked-users">
+                                                            <li>
+                                                                <a href="#"><img src="assets/images/users/user-7.png" alt="Like user image"></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><img src="assets/images/users/user-6.png" alt="Like user image"></a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#"><img src="assets/images/users/user-5.png" alt="Like user image"></a>
+                                                            </li>
+                                                            <li>
+                                                                <span class="liked-info fs-8">4 friends are members</span>
+                                                            </li>
+                                                        </ul>
                                                     </div>
-                                                </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <a href="#" class="btn btn-quick-link bg-white">Join</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <hr class="my-5">
+                        <div class="groups py-3 px-4 mt-3 mb-4" id="scroll-div-bootom">
+                            <div class="card-head d-flex justify-content-between">
+                                <h5 class="mb-4">Find By Categories</h5>
+                                <button class="btn btn-link" id="btn-to-scroll-bottom" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="group-category-1 group-category-2">Open</button>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="collapse multi-collapse group-collapse" id="group-category-1">
+                                        <div class="card group-card shadow-sm text-white">
+                                            <a href="#" class="group-category">
+                                                <img src="assets/images/groups/category-1.png" class="card-img group-category-img" alt="Category type">
+                                                <div class="card-img-overlay group-cat-overlay d-flex align-items-end">
+                                                    <h5 class="card-title">Arts &#38; Culture</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="collapse multi-collapse group-collapse" id="group-category-1">
+                                        <div class="card group-card shadow-sm text-white">
+                                            <a href="#" class="group-category">
+                                                <img src="assets/images/groups/category-2.jpg" class="card-img group-category-img" alt="Category type">
+                                                <div class="card-img-overlay group-cat-overlay d-flex align-items-end">
+                                                    <h5 class="card-title">School &#38; Education</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="collapse multi-collapse group-collapse" id="group-category-1">
+                                        <div class="card group-card shadow-sm text-white">
+                                            <a href="#" class="group-category">
+                                                <img src="assets/images/groups/category-3.jpg" class="card-img group-category-img" alt="Category type">
+                                                <div class="card-img-overlay group-cat-overlay d-flex align-items-end">
+                                                    <h5 class="card-title">Music &#38; TV</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="collapse multi-collapse group-collapse" id="group-category-1">
+                                        <div class="card group-card shadow-sm text-white">
+                                            <a href="#" class="group-category">
+                                                <img src="assets/images/groups/category-4.jpg" class="card-img group-category-img" alt="Category type">
+                                                <div class="card-img-overlay group-cat-overlay d-flex align-items-end">
+                                                    <h5 class="card-title">Sport &#38; Health</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="collapse multi-collapse group-collapse" id="group-category-1">
+                                        <div class="card group-card shadow-sm text-white">
+                                            <a href="#" class="group-category">
+                                                <img src="assets/images/groups/category-5.jpg" class="card-img group-category-img" alt="Category type">
+                                                <div class="card-img-overlay group-cat-overlay d-flex align-items-end">
+                                                    <h5 class="card-title">Dating</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-4">
+                                    <div class="collapse multi-collapse group-collapse" id="group-category-1">
+                                        <div class="card group-card shadow-sm text-white">
+                                            <a href="#" class="group-category">
+                                                <img src="assets/images/groups/category-6.jpg" class="card-img group-category-img" alt="Category type">
+                                                <div class="card-img-overlay group-cat-overlay d-flex align-items-end">
+                                                    <h5 class="card-title">Business</h5>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="my-5">
+                        <hr class="my-5">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="newConversation" tabindex="-1" role="dialog" aria-labelledby="newConversationLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog mobile-modal" role="document">
             <div class="modal-content">
-                <div class="modal-header new-msg-header">
-                    <h5 class="modal-title" id="newConversationLabel">Start new conversation</h5>
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body new-msg-body">
-                    <form action="" method="" class="new-msg-form">
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                            <input type="text" class="form-control search-input" id="recipient-name" placeholder="Add recipient...">
-                        </div>
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">Message:</label>
-                            <textarea class="form-control search-input" rows="5" id="message-text" placeholder="Type a message..."></textarea>
-                        </div>
-                    </form>
+                <div class="modal-body">
+                    ...
                 </div>
-                <div class="modal-footer new-msg-footer">
-                    <button type="button" class="btn btn-primary btn-sm">Send message</button>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
@@ -667,12 +694,16 @@
     <script src="assets/js/popper/popper.min.js"></script>
     <script src="assets/js/bootstrap/bootstrap.min.js"></script>
     <!-- Optional -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <script type="text/javascript">
         $("#menu-toggle").click(function(e) {
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+
     </script>
-    <script src="assets/js/components/components.js"></script>
     <script src="assets/js/app.js"></script>
-</body></html>
+    <script src="assets/js/components/components.js"></script>
+</body>
+
+</html>
