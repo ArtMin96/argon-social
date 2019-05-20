@@ -214,37 +214,37 @@
 .reaction-like {
     left: 10px;
     transition-delay: 0s;
-    background-image: url('../images/icons/reactions/reactions_like.png');
+    background-image: url('../images/icons/reactions/like.gif');
 }
 
 .reaction-love {
     left: 48px;
     transition-delay: .05s;
-    background-image: url('../images/icons/reactions/reactions_love.png');
+    background-image: url('../images/icons/reactions/love.gif');
 }
 
 .reaction-haha {
     left: 86px;
     transition-delay: .1s;
-    background-image: url('../images/icons/reactions/reactions_haha.png');
+    background-image: url('../images/icons/reactions/haha.gif');
 }
 
 .reaction-wow {
     left: 124px;
     transition-delay: .15s;
-    background-image: url('../images/icons/reactions/reactions_wow.png');
+    background-image: url('../images/icons/reactions/wow.gif');
 }
 
 .reaction-sad {
     left: 162px;
     transition-delay: .2s;
-    background-image: url('../images/icons/reactions/reactions_sad.png');
+    background-image: url('../images/icons/reactions/sad.gif');
 }
 
 .reaction-angry {
     left: 200px;
     transition-delay: .25s;
-    background-image: url('../images/icons/reactions/reactions_angry.png');
+    background-image: url('../images/icons/reactions/angry.gif');
 }
 
 .like-btn:hover .reaction {

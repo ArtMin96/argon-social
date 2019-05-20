@@ -176,11 +176,9 @@
         width: 8%;
     }
 
-    /*
-    #navbar-main .notify-drop {
-        min-width: 320px !important;
+    .profile-posts-options .timeline-manage {
+        text-align: right;
     }
-*/
 }
 
 @media (max-width:768px) {
@@ -199,6 +197,10 @@
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         border-bottom-left-radius: 0px;
+    }
+    
+    .profile-posts-options {
+        text-align: center;
     }
 }
 
@@ -259,6 +261,7 @@
     .third-section .card-title {
         font-size: 1rem
     }
+    
 }
 
 @media (min-width:992px) and (max-width:1200px) {

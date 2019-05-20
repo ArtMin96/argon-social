@@ -532,7 +532,7 @@
                                                 <a href="#" class="message-profile-name">Susan P. Jarvis</a>
                                             </div>
                                             <div class="social-media messenger-top-ricon df-aic">
-                                                <img src="assets/images/icons/messenger/phone.png" class="msg-top-more-info" alt="Messenger icons">
+                                                <img src="assets/images/icons/messenger/phone.png" data-toggle="modal" data-target="#callModal" class="msg-top-more-info" alt="Messenger icons">
                                                 <img src="assets/images/icons/messenger/videocam.png" class="msg-top-more-info" alt="Messenger icons">
                                                 <img src="assets/images/icons/messenger/info.png" class="msg-top-more-info" alt="Messenger icons">
                                                 <span class="dropdown">
@@ -633,7 +633,7 @@
         </div>
     </div>
 
-    <!-- Modal -->
+    <!-- New Conversation Modal -->
     <div class="modal fade" id="newConversation" tabindex="-1" role="dialog" aria-labelledby="newConversationLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -661,6 +661,44 @@
             </div>
         </div>
     </div>
+
+    <!-- modal -->
+    <div id="callModal" class="modal fade call-modal" tabindex="-1" role="dialog" aria-labelledby="callModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 id="callModalLabel" class="modal-title">Connected</h1>
+                    <button type="button" class="btn btn-quick-link">
+                        <i class='bx bx-minus'></i>
+                    </button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class='bx bx-x'></i></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row h-100">
+                        <div class="col-md-12 d-flex align-items-center justify-content-center">
+                            <div class="call-user text-center">
+                                <div class="call-user-img-anim">
+                                    <img src="assets/images/users/user-1.jpg" class="call-user-img" alt="Call user image">
+                                </div>
+                                <p class="call-user-name">Lina Adamyan</p>
+                                <p class="text-muted">05:28</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 offset-md-4 d-flex align-items-center justify-content-between">
+                            <a href="#" class="btn call-btn" data-toggle="tooltip" data-placement="top" data-title="Disable microphone"><i class='bx bxs-microphone'></i></a>
+                            <a href="#" class="btn call-btn" data-toggle="tooltip" data-placement="top" data-title="Enable camera"><i class='bx bxs-video-off'></i></a>
+                            <a href="#" class="btn call-btn drop-call" data-toggle="tooltip" data-placement="top" data-title="End call"><i class='bx bxs-phone'></i></a>
+                            <a href="#" class="btn call-btn" data-toggle="tooltip" data-placement="top" data-title="Share Screen"><i class='bx bx-laptop'></i></a>
+                            <a href="#" class="btn call-btn" data-toggle="tooltip" data-placement="top" data-title="Dark mode"><i class='bx bx-moon'></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END call modal -->
 
     <!-- Core -->
     <script src="assets/js/jquery/jquery-3.3.1.min.js"></script>

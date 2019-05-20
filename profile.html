@@ -24,7 +24,7 @@
 <body class="profile">
     <div class="container-fluid newsfeed d-flex" id="wrapper">
         <div class="row newsfeed-size">
-            <div class="col-md-12" id="page-content-wrapper">
+            <div class="col-md-12 p-0">
                 <nav id="navbar-main" class="navbar navbar-expand-lg shadow-sm sticky-top">
                     <div class="w-100 justify-content-md-center">
                         <ul class="nav navbar-nav enable-mobile px-2">
@@ -451,7 +451,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-md-9 p-0">
                                 <div class="profile-info-right">
 
                                     <!-- Posts section -->
@@ -464,10 +464,7 @@
                                                 <li class="list-inline-item">
                                                     <a href="#">About</a></li>
                                                 <li class="list-inline-item">
-                                                    <a href="#">Followers <span class="badge badge-pill badge-primary ml-2 fs-7">12.7k</span></a>
-                                                </li>
-                                                <li class="list-inline-item">
-                                                    <a href="#">Followings <span class="badge badge-pill badge-primary ml-2 fs-7">375</span></a>
+                                                    <a href="#">Friends</a>
                                                 </li>
                                                 <li class="list-inline-item">
                                                     <a href="#">Photos</a>
@@ -510,12 +507,16 @@
                                                     </div>
                                                 </li>
                                             </ul>
-                                            <div class="profile-posts-options mt-4 mb-3  d-flex justify-content-between">
-                                                <h6 class="text-muted timeline-title">Posts</h6>
-                                                <div class="timeline-manage">
-                                                    <button type="button" class="btn btn-light btn-sm tmo-buttons"><i class='bx bxs-cog'></i> Manage Posts</button>
-                                                    <button type="button" class="btn btn-light btn-sm tmo-buttons ql-active"><i class='bx bx-align-middle'></i> List View</button>
-                                                    <button type="button" class="btn btn-light btn-sm tmo-buttons"><i class='bx bxs-grid-alt'></i> Grid View</button>
+                                            <div class="row profile-posts-options mt-4 mb-3  d-flex justify-content-between">
+                                                <div class="col-md-3 col-sm-12">
+                                                    <h6 class="text-muted timeline-title">Posts</h6>
+                                                </div>
+                                                <div class="col-md-9 col-sm-12">
+                                                    <div class="timeline-manage">
+                                                        <button type="button" class="btn btn-light btn-sm tmo-buttons"><i class='bx bxs-cog'></i> Manage Posts</button>
+                                                        <button type="button" class="btn btn-light btn-sm tmo-buttons ql-active"><i class='bx bx-align-middle'></i> List View</button>
+                                                        <button type="button" class="btn btn-light btn-sm tmo-buttons"><i class='bx bxs-grid-alt'></i> Grid View</button>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="post border-bottom p-3 bg-white w-shadow">
@@ -917,10 +918,7 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
-
     </script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/components/components.js"></script>
-</body>
-
-</html>
+</body></html>

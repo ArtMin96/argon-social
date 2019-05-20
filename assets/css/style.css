@@ -1214,7 +1214,7 @@ img.settings-icon {
 /* GROUP PAGE */
 .groups-banner {
     position: relative;
-    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(../images/theme/suggested.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../images/theme/suggested.jpg);
     background-size: cover;
     background-position: center;
     height: 250px;
@@ -1226,7 +1226,8 @@ img.settings-icon {
     bottom: 0;
 }
 
-.groups-banner h1, .groups-banner p {
+.groups-banner h1,
+.groups-banner p {
     color: #fff !important;
 }
 
@@ -1267,7 +1268,7 @@ img.settings-icon {
 }
 
 .group-cat-overlay {
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     border-radius: 20px;
 }
 
@@ -1287,3 +1288,115 @@ img.settings-icon {
     margin-left: 8px;
 }
 
+/* Call modal */
+.call-modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    border: 0px;
+}
+
+.call-modal .modal-dialog {
+    position: fixed;
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    padding: 0px;
+}
+
+.call-modal .modal-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 0px;
+    border: 0px;
+    box-shadow: none;
+}
+
+.call-modal .modal-header {
+    border: 0px;
+}
+
+.call-modal .modal-title {
+    font-size: 1em;
+    color: #000;
+}
+
+.call-user-img-anim img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.call-user-img-anim {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.call-user-img-anim::before,
+.call-user-img-anim::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #007bff;
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: animateCallUserImage 1s linear infinite;
+}
+
+.call-user-img-anim::after {
+    animation-delay: 0.5s;
+}
+
+.call-user-name {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 4rem;
+}
+
+.call-btn {
+    border: 1px solid #007bff;
+    border-radius: 50%;
+    color: #007bff;
+    font-size: 1.5rem;
+}
+
+.drop-call {
+    border: 1px solid red;
+    color: red;
+}
+
+@keyframes animateCallUserImage {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+    
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+/* END Call modal */
+
+.close:focus {
+    outline: 0;
+}
