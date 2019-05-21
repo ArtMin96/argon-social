@@ -1326,6 +1326,7 @@ img.settings-icon {
 .call-modal .modal-title {
     font-size: 1em;
     color: #000;
+    float: left;
 }
 
 .call-user-img-anim img {
@@ -1384,15 +1385,108 @@ img.settings-icon {
         transform: scale(0.8);
         opacity: 0;
     }
-    
+
     50% {
         opacity: 1;
     }
-    
+
     100% {
         transform: scale(1.2);
         opacity: 0;
     }
+}
+
+.small-call-window {
+    width: 20% !important;
+    height: 20% !important;
+    bottom: 2%;
+    right: 1%;
+    border: 1px solid #e8e8e8;
+}
+
+.small-call-window .modal-header {
+    padding: 0rem 1rem;
+}
+
+.small-call-window .modal-header .call-status .modal-title,
+.small-call-window .modal-header .modal-options button {
+    font-size: 0.8rem;
+}
+
+.small-call-window .modal-header .call-status {
+    align-items: center;
+    display: flex;
+}
+
+
+.small-call-window .call-user-img-anim {
+    text-align: left !important;
+    height: 0px;
+}
+
+.small-call-window .call-user-name {
+    font-size: 0.8rem;
+    margin: 0rem;
+}
+
+.small-call-window .call-time {
+    font-size: 0.6rem;
+}
+
+.small-call-window .call-btn-list {
+    justify-content: center !important;
+}
+
+.small-call-window .call-btn {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    margin: 0px 5px;
+    border: 0px;
+}
+
+.small-call-window .drop-call {
+    border: 1px solid red;
+}
+
+.small-call-window .call-user-img-anim::before,
+.small-call-window .call-user-img-anim::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 5px solid #007bff;
+    left: -85px;
+    right: 85px;
+    top: -80px;
+    bottom: -110px;
+    border-radius: 50%;
+    opacity: 0;
+    animation: animateSmallCallUserImage 1s linear infinite;
+}
+
+@keyframes animateSmallCallUserImage {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+}
+
+.small-call-window .call-user-img-anim::after {
+    animation-delay: 0.5s;
+}
+
+.call-modal .modal-backdrop,
+.call-modal .modal-backdrop.fade.in {
+    opacity: 0 !important;
 }
 
 /* END Call modal */

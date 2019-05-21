@@ -65,17 +65,6 @@ $('#btn-to-scroll-bottom').on('click', function () {
     }, 1000)
 });
 
-// Disable dropdown auto close when click the toggle
-//$('.dark-mode').on('click', function (event) {
-//    event.stopPropagation();
-//});
-
-//$('.dark-mode').on('click', function () {
-//    if(this) {
-//        this.stopPropagation();
-//    }
-//});
-
 // Chatbox
 
 // Minimize chat box
@@ -84,6 +73,35 @@ $('#minimize-chat-window').on('click', function () {
     $('#messagebody').animate({
         scrollTop: $('#messagebody').offset().top
     }, 500);
+});
+
+// Call modal
+
+$('#minimize-call-window').on('click', function () {
+    if ($('.call-modal-dialog').hasClass('small-call-window')) {
+        $('.call-modal-dialog').removeClass('small-call-window shadow', 500);
+        $('.call-user-img-anim img').animate({
+            width: '200px',
+            height: '200px'
+        }, 500);
+        $('.call-modal .modal-dialog').animate({
+            width: '100%',
+            height: '100%'
+        }, 500);
+    } else {
+        $('.call-modal-dialog').addClass('small-call-window shadow', 500);
+        $('.call-user-img-anim img').animate({
+            width: '30px',
+            height: '30px'
+        }, 500);
+    }
+
+    $('#callModal').modal({
+        backdrop: 'static',
+        keyboard: false
+    });
+
+    $('.modal-backdrop').remove();
 });
 
 // Close chatbox
