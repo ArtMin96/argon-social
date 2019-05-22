@@ -224,6 +224,16 @@
     margin: 0;
 }
 
+.intro-title a {
+    color: #000;
+    font-weight: 500;
+}
+
+.intro-about {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
 .intro-title .online-status {
     vertical-align: middle;
     margin-left: 1rem;
@@ -232,14 +242,6 @@
 .intro-title i {
     font-size: 1rem;
     vertical-align: text-bottom;
-}
-
-.btn-fill-intro {
-    background-color: #d1d3d6;
-    color: #6c757d;
-    border-radius: 50%;
-    font-size: 0.7rem;
-    box-shadow: 5px 5px 30px 2px rgba(0, 0, 0, 0.2);
 }
 
 .facebook-color {
@@ -258,11 +260,6 @@
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-}
-
-.btn-fill-intro:hover {
-    background-color: #6c757d;
-    color: #d1d3d6;
 }
 
 .btn-follow,
