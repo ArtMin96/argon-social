@@ -1,3 +1,5 @@
+$('body').fadeIn(100);
+
 // Loader
 $(window).on('load', function () {
     $('#loader').fadeOut('slow');

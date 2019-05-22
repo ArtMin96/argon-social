@@ -23,6 +23,10 @@ body {
     overflow-x: hidden;
 }
 
+.js body {
+    display: none;
+}
+
 @-ms-viewport {
     width: device-width
 }
@@ -198,6 +202,10 @@ button:focus {
     border-radius: 50%;
 }
 
+.search-form .dropdown-menu {
+    margin-left: 0px !important;
+}
+
 .search-button {
     border-left: 0;
     border-color: #fff;
@@ -334,7 +342,8 @@ button:focus {
     -webkit-transition: margin 0.25s ease-out;
     -moz-transition: margin 0.25s ease-out;
     -o-transition: margin 0.25s ease-out;
-    transition: margin 0.25s ease-out
+    transition: margin 0.25s ease-out;
+    z-index: 1000;
 }
 
 .postFormHeader {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 
 <head>
     <meta charset="utf-8">
@@ -20,24 +20,11 @@
     <link href="assets/css/media.css" rel="stylesheet">
     <link href="assets/css/chat.css" rel="stylesheet">
     <link href="https://vjs.zencdn.net/7.4.1/video-js.css" rel="stylesheet">
-    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+    <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js" type="text/javascript"></script>
+    <script src="assets/js/load.js" type="text/javascript"></script>
 </head>
 
 <body class="newsfeed">
-<!--
-    <div class="spinner d-flex align-items-center justify-content-center" id="loader">
-        <div class="row">
-            <div class="col-md-12">
-                <img src="assets/images/logo-128x128.png" class="mb-5" alt="Loader image">
-            </div>
-            <div class="col-md-12 loader">
-                <div class="bounce bounce1"></div>
-                <div class="bounce bounce2"></div>
-                <div class="bounce bounce3"></div>
-            </div>
-        </div>
-    </div>
--->
     <div class="container-fluid" id="wrapper">
         <div class="row newsfeed-size">
             <div class="col-md-12 newsfeed-right-side">
@@ -66,13 +53,84 @@
                         <ul class="navbar-nav mr-5 flex-row" id="main_menu">
                             <a class="navbar-brand nav-item mr-lg-5" href="index.html"><img src="assets/images/logo-64x64.png" width="40" height="40" class="mr-3" alt="Logo"></a>
                             <!-- Collect the nav links, forms, and other content for toggling -->
-                            <form class="w-30 mx-2 my-auto d-inline form-inline mr-5">
-                                <div class="input-group">
+                            <form class="w-30 mx-2 my-auto d-inline form-inline mr-5 dropdown search-form">
+                                <div class="input-group" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="searchDropdown">
                                     <input type="text" class="form-control search-input w-75" placeholder="Search for people, companies, events and more..." aria-label="Search" aria-describedby="search-addon">
                                     <div class="input-group-append">
                                         <button class="btn search-button" type="button"><i class='bx bx-search'></i></button>
                                     </div>
                                 </div>
+                                <ul class="dropdown-menu notify-drop nav-drop shadow-sm" aria-labelledby="searchDropdown">
+                                    <div class="notify-drop-title">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6 fs-8">Search Results <span class="badge badge-pill badge-primary ml-2">29</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- end notify title -->
+                                    <!-- notify content -->
+                                    <div class="drop-content">
+                                        <h6 class="dropdown-header">Peoples</h6>
+                                        <li class="dropdown-item">
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <div class="notify-img">
+                                                    <img src="assets/images/users/user-6.png" alt="Search result">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                                <a href="#" class="notification-user">Susan P. Jarvis</a>
+                                                <a href="#" class="btn btn-quick-link join-group-btn border text-right float-right">
+                                                    Add Friend
+                                                </a>
+                                                <p class="time">6 Mutual friends</p>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <div class="notify-img">
+                                                    <img src="assets/images/users/user-5.png" alt="Search result">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                                <a href="#" class="notification-user">Ruth D. Greene</a>
+                                                <a href="#" class="btn btn-quick-link join-group-btn border text-right float-right">
+                                                    Add Friend
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <h6 class="dropdown-header">Groups</h6>
+                                        <li class="dropdown-item">
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <div class="notify-img">
+                                                    <img src="assets/images/groups/group-2.jpg" alt="Search result">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                                <a href="#" class="notification-user">Tourism</a>
+                                                <a href="#" class="btn btn-quick-link join-group-btn border text-right float-right">
+                                                    Join
+                                                </a>
+                                                <p class="time">2.5k Members 35+ post a week</p>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <div class="notify-img">
+                                                    <img src="assets/images/groups/group-1.png" alt="Search result">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                                <a href="#" class="notification-user">Argon Social Network <img src="assets/images/theme/verify.png" width="10px" class="verify" alt="Group verified"></a>
+                                                <a href="#" class="btn btn-quick-link join-group-btn border text-right float-right">
+                                                    Join
+                                                </a>
+                                                <p class="time">10k Members 20+ post a week</p>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="notify-drop-footer text-center">
+                                        <a href="#">See More</a>
+                                    </div>
+                                </ul>
                             </form>
                             <li class="nav-item s-nav dropdown d-mobile">
                                 <a href="#" class="nav-link nav-icon nav-links drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Create" role="button" aria-haspopup="true" aria-expanded="false">
@@ -1301,7 +1359,7 @@
     </div>
 
     <!-- Chat Popup -->
-    <div class="chat-popup" id="hide-in-mobile">
+    <div class="chat-popup shadow" id="hide-in-mobile">
         <div class="row chat-window col-xs-5 col-md-3">
             <div class="col-md-12">
                 <div class="card">

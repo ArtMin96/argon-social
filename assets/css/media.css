@@ -342,7 +342,7 @@
 
     #navbar-main .dropdown-menu {
         position: absolute;
-        margin-left: -90px !important;
+        margin-left: -90px;
     }
 
     #navbar-main .navbar-brand {
