@@ -1,0 +1,28 @@
+.newsfeed-left-sidebar {
+    overflow: auto;
+}
+
+.products .row .col-md-2 {
+    padding: 0.5rem 0.2rem;
+}
+
+.products .group-card {
+    background-color: transparent;
+}
+
+.products .group-card .card-body {
+    padding: 0.5rem 0.3rem;
+}
+
+.products .group-card .card-body .card-title a {
+    font-size: 0.8rem;
+    color: #000 !important;
+}
+
+.sidebar-item-icon i {
+    background-color: #dee2e6;
+    padding: 0.5rem;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: 0.8rem;
+}

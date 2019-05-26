@@ -795,6 +795,14 @@
     #message-frame .content .message-input .wrap button {
         padding: 16px 0
     }
+    
+    #message-frame .content .message-input .wrap .messenger-input {
+        width: 100%;
+    }
+    
+    .messenger-icons img {
+        margin: 0px 10px;
+    }
 }
 
 @media screen and (max-width: 992px) {

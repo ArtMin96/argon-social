@@ -18,6 +18,7 @@
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/components.css" rel="stylesheet">
     <link href="assets/css/media.css" rel="stylesheet">
+    <link href="assets/css/market.css" rel="stylesheet">
     <script src="assets/js/load.js" type="text/javascript"></script>
 </head>
 
@@ -50,13 +51,84 @@
                         <ul class="navbar-nav mr-5 flex-row" id="main_menu">
                             <a class="navbar-brand nav-item mr-lg-5" href="index.html"><img src="assets/images/logo-64x64.png" width="40" height="40" class="mr-3" alt="Logo"></a>
                             <!-- Collect the nav links, forms, and other content for toggling -->
-                            <form class="w-30 mx-2 my-auto d-inline form-inline mr-5">
-                                <div class="input-group">
+                            <form class="w-30 mx-2 my-auto d-inline form-inline mr-5 dropdown search-form">
+                                <div class="input-group" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="searchDropdown">
                                     <input type="text" class="form-control search-input w-75" placeholder="Search for people, companies, events and more..." aria-label="Search" aria-describedby="search-addon">
                                     <div class="input-group-append">
                                         <button class="btn search-button" type="button"><i class='bx bx-search'></i></button>
                                     </div>
                                 </div>
+                                <ul class="dropdown-menu notify-drop nav-drop shadow-sm" aria-labelledby="searchDropdown">
+                                    <div class="notify-drop-title">
+                                        <div class="row">
+                                            <div class="col-md-6 col-sm-6 col-xs-6 fs-8">Search Results <span class="badge badge-pill badge-primary ml-2">29</span></div>
+                                        </div>
+                                    </div>
+                                    <!-- end notify title -->
+                                    <!-- notify content -->
+                                    <div class="drop-content">
+                                        <h6 class="dropdown-header">Peoples</h6>
+                                        <li class="dropdown-item">
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <div class="notify-img">
+                                                    <img src="assets/images/users/user-6.png" alt="Search result">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                                <a href="#" class="notification-user">Susan P. Jarvis</a>
+                                                <a href="#" class="btn btn-quick-link join-group-btn border text-right float-right">
+                                                    Add Friend
+                                                </a>
+                                                <p class="time">6 Mutual friends</p>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <div class="notify-img">
+                                                    <img src="assets/images/users/user-5.png" alt="Search result">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                                <a href="#" class="notification-user">Ruth D. Greene</a>
+                                                <a href="#" class="btn btn-quick-link join-group-btn border text-right float-right">
+                                                    Add Friend
+                                                </a>
+                                            </div>
+                                        </li>
+                                        <h6 class="dropdown-header">Groups</h6>
+                                        <li class="dropdown-item">
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <div class="notify-img">
+                                                    <img src="assets/images/groups/group-2.jpg" alt="Search result">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                                <a href="#" class="notification-user">Tourism</a>
+                                                <a href="#" class="btn btn-quick-link join-group-btn border text-right float-right">
+                                                    Join
+                                                </a>
+                                                <p class="time">2.5k Members 35+ post a week</p>
+                                            </div>
+                                        </li>
+                                        <li class="dropdown-item">
+                                            <div class="col-md-2 col-sm-2 col-xs-2">
+                                                <div class="notify-img">
+                                                    <img src="assets/images/groups/group-1.png" alt="Search result">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-10 col-sm-10 col-xs-10">
+                                                <a href="#" class="notification-user">Argon Social Network <img src="assets/images/theme/verify.png" width="10px" class="verify" alt="Group verified"></a>
+                                                <a href="#" class="btn btn-quick-link join-group-btn border text-right float-right">
+                                                    Join
+                                                </a>
+                                                <p class="time">10k Members 20+ post a week</p>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div class="notify-drop-footer text-center">
+                                        <a href="#">See More</a>
+                                    </div>
+                                </ul>
                             </form>
                             <li class="nav-item s-nav dropdown d-mobile">
                                 <a href="#" class="nav-link nav-icon nav-links drop-w-tooltip" data-toggle="dropdown" data-placement="bottom" data-title="Create" role="button" aria-haspopup="true" aria-expanded="false">
@@ -354,13 +426,13 @@
                                 <div class="dropdown-menu dropdown-menu-right settings-dropdown shadow-sm" aria-labelledby="settings-dropdown">
                                     <a class="dropdown-item" href="#">
                                         <img src="assets/images/icons/navbar/help.png" alt="Navbar icon"> Help Center</a>
-                                    <a class="dropdown-item d-flex align-items-center dark-mode" onClick="event.stopPropagation();" href="#">
+                                    <a class="dropdown-item d-flex align-items-center dark-mode" href="#">
                                         <img src="assets/images/icons/navbar/moon.png" alt="Navbar icon"> Dark Mode
                                         <button type="button" class="btn btn-lg btn-toggle ml-auto" data-toggle="button" aria-pressed="false" autocomplete="off">
                                             <div class="handle"></div>
                                         </button>
                                     </a>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="settings.html">
                                         <img src="assets/images/icons/navbar/gear-1.png" alt="Navbar icon"> Settings</a>
                                     <a class="dropdown-item logout-btn" href="#">
                                         <img src="assets/images/icons/navbar/logout.png" alt="Navbar icon"> Log Out</a>
@@ -375,45 +447,50 @@
                 <div class="row newsfeed-right-side-content mt-3">
                     <div class="col-md-2 newsfeed-left-side sticky-top shadow-sm" id="sidebar-wrapper">
                         <div class="card newsfeed-user-card h-100">
-                            <ul class="list-group list-group-flush newsfeed-left-sidebar">
-                                <li class="list-group-item">
-                                    <h6>Home</h6>
+                            <ul class="list-group list-group-flush newsfeed-left-sidebar" id="marketplace-parameters">
+                                <li class="list-group-item d-flex align-items-center justify-content-between">
+                                    <h6>Marketplace</h6>
+                                    <button type="button" class="btn btn-sm btn-quick-link join-group-btn btn-rounded">
+                                        <i class="bx bx-plus"></i>
+                                    </button>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="index.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/newsfeed.png" alt="newsfeed"> News Feed</a>
-                                    <a href="#" class="newsfeedListicon"><i class='bx bx-dots-horizontal-rounded'></i></a>
+                                    <div class="input-group messenger-input w-100 align-items-center pr-2">
+                                        <input type="text" class="form-control search-input" placeholder="Search Products" aria-label="Type a message..." aria-describedby="button-addon2">
+                                        <div class="input-group-append">
+                                            <i class="bx bx-search"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center sidebar-item-icon">
+                                    <a href="messages.html" class="sidebar-item" data-toggle="tooltip" data-placement="top" data-title="Browse All"><i class='bx bxs-store'></i></a>
+                                    <a href="messages.html" class="sidebar-item" data-toggle="tooltip" data-placement="top" data-title="Location"><i class="bx bxs-map"></i></a>
+                                    <a href="messages.html" class="sidebar-item" data-toggle="tooltip" data-placement="top" data-title="Notification"><i class='bx bxs-bell-ring'></i></a>
+                                    <a href="messages.html" class="sidebar-item" data-toggle="tooltip" data-placement="top" data-title="Discount"><i class='bx bxs-discount'></i></a>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="messages.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/message.png" alt="message"> Messages</a>
-                                    <span class="badge badge-primary badge-pill">2</span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center sd-active">
-                                    <a href="groups.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/group.png" alt="group"> Groups</a>
-                                    <span class="badge badge-primary badge-pill">17</span>
+                                    <a href="groups.html" class="sidebar-item"><img src="assets/images/icons/navbar/account.png" alt="group"> Marketplace Account</a>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="events.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/event.png" alt="event"> Events</a>
-                                    <span class="badge badge-primary badge-pill">3</span>
+                                    <a href="messages.html" class="sidebar-item btn join-group-btn w-100"><i class='bx bxs-filter-alt'></i> Filter Marketplace</a>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="saved.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/saved.png" alt="saved"> Saved</a>
-                                    <span class="badge badge-primary badge-pill">8</span>
+                                <li class="list-group-item border-top">
+                                    <h6>Categories</h6>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="find-friends.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/find-friends.png" alt="find-friends"> Find Friends</a>
-                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                <li class="list-group-item d-flex justify-content-between align-items-center sidebar-item-icon">
+                                    <a href="groups.html" class="sidebar-item"><i class='bx bxs-car'></i> Vehicles</a>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="matches.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/matches.png" alt="matches"> Matches</a>
-                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                <li class="list-group-item d-flex justify-content-between align-items-center sidebar-item-icon">
+                                    <a href="groups.html" class="sidebar-item"><i class='bx bxs-home'></i> Housing</a>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="teams.html" class="sidebar-item"><img src="assets/images/icons/left-sidebar/team.png" alt="find-friends"> Argon For Teams</a>
-                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                <li class="list-group-item d-flex justify-content-between align-items-center sidebar-item-icon">
+                                    <a href="groups.html" class="sidebar-item"><i class='bx bx-laptop'></i> Electronics</a>
                                 </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center newsLink">
-                                    <a href="https://github.com/ArtMin96/argon-social" target="_blank" class="sidebar-item"><img src="assets/images/icons/left-sidebar/news.png" alt="find-friends"> News</a>
-                                    <span class="badge badge-primary badge-pill"><i class='bx bx-chevron-right'></i></span>
+                                <li class="list-group-item d-flex justify-content-between align-items-center sidebar-item-icon">
+                                    <a href="groups.html" class="sidebar-item"><i class='bx bxs-t-shirt'></i> Clothing</a>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center sidebar-item-icon">
+                                    <a href="groups.html" class="sidebar-item"><i class='bx bx-dots-horizontal-rounded'></i> More</a>
                                 </li>
                             </ul>
                         </div>
@@ -444,17 +521,17 @@
                         </div>
 
                         <!-- Groups -->
-                        <div class="groups bg-white py-3 px-4 shadow-sm">
+                        <div class="groups products py-3 px-4">
                             <div class="card-head d-flex justify-content-between">
                                 <h5 class="mb-4">Popular Products</h5>
                                 <a href="#" class="btn btn-link">See All</a>
                             </div>
                             <div class="row">
                                 <div class="col-md-2 col-sm-6">
-                                    <div class="card group-card shadow-sm">
+                                    <div class="card group-card">
                                         <img src="assets/images/product/product-1.jpg" class="card-img-top group-card-image" alt="Group image">
                                         <div class="card-body">
-                                            <h5 class="card-title">$89.99</h5>
+                                            <h5 class="product-card-price">$89.99</h5>
                                             <h5 class="card-title"><a href="#">Beauty Counter</a></h5>
                                             <p class="card-text">California, CA</p>
                                             <a href="#" class="btn btn-quick-link join-group-btn border w-100">Details</a>
@@ -462,21 +539,21 @@
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-6">
-                                    <div class="card group-card shadow-sm">
+                                    <div class="card group-card">
                                         <img src="assets/images/product/product-2.jpg" class="card-img-top group-card-image" alt="Group image">
                                         <div class="card-body">
-                                            <h5 class="card-title">$187.99</h5>
-                                            <h5 class="card-title"><a href="#">Professional 360 Product...</a></h5>
-                                            <p class="card-text">California, CA</p>
+                                            <h5 class="product-card-price">$187.99</h5>
+                                            <h5 class="card-title"><a href="#">Professional 360</a></h5>
+                                            <p class="card-text">Chicago, IL</p>
                                             <a href="#" class="btn btn-quick-link join-group-btn border w-100">Details</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-6">
-                                    <div class="card group-card shadow-sm">
+                                    <div class="card group-card">
                                         <img src="assets/images/product/product-3.jpg" class="card-img-top group-card-image" alt="Group image">
                                         <div class="card-body">
-                                            <h5 class="card-title">$42.99</h5>
+                                            <h5 class="product-card-price">$42.99</h5>
                                             <h5 class="card-title"><a href="#">BLEU de CHANEL</a></h5>
                                             <p class="card-text">California, CA</p>
                                             <a href="#" class="btn btn-quick-link join-group-btn border w-100">Details</a>
@@ -484,12 +561,34 @@
                                     </div>
                                 </div>
                                 <div class="col-md-2 col-sm-6">
-                                    <div class="card group-card shadow-sm">
+                                    <div class="card group-card">
                                         <img src="assets/images/product/product-4.jpg" class="card-img-top group-card-image" alt="Group image">
                                         <div class="card-body">
-                                            <h5 class="card-title">$213.99</h5>
+                                            <h5 class="product-card-price">$213.99</h5>
                                             <h5 class="card-title"><a href="#">DHS Deals</a></h5>
                                             <p class="card-text">Los Angeles, LA</p>
+                                            <a href="#" class="btn btn-quick-link join-group-btn border w-100">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-6">
+                                    <div class="card group-card">
+                                        <img src="assets/images/product/product-5.jpg" class="card-img-top group-card-image" alt="Group image">
+                                        <div class="card-body">
+                                            <h5 class="product-card-price">$159.99</h5>
+                                            <h5 class="card-title"><a href="#">Flowers In Thailand</a></h5>
+                                            <p class="card-text">Thailand</p>
+                                            <a href="#" class="btn btn-quick-link join-group-btn border w-100">Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2 col-sm-6">
+                                    <div class="card group-card">
+                                        <img src="assets/images/product/product-6.jpg" class="card-img-top group-card-image" alt="Group image">
+                                        <div class="card-body">
+                                            <h5 class="product-card-price">$287.99</h5>
+                                            <h5 class="card-title"><a href="#">Grey upholstered dining</a></h5>
+                                            <p class="card-text">Toronto</p>
                                             <a href="#" class="btn btn-quick-link join-group-btn border w-100">Details</a>
                                         </div>
                                     </div>
@@ -499,7 +598,7 @@
                         <hr class="my-5">
                         <div class="groups py-3 px-4 mt-3">
                             <div class="card-head d-flex justify-content-between">
-                                <h5 class="mb-4">Friends Groups</h5>
+                                <h5 class="mb-4">Today's Sales</h5>
                                 <a href="#" class="btn btn-link">See All</a>
                             </div>
                             <div class="row">
@@ -670,10 +769,7 @@
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
-
     </script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/components/components.js"></script>
-</body>
-
-</html>
+</body></html>

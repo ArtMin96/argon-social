@@ -525,6 +525,19 @@ body::-webkit-scrollbar-thumb:hover {
     border-left: 0;
 }
 
+.messenger-input {
+    background-color: #e8e8e8;
+    float: left;
+    width: calc(100% - 90px);
+    border-radius: 30px;
+}
+
+.messenger-input input, .messenger-input .search-button {
+    border-radius: 30px;
+    background-color: transparent;
+    border: 0;
+}
+
 .nav-links {
     font-size: 0.8rem;
     line-height: 2;
@@ -1224,6 +1237,10 @@ img.settings-icon {
     border-radius: 10px;
     font-weight: 500;
     background-color: #dee2e6;
+}
+
+.btn-rounded {
+    border-radius: 50% !important;
 }
 
 .group-cat-overlay {
