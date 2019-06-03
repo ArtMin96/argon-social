@@ -1506,3 +1506,15 @@ img.settings-icon {
     border-top-right-radius: 10px !important;
     border-bottom-right-radius: 10px !important;
 }
+
+.weather-forecast .forecast-day .forecast-between span {
+    font-weight: 700;
+}
+
+.weather-forecast .col-md-3 {
+    border-right: 1px solid #bdc1c8;
+}
+
+.weather-forecast .col-md-3:last-child {
+    border-right: 0px;
+}
